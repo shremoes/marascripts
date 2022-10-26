@@ -38,8 +38,10 @@
         for (const profile in allOnline) {
             const href = allOnline[profile].href
             if (href && href !== "" && href.includes("id=")) {
-
-                location.href = allOnline[profile].href + "&halloween=1"
+                const goTo = allOnline[profile].href + "&halloween=1"
+                setTimeout(() => {
+                    location.href = goTo
+                }, Math.random() * (2000 - 1500) + 1500)
                 break
             }
         }
@@ -50,6 +52,6 @@
         GM_setValue("visited", visited)
         setTimeout(() => {
             location.href = "https://www.marapets.com/online.php"
-        }, 1500)
+        }, Math.random() * (2000 - 1500) + 1500)
     }
 })()
