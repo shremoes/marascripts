@@ -4,6 +4,7 @@
 // @description Quest automater.
 // @author      marascripts
 // @version     1.0.0
+// @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/priceCheck.user.js
 // @grant       GM_setValue
 // @grant       GM_getValue
 // @match       https://www.marapets.com/carpenter.php*
