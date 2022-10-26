@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Automates most dailies.
 // @author      marascripts
-// @version     1.0.3
+// @version     1.0.4
 // @grant       none
 // @match       https://www.marapets.com/ants.php
 // @match       https://www.marapets.com/vending.php
@@ -231,7 +231,7 @@
     }
 
     //* Plushie Machines, Nutty Tree, and Christmas Tree
-    if (path === "/plushies.php" || path === "/plushies2.php" || path === "/tree.php") {
+    if (path === "/plushies.php" || path === "/plushies2.php" || path === "/tree.php" || path === "/nuttytree.php") {
         pickRandom("input[type='submit']")
     }
 })()
