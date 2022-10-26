@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Quest automater.
 // @author      marascripts
-// @version     1.1.0
+// @version     1.1.1
 // @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/priceCheck.js
 // @grant       GM_setValue
 // @grant       GM_getValue
@@ -55,18 +55,12 @@
         }
     }
 
-    function getItems () {
-        const itemsNeeded = getQuestItems()
-        GM_setValue("items", itemsNeeded)
-    }
-
     async function checkFirstItem () {
-        const questItems = getItems()
+        const questItems = getQuestItems()
+        GM_setValue("items", questItems)
 
         if (questItems[0]) {
-            const itemId = questItems[0].check
-            document.querySelector(`a[data-id='${itemId}']`).click()
-
+            priceCheckById(questItems[0].check)
             setTimeout(function () {
                 const itemURL = doPriceCheck()
                 goTo(itemURL)
