@@ -13,7 +13,7 @@
 // @match       https://www.marapets.com/shops.php*
 // @match       https://www.marapets.com/attic.php*
 // @run-at      document-idle
-// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/main/scripts/snowmanSantaHelper.user.js
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/snowmanSantaHelper.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT
@@ -25,7 +25,7 @@
 
     const captcha = document.querySelector("input[name='code']")
 
-    function getAttic() {
+    function getAttic () {
         const atticCount = document.querySelector(".pricecheckcontent .banned.same")
         return parseInt(atticCount.innerText.split(" ")[0]) === 0 ? null : atticCount.parentElement.href
     }

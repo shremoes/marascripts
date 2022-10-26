@@ -10,7 +10,7 @@
 // @match       https://www.marapets.com/rpbank.php
 // @match       https://www.marapets.com/bank.php
 // @run-at      document-idle
-// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/main/scripts/bankingAssistant.user.js
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/bankingAssistant.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT
@@ -30,7 +30,7 @@
         document.querySelector("form[action='https://www.marapets.com/atm.php?do=deposit'] input[name='pin']").value = MY_PIN
         document.querySelector("form[action='https://www.marapets.com/atm.php?do=withdraw'] input[name='pin']").value = MY_PIN
     }
-    
+
     // If at any bank collect interest, and return to banking page
     else {
         const collectInterest = [...document.querySelectorAll("input")].find((e) => e.value.includes("Interest"))

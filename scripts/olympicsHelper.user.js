@@ -7,7 +7,7 @@
 // @grant       none
 // @match       https://www.marapets.com/competitions.php*
 // @run-at      document-idle
-// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/main/scripts/olympicsHelper.user.js
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/olympicsHelper.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT
@@ -16,7 +16,7 @@
 
 (function () {
     'use strict'
-    
+
     const events = document.querySelectorAll(".eachpet_box.marapets_border")
 
     const bp = [4, 11, 18, 25] // Basketball, Golf, Rowing, Tennis
@@ -86,6 +86,6 @@
     else {
         setTimeout(() => {
             window.location.href = "https://www.marapets.com/competitions.php"
-        }, 100000);
+        }, 100000)
     }
 })()

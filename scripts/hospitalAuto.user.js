@@ -7,7 +7,7 @@
 // @grant       none
 // @match       https://www.marapets.com/hospital.php*
 // @run-at      document-idle
-// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/main/scripts/hospitalAuto.user.js
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/hospitalAuto.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT
@@ -19,7 +19,7 @@
 
     const selectAll = document.querySelector("input[value='Select All Pets']")
     selectAll.click()
-    
+
     const curePets = document.querySelector("input[value='Cure Pets']")
     curePets.click()
 })()

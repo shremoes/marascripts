@@ -18,7 +18,7 @@
 // @match       https://www.marapets.com/rollercoaster.php
 // @match       https://www.marapets.com/portal.php
 // @run-at      document-idle
-// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/main/scripts/defaultPetPicker.user.js
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/defaultPetPicker.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT

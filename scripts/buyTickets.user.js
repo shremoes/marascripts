@@ -8,7 +8,7 @@
 // @match       https://www.marapets.com/raffle.php*
 // @match       https://www.marapets.com/lottery.php*
 // @run-at      document-idle
-// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/main/scripts/buyTickets.user.js
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/buyTickets.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT

@@ -7,7 +7,7 @@
 // @grant       none
 // @match       
 // @run-at      document-idle
-// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/main/scripts/utilities/refresher.user.js
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/refresher.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT

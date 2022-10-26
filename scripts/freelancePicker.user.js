@@ -7,7 +7,7 @@
 // @grant       none
 // @match       https://www.marapets.com/agency.php
 // @run-at      document-idle
-// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/main/scripts/freelancePicker.user.js
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/freelancePicker.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT
@@ -41,12 +41,12 @@
     }
 
     // TODO: Split thousand demonination jobs at comma
-    function getJobRatio(job, time) {
+    function getJobRatio (job, time) {
         const pay = parseInt(job[0].split("MP")[0])
         return pay / time
     }
 
-    function getJobTime(job) {
+    function getJobTime (job) {
         const time = parseInt(job[1])
         const timeUnit = job[2].split("\n")[0]
         return timeUnit !== "minutes" ? time * 60 : time

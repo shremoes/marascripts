@@ -10,7 +10,7 @@
 // @match       https://www.marapets.com/sumo.php*
 // @match       https://www.marapets.com/knight.php*
 // @run-at      document-idle
-// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/main/scripts/battleHelper.user.js
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/battleHelper.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT
@@ -22,7 +22,7 @@
 
     const doc = document
 
-    function getOpponentsTurn() {
+    function getOpponentsTurn () {
         const battleLogs = doc.querySelectorAll(".battle_logs")
         if (battleLogs[0].innerText !== "") {
             const currentHealth = parseInt(doc.querySelectorAll(".opponents2")[0].querySelector(".bigger.healthtxt").innerText)
@@ -35,7 +35,7 @@
         else { attack() }
     }
 
-    function heal() {
+    function heal () {
         const heal = doc.getElementById("heal")
         if (heal) { heal.click() }
 
@@ -43,7 +43,7 @@
         if (confirmHeal) { confirmHeal.click() }
     }
 
-    function attack() {
+    function attack () {
         const attack = doc.getElementById("attack")
         if (attack) { attack.click() }
 
@@ -51,7 +51,7 @@
         if (confirmAttack) { confirmAttack.click() }
     }
 
-    function battleAgain() {
+    function battleAgain () {
         const battleAgain = doc.querySelector(".g-recaptcha")
         if (battleAgain) { battleAgain.click() }
     }
@@ -71,6 +71,6 @@
 
             const battleAction = startBattle ? startBattle : questAgain
             battleAction.click()
-        }, 750);
+        }, 750)
     }
 })()

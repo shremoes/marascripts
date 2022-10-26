@@ -41,7 +41,7 @@
 // @match       https://www.marapets.com/shop.php*
 // @match       https://www.marapets.com/agency.php*
 // @run-at      document-idle
-// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/main/scripts/captchaHelper.user.js
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/captchaHelper.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT
@@ -54,12 +54,12 @@
   const captcha = document.querySelector("input[name='code']")
 
   if (captcha) {
-    captcha.focus();
+    captcha.focus()
     captcha.oninput = () => {
       if (captcha.value.length === 6) {
-        const submit = document.querySelector("input[type='submit']");
-        submit.click();
+        const submit = document.querySelector("input[type='submit']")
+        submit.click()
       }
-    };
+    }
   }
 })()

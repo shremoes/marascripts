@@ -12,7 +12,7 @@
 // @match       https://www.marapets.com/shops.php*
 // @match       https://www.marapets.com/shop.php*
 // @run-at      document-idle
-// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/main/scripts/petTraining.user.js
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/petTraining.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT
@@ -23,13 +23,13 @@
 (function () {
     'use strict'
 
-    function isUserShopCheaper() {
+    function isUserShopCheaper () {
         const userPrice = parseInt(document.querySelector(".alsotry.same.strong").innerText.split(" ")[2].split("MP")[0].replace(/,/g, ""))
         const shopPrice = parseInt(document.querySelector("span.sitedate.same.italic").innerText.split(" ").pop().split("MP")[0].replace(/,/g, ""))
         return shopPrice <= userPrice ? false : true
     }
 
-    function checkInStock() {
+    function checkInStock () {
         const itemSource = document.querySelector(".pricechecktable .sitedate.same.italic")
         if (itemSource) {
             const stock = itemSource.innerText
@@ -37,19 +37,19 @@
         } else { return null }
     }
 
-    function checkRetired() {
+    function checkRetired () {
         const retired = document.querySelector(".pricechecktable .banned.same.italic")
         const retiredAlt = document.querySelector(".pricechecktable .offline.same.italic")
         return retired || retiredAlt ? true : false
     }
 
-    function getUserShop() {
+    function getUserShop () {
         const userShopLink = document.querySelector(".pricechecktable .alsotry.same.strong")
         return userShopLink ? userShopLink.parentElement.href : null
     }
 
 
-    function payFromAttic() {
+    function payFromAttic () {
         const radio = document.getElementById("location2")
         if (radio) {
             radio.click()
@@ -57,7 +57,7 @@
         }
     }
 
-    function setUrl() {
+    function setUrl () {
         const pet = document.querySelector(".petwidth a").href.split("?")[1]
 
         let url = ""
@@ -68,13 +68,13 @@
         GM_setValue("training", url)
     }
 
-    function getPayButton() {
+    function getPayButton () {
         const school = document.querySelector("input[value='Pay for Lesson']")
         const gyms = document.querySelector("input[value='Pay for Training']")
         return gyms ? gyms : school
     }
 
-    function clickShopItem() {
+    function clickShopItem () {
         const itemToBuy = GM_getValue("item")
         const allItems = document.querySelectorAll(".itempadding a span.bigger")
         allItems.forEach((item) => {
@@ -85,7 +85,7 @@
         })
     }
 
-    function goToItem(itemToBuy) {
+    function goToItem (itemToBuy) {
         setTimeout(() => {
             const userShopURL = getUserShop() // Direct URL to buy from user shop
             const inStockURL = checkInStock() // URL to the shop where item is sold
@@ -100,7 +100,7 @@
                 // Compare user shop price to NPC shop
                 GM_setValue("item", itemToBuy.parentElement.parentElement.querySelector(".itempadding .bigger").innerText)
                 const userCheaper = isUserShopCheaper()
-                itemURL = !userCheaper ? inStockURL : userShopURL;
+                itemURL = !userCheaper ? inStockURL : userShopURL
             }
 
             window.location.href = itemURL

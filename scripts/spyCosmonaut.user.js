@@ -9,7 +9,7 @@
 // @match       https://www.marapets.com/shop.php*
 // @match       https://www.marapets.com/cosmonaut.php*
 // @run-at      document-idle
-// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/main/scripts/spyCosmonaut.user.js
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/spyCosmonaut.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT
