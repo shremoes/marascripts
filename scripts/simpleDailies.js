@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Automates most dailies.
 // @author      marascripts
-// @version     1.0.2
+// @version     1.0.3
 // @grant       none
 // @match       https://www.marapets.com/ants.php
 // @match       https://www.marapets.com/vending.php
@@ -57,9 +57,6 @@
 /*jshint -W033 */
 
 /**
- * TODO: Plushie Machines
- * TODO: Christmas Tree
- * TODO: Nutty Tree
  * TODO: Worm Digging
  * TODO: Open Graves
  * TODO: Pancake Pile
@@ -231,5 +228,10 @@
     //* Jackpot Pyramid
     if (path === "/jackpot.php") {
         pickRandom(".pyramid a")
+    }
+
+    //* Plushie Machines, Nutty Tree, and Christmas Tree
+    if (path === "/plushies.php" || path === "/plushies2.php" || path === "/tree.php") {
+        pickRandom("input[type='submit']")
     }
 })()
