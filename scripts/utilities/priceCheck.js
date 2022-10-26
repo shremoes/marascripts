@@ -77,3 +77,34 @@ function doPriceCheck () {
 
     return itemURL
 }
+
+/** Gets quest items
+ * TODO: Don't base of checkmark
+ */
+function getQuestItems () {
+    const questItemsTable = document.querySelector(".bigsearchbox.middleit .flex-table2")
+
+    if (questItemsTable) {
+        const itemsNeeded = {}
+        const itemElements = [...questItemsTable.children]
+
+        let index = 0
+        itemElements.forEach((item) => {
+            const obtained = item.querySelector(".bigger").innerHTML.includes("/tick.png")
+
+            if (!obtained) {
+                const itemName = item.querySelector(".bigger").innerText
+                const priceCheck = item.querySelector(".petpadding a").getAttribute("data-id")
+
+                itemsNeeded[index] = {
+                    "name": itemName,
+                    "check": priceCheck
+                }
+
+                index += 1
+            }
+        })
+
+        return itemsNeeded
+    }
+}

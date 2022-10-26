@@ -40,40 +40,6 @@
 (function () {
     'use strict'
 
-    function isUserShopCheaper () {
-        const userPrice = parseInt(document.querySelector(".alsotry.same.strong").innerText.split(" ")[2].split("MP")[0].replace(/,/g, ""))
-        const shopPrice = parseInt(document.querySelector("span.sitedate.same.italic").innerText.split(" ").pop().split("MP")[0].replace(/,/g, ""))
-        return shopPrice <= userPrice ? false : true
-    }
-
-    function checkInStock () {
-        const itemSource = document.querySelector(".pricechecktable .sitedate.same.italic")
-        if (itemSource) {
-            const stock = itemSource.innerText
-            return (stock.includes("stock") && stock.split(" ")[0] !== "0") ? itemSource.parentElement.href : null
-        } else { return null }
-    }
-
-    function checkRetired () {
-        const retired = document.querySelector(".pricechecktable .banned.same.italic")
-        const retiredAlt = document.querySelector(".pricechecktable .offline.same.italic")
-        return retired || retiredAlt ? true : false
-    }
-
-    function getAttic () {
-        const atticCount = document.querySelector(".pricecheckcontent .banned.same")
-        return parseInt(atticCount.innerText.split(" ")[0]) === 0 ? null : atticCount.parentElement.href
-    }
-
-    function getUserShop () {
-        const userShopLink = document.querySelector(".pricechecktable .alsotry.same.strong")
-        return userShopLink ? userShopLink.parentElement.href : null
-    }
-
-    function goToItem (url) {
-        location.href = url
-    }
-
     function checkCaptcha () {
         return document.getElementById("securitycode") ? true : false
     }
@@ -90,32 +56,8 @@
     }
 
     function getItems () {
-        const questItemsTable = document.querySelector(".bigsearchbox.middleit .flex-table2")
-
-        if (questItemsTable) {
-            const itemsNeeded = {}
-            const itemElements = [...questItemsTable.children]
-
-            let index = 0
-            itemElements.forEach((item) => {
-                const obtained = item.querySelector(".bigger").innerHTML.includes("/tick.png")
-
-                if (!obtained) {
-                    const itemName = item.querySelector(".bigger").innerText
-                    const priceCheck = item.querySelector(".petpadding a").getAttribute("data-id")
-
-                    itemsNeeded[index] = {
-                        "name": itemName,
-                        "check": priceCheck
-                    }
-
-                    index += 1
-                }
-            })
-
-            GM_setValue("items", itemsNeeded)
-            return itemsNeeded
-        }
+        const itemsNeeded = getQuestItems()
+        GM_setValue("items", itemsNeeded)
     }
 
     async function checkFirstItem () {
@@ -126,26 +68,8 @@
             document.querySelector(`a[data-id='${itemId}']`).click()
 
             setTimeout(function () {
-                let itemURL = ""
-
-                const atticURL = getAttic()
-                if (atticURL !== null) { itemURL = atticURL }
-
-                else {
-                    const userShopURL = getUserShop()
-                    const inStockURL = checkInStock()
-
-                    const retired = checkRetired()
-                    if (retired || !inStockURL) { itemURL = userShopURL }
-
-                    else {
-                        const userCheaper = isUserShopCheaper()
-                        if (!userCheaper) { itemURL = inStockURL }
-                        else { itemURL = userShopURL }
-                    }
-                }
-
-                goToItem(itemURL)
+                const itemURL = doPriceCheck()
+                goTo(itemURL)
             }, 1500)
         } else if (!checkCaptcha()) { document.querySelector("input[value='Complete Quest']").click() }
     }
