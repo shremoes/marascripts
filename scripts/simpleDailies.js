@@ -221,7 +221,14 @@
     }
 
     //* Giveaways, Balloon Burst, Mummy Multiplier, and Spooks Busters
-    if (path === '/giveaways.php' || path === '/burst.php' || path === '/multiplier.php' || path === '/spooks.php') {
+    const randomImgs = [
+        '/giveaways.php',
+        '/burst.php',
+        '/multiplier.php',
+        '/spooks.php'
+    ]
+
+    if (randomImgs.includes(path)) {
         pickRandom("#eachitemdiv a")
     }
 
@@ -231,7 +238,14 @@
     }
 
     //* Plushie Machines, Nutty Tree, and Christmas Tree
-    if (path === "/plushies.php" || path === "/plushies2.php" || path === "/tree.php" || path === "/nuttytree.php") {
+    const randomButtons = [
+        "/plushies.php",
+        "/plushies2.php",
+        "/tree.php",
+        "/nuttytree.php"
+    ]
+
+    if (randomButtons.includes(path)) {
         pickRandom("input[type='submit']")
     }
 })()
