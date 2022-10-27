@@ -48,6 +48,7 @@
 // @match       https://www.marapets.com/bingo.php*
 // @match       https://www.marapets.com/pie.php*
 // @match       https://www.marapets.com/multiplier.php*
+// @match       https://www.marapets.com/tree.php
 // @run-at      document-idle
 // @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/simpleDailies.user.js
 // @homepageURL https://github.com/marascript/userscripts
