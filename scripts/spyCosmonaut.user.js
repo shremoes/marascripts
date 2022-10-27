@@ -46,7 +46,7 @@
         }
 
         const completeQuest = document.querySelector("input[value='Complete Quest']")
-        if (completeQuest && !document.getElementById("securitycode")) { completeQuest.click() }
+        if (completeQuest && !document.querySelector(".comebackbox.middleit img")) { completeQuest.click() }
     }
 
     if (document.URL.includes("shop.php")) { buyItem() }
