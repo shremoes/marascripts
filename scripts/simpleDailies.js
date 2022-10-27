@@ -57,7 +57,6 @@
 /*jshint -W033 */
 
 /**
- * TODO: Open Graves
  * TODO: Pancake Pile
  * TODO: Duck or Dive (maybe)
  * TODO: Newth Racing
@@ -251,5 +250,10 @@
 
     if (randomButtons.includes(path)) {
         pickRandom("input[type='submit']")
+    }
+
+    //* Open Graves
+    if (path === "/graves.php") {
+        pickRandom(".flex-table .middleit")
     }
 })()
