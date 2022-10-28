@@ -1,3 +1,11 @@
+/**
+ * Script to include with others to target a captcha,
+ * and once six numbers are entered, click submit.
+ * 
+ * Paste the following in any userscript:
+ * @require https://github.com/marascript/userscripts/raw/master/scripts/utilities/captcha.js
+ */
+
 const captcha = document.querySelector("input[name='code']")
 
 if (captcha) {
