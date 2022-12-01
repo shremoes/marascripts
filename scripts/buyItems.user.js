@@ -1,12 +1,19 @@
 // ==UserScript==
 // @name        Buy Item Faster
-// @namespace   Violentmonkey Scripts
-// @match       https://www.marapets.com/shop.php*
+// @namespace   Marascripts
+// @author      marascripts
+// @version     1.1.0
 // @grant       GM.setValue
 // @grant       GM_getValue
 // @version     1.0
-// @author      -
-// @description 7/26/2022, 11:08:42 AM
+// @grant       GM_setValue
+// @grant       GM_getValue
+// @match       https://www.marapets.com/shop.php*
+// @run-at      document-idle
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/buyItems.user.js
+// @homepageURL https://github.com/marascript/userscripts
+// @supportURL	https://github.com/marascript/userscripts/issues
+// @license     MIT
 // ==/UserScript==
 /*jshint -W033 */
 
@@ -14,19 +21,8 @@ const doc = document
 const AUTO_BUY = GM_getValue("autoBuy", true)
 const PURCHASED_ITEMS = JSON.parse(localStorage.getItem("purchased")) || []
 
-if (doc.querySelector(".middleit.bigger .petpadding") && AUTO_BUY) {
-
-  setTimeout(() => {
-    const allItems = Array.from(doc.querySelectorAll(".itemwidth"))
-    const itemToBuy = allItems.find(el => !PURCHASED_ITEMS.includes(el.querySelector(".bigger").innerText.trim())).querySelector(".fixborders.itempadding.middleit a")
-
-
-    if (itemToBuy) {
-      console.log(itemToBuy)
-      itemToBuy.click()
-    }
-    else if (!itemToBuy) {
-      const storesToVisit = [
+function findNewStore() {
+    const storesToVisit = [
         38, // Armour
         33, // Bakery
         27, // Balloons
@@ -86,69 +82,84 @@ if (doc.querySelector(".middleit.bigger .petpadding") && AUTO_BUY) {
         6,  // Vegetables
         7,  // Weapons
         5,  // Wigs
-      ]
+    ]
 
-      location.href = `https://www.marapets.com/shop.php?id=${storesToVisit[Math.floor(Math.random() * storesToVisit.length)]}`
+    location.href = `https://www.marapets.com/shop.php?id=${storesToVisit[Math.floor(Math.random() * storesToVisit.length)]}`
+}
+
+if (doc.querySelector(".middleit.bigger .petpadding") && AUTO_BUY) {
+    const allItems = Array.from(document.querySelectorAll(".itemwidth"))
+    const itemToBuy = allItems.find(el => !PURCHASED_ITEMS.includes(el.querySelector(".bigger").innerText.trim()))
+
+    if (itemToBuy) {
+        setTimeout(() => {
+            itemToBuy.querySelector(".fixborders.itempadding.middleit a").click()
+        }, Math.random() * (500 - 200) + 200)
     }
-  }, Math.random() * (500 - 200) + 200)
 
+    else {
+        findNewStore()
+    }
+}
+else if (doc.URL.includes("id=") && !doc.URL.includes("?do=buy") && !doc.querySelector(".middleit.bigger .petpadding")) {
+    findNewStore()
 }
 
 if (!doc.URL.includes("id=")) {
-  setTimeout(() => {
-  // If we dont have an unsuccesful message, add item to list of purchased items
-    if (!doc.querySelector(".maralayoutmiddle .middleit span.bigger")) {
-      const message = doc.querySelector(".bigger.middleit .bigger.middleit.btmpad6").innerText
-      if (message.includes("I accept")) {
-       PURCHASED_ITEMS.push(message.split(" for ")[1].split("\n")[0])
-      }
-      else {
-        PURCHASED_ITEMS.push(message.split("buying ")[1].split(" for ")[0])
-      }
+    setTimeout(() => {
+        // If we dont have an unsuccesful message, add item to list of purchased items
+        if (!doc.querySelector(".maralayoutmiddle .middleit span.bigger")) {
+            const message = doc.querySelector(".bigger.middleit .bigger.middleit.btmpad6").innerText
+            if (message.includes("I accept")) {
+                PURCHASED_ITEMS.push(message.split(" for ")[1].split("\n")[0])
+            }
+            else {
+                PURCHASED_ITEMS.push(message.split("buying ")[1].split(" for ")[0])
+            }
 
-      localStorage.setItem("purchased", JSON.stringify(PURCHASED_ITEMS))
-    }
+            localStorage.setItem("purchased", JSON.stringify(PURCHASED_ITEMS))
+        }
 
-    // Return to the shop
-    doc.querySelector(".mainfeature_art a").click()
-  }, Math.random() * (500 - 100) + 200)
+        // Return to the shop
+        doc.querySelector(".mainfeature_art a").click()
+    }, Math.random() * (500 - 100) + 200)
 }
 
 else if (doc.URL.includes("?do=buy")) {
     const captcha = doc.querySelector("input[name='code']")
     // No captcha buy the item
     if (!captcha) {
-    	doc.querySelector("button").click()
+        doc.querySelector("button").click()
     }
 
     // If we are auto buying just skip the item
     else if (AUTO_BUY) {
-      PURCHASED_ITEMS.push(doc.querySelector(".mainfeature_art2 b.bigger").innerText)
-      localStorage.setItem("purchased", JSON.stringify(PURCHASED_ITEMS))
-      doc.querySelector(".mainfeature_art a").click()
-    	
+        PURCHASED_ITEMS.push(doc.querySelector(".mainfeature_art2 b.bigger").innerText)
+        localStorage.setItem("purchased", JSON.stringify(PURCHASED_ITEMS))
+        doc.querySelector(".mainfeature_art a").click()
+
     }
 
     // We have a captcha, focus it and submit after 6 digits
     else {
-      captcha.focus()
-      captcha.oninput = () => {
-        // Once six numbers are inpt
-        if (captcha.value.length === 6) {
-          doc.querySelector("button").click()
+        captcha.focus()
+        captcha.oninput = () => {
+            // Once six numbers are inpt
+            if (captcha.value.length === 6) {
+                doc.querySelector("button").click()
+            }
         }
-      }
     }
 }
 
-else  {
-  const IN_SHOP_ID = doc.querySelector(".mainfeature_art a").href.split("id=")[1] // Shop ID from the URL
-  const SHOP_ID = localStorage.getItem("shopId") || IN_SHOP_ID // Saved shop ID, or the current shop ID if none is saved
+else {
+    const IN_SHOP_ID = doc.querySelector(".mainfeature_art a").href.split("id=")[1] // Shop ID from the URL
+    const SHOP_ID = localStorage.getItem("shopId") || IN_SHOP_ID // Saved shop ID, or the current shop ID if none is saved
 
-  // Check id the saved shop ID and current shop ID match, or if there is no saved ID
-  // If either is true save the current shops ID
-  if (SHOP_ID !== IN_SHOP_ID || !localStorage.getItem("shopId")) {
-    localStorage.setItem("shopId", IN_SHOP_ID)
-    localStorage.removeItem("purchased")
-  }
+    // Check id the saved shop ID and current shop ID match, or if there is no saved ID
+    // If either is true save the current shops ID
+    if (SHOP_ID !== IN_SHOP_ID || !localStorage.getItem("shopId")) {
+        localStorage.setItem("shopId", IN_SHOP_ID)
+        localStorage.removeItem("purchased")
+    }
 }
