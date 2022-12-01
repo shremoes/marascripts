@@ -1,5 +1,6 @@
 // ==UserScript==
 // @name        Buy Item Faster
+// @description Buys one of each item in a shop, then goes to another.
 // @namespace   Marascripts
 // @author      marascripts
 // @version     1.1.0
@@ -94,7 +95,7 @@ if (doc.querySelector(".middleit.bigger .petpadding") && AUTO_BUY) {
     if (itemToBuy) {
         setTimeout(() => {
             itemToBuy.querySelector(".fixborders.itempadding.middleit a").click()
-        }, Math.random() * (500 - 200) + 200)
+        }, Math.random() * (500 - 300) + 100)
     }
 
     else {
@@ -130,6 +131,11 @@ else if (doc.URL.includes("?do=buy")) {
     // No captcha buy the item
     if (!captcha) {
         doc.querySelector("button").click()
+    }
+
+    // "Sorry just sold the last..."
+    else if (!doc.querySelector("button")) {
+        doc.querySelector(".mainfeature_art a").click()
     }
 
     // If we are auto buying just skip the item
