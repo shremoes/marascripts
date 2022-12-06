@@ -5,7 +5,7 @@
 // @author      marascripts
 // @version     1.0.0
 // @grant       GM_setValue
-// @grant		GM_getValue
+// @grant       GM_getValue
 // @match       https://www.marapets.com/scratchcards*
 // @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/betterScratchcards.user.js
 // @homepageURL https://github.com/marascript/userscripts
