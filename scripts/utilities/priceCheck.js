@@ -30,7 +30,7 @@ function checkRetired () {
 /** Checks if we have the item in the attic */
 function getAttic () {
     const atticCount = document.querySelector(".pricecheckcontent .banned.same")
-    return parseInt(atticCount.innerText.split(" ")[0]) === 1 ? null : atticCount.parentElement.href
+    return parseInt(atticCount.innerText.split(" ")[0]) === 0 ? null : atticCount.parentElement.href
 }
 
 /** Checks if sold in user shop and returns URL */
