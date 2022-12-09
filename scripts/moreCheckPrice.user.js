@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Adds Check Price links to collection pages and shops.
 // @author      marascripts
-// @version     1.0.0
+// @version     1.0.1
 // @grant       none
 // @match       https://www.marapets.com/books.php*
 // @match       https://www.marapets.com/cds.php*
@@ -75,4 +75,4 @@
             }
         }
     }
-})
+})()
