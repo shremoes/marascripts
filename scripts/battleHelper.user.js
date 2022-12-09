@@ -4,7 +4,7 @@
 // @description Automates battling.
 // @author      marascripts
 // @version     1.1.0
-// @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/priceCheck.js
+// @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/captcha.js
 // @grant       none
 // @match       https://www.marapets.com/battle.php*
 // @match       https://www.marapets.com/talon.php*
