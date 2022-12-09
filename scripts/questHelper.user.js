@@ -5,6 +5,7 @@
 // @author      marascripts
 // @version     1.1.1
 // @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/priceCheck.js
+// @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/captcha.js
 // @grant       GM_setValue
 // @grant       GM_getValue
 // @match       https://www.marapets.com/carpenter.php*
