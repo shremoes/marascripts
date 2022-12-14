@@ -23,7 +23,7 @@ const AUTO_BUY = GM_getValue("autoBuy", true)
 const PURCHASED_ITEMS = JSON.parse(localStorage.getItem("purchased")) || []
 
 /*
-** Comment out (//) stores you don;t want to visit.
+** Comment out (//) stores you don't want to visit.
 ** Function will pick randomly from the "storesTovisit" variable.
 */
 function findNewStore() {
