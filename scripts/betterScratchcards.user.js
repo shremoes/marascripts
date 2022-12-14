@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Better Scratchcards
 // @namespace   Marascripts
-// @description Buys the max amount of lottery and raffle tickets.
+// @description Improves scratchcards by adding a "Next Card" link, to make it more fun.
 // @author      marascripts
 // @version     1.0.0
 // @grant       GM_setValue
