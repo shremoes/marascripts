@@ -24,7 +24,7 @@ const PURCHASED_ITEMS = JSON.parse(localStorage.getItem("purchased")) || []
 
 /*
 ** Comment out (//) stores you don't want to visit.
-** Function will pick randomly from the "storesTovisit" variable.
+** Function will pick randomly from the "storesToVisit" variable.
 */
 function findNewStore() {
     const storesToVisit = [
