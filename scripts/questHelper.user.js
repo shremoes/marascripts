@@ -28,6 +28,7 @@
 // @match       https://www.marapets.com/garage.php*
 // @match       https://www.marapets.com/santa.php*
 // @match       https://www.marapets.com/truck.php*
+// @match       https://www.marapets.com/leprechaun.php*
 // @license     MIT
 // @run-at      document-idle
 // @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/questHelper.user.js
