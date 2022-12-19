@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Trick or treats.
 // @author      marascripts
-// @version     1.0.0
+// @version     1.0.1
 // @grant       GM_setValue
 // @grant       GM_getValue
 // @grant       GM_registerMenuCommand
@@ -47,7 +47,7 @@
         }
     }
 
-    if (document.URL.includes("profile")) {
+    if (document.URL.includes("profile") && document.URL.includes("&halloween=1")) {
         visited.push(location.href.split("&")[0])
         GM_setValue("visited", visited)
         setTimeout(() => {
