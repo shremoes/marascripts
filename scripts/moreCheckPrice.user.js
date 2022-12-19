@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Adds Check Price links to collection pages and shops.
 // @author      marascripts
-// @version     1.0.1
+// @version     1.1.0
 // @grant       none
 // @match       https://www.marapets.com/books.php*
 // @match       https://www.marapets.com/cds.php*
@@ -70,6 +70,10 @@
         for (const stamp in stamps) {
             if (stamps[stamp] instanceof Node) {
                 const stampLink = stamps[stamp].querySelector("a")
+                if (stampLink) {
+                	const stampId = stampLink.href.split("item=")[1]
+                	createCheckPrice(stamps[stamp], stampId)
+                }
                 const stampId = stampLink.href.split("item=")[1]
                 createCheckPrice(stamps[stamp], stampId)
             }
