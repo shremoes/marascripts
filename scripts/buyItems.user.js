@@ -7,8 +7,6 @@
 // @grant       GM.setValue
 // @grant       GM_getValue
 // @version     1.0
-// @grant       GM_setValue
-// @grant       GM_getValue
 // @match       https://www.marapets.com/shop.php*
 // @run-at      document-idle
 // @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/buyItems.user.js
