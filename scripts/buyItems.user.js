@@ -3,7 +3,7 @@
 // @description Buys one of each item in a shop, then goes to another.
 // @namespace   Marascripts
 // @author      marascripts
-// @version     1.1.1
+// @version     1.1.2
 // @grant       GM.setValue
 // @grant       GM_getValue
 // @version     1.0
