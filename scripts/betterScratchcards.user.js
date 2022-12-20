@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Improves scratchcards by adding a "Next Card" link, to make it more fun.
 // @author      marascripts
-// @version     1.0.0
+// @version     1.0.1
 // @grant       GM_setValue
 // @grant       GM_getValue
 // @match       https://www.marapets.com/scratchcards*
@@ -15,6 +15,7 @@
 /*jshint -W033 */
 /*jshint -W117 */ // Avoid JSHint errors in editor for GM* functions
 
+// If we are on scratchcard selection page, save all links for use later
 if (document.querySelector(".middleit.flex-table .fixborders img")) {
     const cards = document.querySelectorAll(".middleit.flex-table .fixborders img")
 
