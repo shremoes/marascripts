@@ -31,11 +31,12 @@
 // @license     MIT
 // ==/UserScript==
 /*jshint -W033 */
+/*jshint -W107 */
 
 (function () {
     'use strict'
 
-    function createCheckPrice(item, itemId) {
+    function createCheckPrice (item, itemId) {
         const checkPrice = document.createElement("b")
         checkPrice.innerText = "Check Price"
         checkPrice.classList.add("pricecheck")
@@ -71,8 +72,8 @@
             if (stamps[stamp] instanceof Node) {
                 const stampLink = stamps[stamp].querySelector("a")
                 if (stampLink) {
-                	const stampId = stampLink.href.split("item=")[1]
-                	createCheckPrice(stamps[stamp], stampId)
+                    const stampId = stampLink.href.split("item=")[1]
+                    createCheckPrice(stamps[stamp], stampId)
                 }
                 const stampId = stampLink.href.split("item=")[1]
                 createCheckPrice(stamps[stamp], stampId)
