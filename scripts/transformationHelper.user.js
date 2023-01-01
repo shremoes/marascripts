@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Adds Check Price links for missing transformations.
 // @author      marascripts
-// @version     1.2.0
+// @version     1.2.1
 // @grant       none
 // @match       https://www.marapets.com/transformations.php*
 // @run-at      document-end
@@ -6446,28 +6446,28 @@
                 petCostumeName.pop()
                 const costumeName = petCostumeName.join(" ")
 
-                if (fakeCostumes[costumeName]) {
-                    createCheckPrice(petCostume, fakeCostumes[costumeName], "Fake")
-                }
-
-                if (realCostumes[costumeName]) {
-                    createCheckPrice(petCostume, realCostumes[costumeName], "Real")
-                }
-
-                if (mummyDolls[petCostume]) {
-                    createCheckPrice(petCostume, mummyDolls[petCostume], "Doll")
-                }
-
-                if (poisons[petCostume]) {
-                    createCheckPrice(petCostume, poisons[petCostume], "Poison")
-                }
-
                 if (potions[petCostume]) {
                     createCheckPrice(petCostume, potions[petCostume], "Potion")
                 }
 
                 if (plushies[petCostume]) {
                     createCheckPrice(petCostume, plushies[petCostume], "Plushie")
+                }
+
+                if (realCostumes[costumeName]) {
+                    createCheckPrice(petCostume, realCostumes[costumeName], "Real")
+                }
+
+                if (fakeCostumes[costumeName]) {
+                    createCheckPrice(petCostume, fakeCostumes[costumeName], "Fake")
+                }
+
+                if (poisons[petCostume]) {
+                    createCheckPrice(petCostume, poisons[petCostume], "Poison")
+                }
+
+                if (mummyDolls[petCostume]) {
+                    createCheckPrice(petCostume, mummyDolls[petCostume], "Doll")
                 }
             }
         }
