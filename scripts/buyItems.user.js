@@ -3,7 +3,7 @@
 // @description Buys one of each item in a shop, then goes to another.
 // @namespace   Marascripts
 // @author      marascripts
-// @version     1.1.2
+// @version     1.1.3
 // @grant       GM.setValue
 // @grant       GM_getValue
 // @version     1.0
@@ -15,6 +15,7 @@
 // @license     MIT
 // ==/UserScript==
 /*jshint -W033 */
+/*jshint -W117 */ // Avoid JSHint errors in editor for GM* functions
 
 (function () {
     'use strict'
@@ -27,7 +28,7 @@
     ** Comment out (//) stores you don't want to visit.
     ** Function will pick randomly from the "storesToVisit" variable.
     */
-    function findNewStore() {
+    function findNewStore () {
         const storesToVisit = [
             38, // Armour
             33, // Bakery
