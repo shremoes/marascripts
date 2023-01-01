@@ -15,42 +15,46 @@
 /*jshint -W033 */
 /*jshint -W117 */ // Avoid JSHint errors in editor for GM* functions
 
-// If we are on scratchcard selection page, save all links for use later
-if (document.querySelector(".middleit.flex-table .fixborders img")) {
-    const cards = document.querySelectorAll(".middleit.flex-table .fixborders img")
+(function () {
+    'use strict'
 
-    let links = []
-    for (let card of cards) {
-        card.parentElement.setAttribute("onclick", "")
-        links.push(card.parentElement.href)
+    // If we are on scratchcard selection page, save all links for use later
+    if (document.querySelector(".middleit.flex-table .fixborders img")) {
+        const cards = document.querySelectorAll(".middleit.flex-table .fixborders img")
+
+        let links = []
+        for (let card of cards) {
+            card.parentElement.setAttribute("onclick", "")
+            links.push(card.parentElement.href)
+        }
+
+        GM_setValue("links", links)
     }
 
-    GM_setValue("links", links)
-}
+    if (document.URL.includes("scratch=") && !document.querySelector(".middleit.flex-table .fixborders img")) {
+        const cards = GM_getValue("links", [])
+        const url = document.URL
+        const newCards = cards.filter(card => card !== url)
+        GM_setValue("links", newCards)
 
-if (document.URL.includes("scratch=") && !document.querySelector(".middleit.flex-table .fixborders img")) {
-    const cards = GM_getValue("links", [])
-    const url = document.URL
-    const newCards = cards.filter(card => card !== url)
-    GM_setValue("links", newCards)
+        let cardStatus = ""
+        if (newCards.length !== 0) {
+            document.querySelector(".friendsbackground").addEventListener('mousemove', () => {
+                cardStatus = document.querySelector(".scratchcard_win").innerText
 
-    let cardStatus = ""
-    if (newCards.length !== 0) {
-        document.querySelector(".friendsbackground").addEventListener('mousemove', () => {
-            cardStatus = document.querySelector(".scratchcard_win").innerText
+                // If we have more cards, and are finished with current card, show "Next Card >" button
+                if (!document.getElementById("nextcard") && !cardStatus.includes("You've Scratched") && cardStatus !== "Scratch off all the circles to see if you're a winner") {
+                    const btn = document.createElement("a")
+                    btn.innerHTML = "Next Card >"
+                    btn.href = newCards[0]
+                    btn.style.color = "white"
+                    btn.id = "nextcard"
+                    btn.style.fontWeight = "bold"
+                    btn.style.fontSize = "2em"
 
-            // If we have more cards, and are finished with current card, show "Next Card >" button
-            if (!document.getElementById("nextcard") && !cardStatus.includes("You've Scratched") && cardStatus !== "Scratch off all the circles to see if you're a winner") {
-                const btn = document.createElement("a")
-                btn.innerHTML = "Next Card >"
-                btn.href = newCards[0]
-                btn.style.color = "white"
-                btn.id = "nextcard"
-                btn.style.fontWeight = "bold"
-                btn.style.fontSize = "2em"
-
-                document.querySelector(".scratchcard_outside").appendChild(btn)
-            }
-        })
+                    document.querySelector(".scratchcard_outside").appendChild(btn)
+                }
+            })
+        }
     }
-}
+})()
