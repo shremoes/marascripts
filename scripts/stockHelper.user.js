@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Automatically selects the cheapest stock.
 // @author      marascripts
-// @version     1.0.0
+// @version     1.0.1
 // @grant       none
 // @match       https://www.marapets.com/shares.php*
 // @run-at      document-idle
