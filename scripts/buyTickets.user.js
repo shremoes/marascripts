@@ -17,6 +17,7 @@
 
 /**
  * TODO: Will keep trying to buy until error page.
+ * * ? Could find number of tickets, but accounting for 2 for 1 weeks, makes it trickier.
  */
 
 (function () {
