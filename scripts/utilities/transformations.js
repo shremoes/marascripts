@@ -1,6 +1,15 @@
 /*jshint -W033 */
 /*jshint -W098 */
 
+/**
+ * Script contains all transformation methods.
+ * 
+ * Use in any userscript like this:
+ * @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/transformations.js
+ * 
+ * ! NOTE: Websites like Greasy Fork will not allow this as it is too long.
+ */
+
 const fakeCostumes = {
     "American": 62985,
     "Angel": 53733,
