@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Does Drew and Shusan, and prompts when item is missing.
 // @author      marascripts
-// @version     1.0.2
+// @version     1.0.3
 // @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/captcha.js
 // @grant       none
 // @match       https://www.marapets.com/drew.php*
