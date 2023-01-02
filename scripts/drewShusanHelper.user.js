@@ -27,7 +27,7 @@
     'use strict'
 
     if (document.querySelector(".flex-table2")) {
-        const itemsRequested = document.querySelectorAll(".width33").length
+        const itemsRequested = document.querySelectorAll(".dopricecheck").length
         const checks = document.querySelectorAll("img[src='https://images.marapets.com/tick.png']").length
 
         // If we don't have all items, show an alert.
