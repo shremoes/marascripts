@@ -28,32 +28,6 @@
 (function () {
     'use strict'
 
-    function isUserShopCheaper () {
-        const userPrice = parseInt(document.querySelector(".alsotry.same.strong").innerText.split(" ")[2].split("MP")[0].replace(/,/g, ""))
-        const shopPrice = parseInt(document.querySelector("span.sitedate.same.italic").innerText.split(" ").pop().split("MP")[0].replace(/,/g, ""))
-        return shopPrice <= userPrice ? false : true
-    }
-
-    function checkInStock () {
-        const itemSource = document.querySelector(".pricechecktable .sitedate.same.italic")
-        if (itemSource) {
-            const stock = itemSource.innerText
-            return (stock.includes("stock") && stock.split(" ")[0] !== "0") ? itemSource.parentElement.href : null
-        } else { return null }
-    }
-
-    function checkRetired () {
-        const retired = document.querySelector(".pricechecktable .banned.same.italic")
-        const retiredAlt = document.querySelector(".pricechecktable .offline.same.italic")
-        return retired || retiredAlt ? true : false
-    }
-
-    function getUserShop () {
-        const userShopLink = document.querySelector(".pricechecktable .alsotry.same.strong")
-        return userShopLink ? userShopLink.parentElement.href : null
-    }
-
-
     function payFromAttic () {
         const radio = document.getElementById("location2")
         if (radio) {
