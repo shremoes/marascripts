@@ -14,6 +14,10 @@
 // ==/UserScript==
 /*jshint -W033 */
 
+/**
+ * TODO: Will try to buy stock under 100MP
+ */
+
 (function () {
     'use strict'
 
