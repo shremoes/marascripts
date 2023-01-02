@@ -3,7 +3,9 @@
 // @namespace   Marascripts
 // @description Automates Snowman and Secret Santa quests.
 // @author      marascripts
-// @version     1.0.0
+// @version     1.1.0
+// @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/priceCheck.js
+// @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/captcha.js
 // @grant       none
 // @match       https://www.marapets.com/item.php*
 // @match       https://www.marapets.com/market.php*
@@ -20,6 +22,10 @@
 // ==/UserScript==
 /*jshint -W033 */
 
+/**
+ * TODO: Use the utilities file for checking prices.
+ */
+
 (function () {
     "use strict"
 
@@ -31,7 +37,6 @@
     }
 
     if (document.URL.includes("secret.php") || document.URL.includes("snowman.php")) {
-
         const again = document.querySelector("input[value='Quest Secret Santa Again']")
         const snowmanAgain = document.querySelector("input[value='Quest Snowman Again']")
         const accept = document.querySelector("input[value='Accept Quest']")

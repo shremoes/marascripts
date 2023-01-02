@@ -48,6 +48,10 @@
 // ==/UserScript==
 /*jshint -W033 */
 
+/**
+ * TODO: This is now in utilities, should be deprecated.
+ */
+
 (function () {
   'use strict'
 

@@ -4,6 +4,7 @@
 // @description Pays for pet training and school.
 // @author      marascripts
 // @version     1.0.0
+// @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/priceCheck.js
 // @grant       GM_setValue
 // @grant       GM_getValue
 // @match       https://www.marapets.com/school.php*
@@ -19,6 +20,10 @@
 // ==/UserScript==
 /*jshint -W033 */
 /*jshint -W117 */ // Avoid JSHint errors in editor for GM* functions
+
+/**
+ * TODO: Use utilities file for checking prices.
+ */
 
 (function () {
     'use strict'

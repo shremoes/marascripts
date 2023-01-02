@@ -5,6 +5,7 @@
 // @author      marascripts
 // @version     1.1.0
 // @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/captcha.js
+// @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/priceCheck.js
 // @grant       none
 // @match       https://www.marapets.com/spy.php*
 // @match       https://www.marapets.com/shop.php*
@@ -16,6 +17,10 @@
 // @license     MIT
 // ==/UserScript==
 /*jshint -W033 */
+
+/**
+ * TODO: Use the utilities file for checking prices.
+ */
 
 (function () {
     'use strict'
