@@ -3,8 +3,7 @@
 // @namespace   Marascripts
 // @description Does Drew and Shusan, and prompts when item is missing.
 // @author      marascripts
-// @version     1.0.3
-// @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/captcha.js
+// @version     1.1.0
 // @grant       none
 // @match       https://www.marapets.com/drew.php*
 // @match       https://www.marapets.com/socks.php*
@@ -36,9 +35,21 @@
             alert("Missing items.")
         }
 
-        // If we have all items complete the quest.
+        // If we have all items complete the quest, if we have a captch
+        // wait for six numbers, then complete the quest.
         else {
-            document.querySelector("input[type='submit']").click()
+            const captcha = document.querySelector("input[name='code']")
+            const complete = document.querySelector("input[type='submit']")
+            if (captcha) {
+                captcha.focus()
+                captcha.oninput = () => {
+                    if (captcha.value.length === 6) {
+                        complete.click()
+                    }
+                }
+            } else {
+                complete.click()
+            }
         }
     }
 

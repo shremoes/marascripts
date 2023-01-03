@@ -36,8 +36,6 @@ These scripts automate many of the quests. Do not keep them enabled when not que
 
 * [Drew / Shushan Helper](https://raw.githubusercontent.com/marascript/userscripts/master/scripts/drewShusanHelper.user.js)
   > Completes Drew/Shusan quests, and alerts if you have a missing item.
-  > ##### **KNOWN ISSUES**
-  > * Captcha
 
 ---
 
