@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Automates most dailies.
 // @author      marascripts
-// @version     1.0.5
+// @version     1.1.0
 // @grant       none
 // @match       https://www.marapets.com/ants.php
 // @match       https://www.marapets.com/vending.php
@@ -49,6 +49,8 @@
 // @match       https://www.marapets.com/pie.php*
 // @match       https://www.marapets.com/multiplier.php*
 // @match       https://www.marapets.com/tree.php
+// @match       https://www.marapets.com/deal.php*
+// @match       https://www.marapets.com/pancakes.php*
 // @run-at      document-idle
 // @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/simpleDailies.user.js
 // @homepageURL https://github.com/marascript/userscripts
@@ -58,8 +60,6 @@
 /*jshint -W033 */
 
 /**
- * TODO: Pancake Pile
- * TODO: Duck or Dive (maybe)
  * TODO: Newth Racing
  * TODO: Fruit Machine
  * TODO: Daily Discount
@@ -256,5 +256,23 @@
     //* Open Graves
     if (path === "/graves.php") {
         pickRandom(".flex-table .middleit")
+    }
+
+    //* Duck or Dive
+    // TODO: Look for special ducks
+    // TODO: Pick best time to stop, maybe
+    if (path === "/deal.php") {
+        pickRandom(".middleit.flex-table #eachitemdiv a")
+    }
+
+    //* Pancake Pile
+    // Only picks from top row
+    if (path === "/pancakes.php") {
+        const panOne = document.querySelector("a[href='pancakes.php?play=1&id=1']")
+        if (panOne) { panOne.click() }
+        else {
+            const panTwo = document.querySelector("a[href='pancakes.php?play=1&id=2']")
+            panTwo.click()
+        }
     }
 })()
