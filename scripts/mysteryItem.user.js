@@ -23,13 +23,21 @@
      * https://www.marasites.com/?name=Dani&page=MysteryItemGuide
      * https://mara.page/Dani/MysteryItemGuide2
      * 
-     * If the answers image URL is is hosted on Marapets, add the image name and answer to knownItems
+     * If the answers image URL is is hosted on Marapets, add the image name and answer to knownItems.
+     * Example:
+     * 
+     * https://images.marapets.com/icefairy/jentnerkommeroggar.png
+     * 
+     * So you would add:
+     * "jentnerkommeroggar.png": "Heavy Concoction"
      */
 
     const knownItems = {
         "sjdjdidosos.gif": "Ball Of Bronze Yarn",
         "ikjjeesydepaaenfinda.png": "Nutcracker Action Figure",
-        "maanydemadennarmankan.png": "Spooks"
+        "maanydemadennarmankan.png": "Spooks",
+        "tykkkeeeikkjedet.png": "Green Hick Plate",
+        "jentnerkommeroggar.png": "Heavy Concoction"
     }
 
     const todaysItem = document.querySelector(".middleit .marapets_border").src.split("/")[4]
