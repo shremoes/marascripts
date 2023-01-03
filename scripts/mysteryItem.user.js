@@ -4,6 +4,7 @@
 // @description Fills in known Mystery Items, WIP as I add more.
 // @author      marascripts
 // @version     1.0.0
+// @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/mysteryItems.js     
 // @grant       none
 // @match       https://www.marapets.com/icefairy.php
 // @run-at      document-idle
@@ -13,32 +14,12 @@
 // @license     MIT
 // ==/UserScript==
 /*jshint -W033 */
+/*jshint -W117 */
+
+// ! Some answers may be incorrect or misspelled.
 
 (function () {
     'use strict'
-
-    /**
-     * Use these sites to get the answer (maybe):
-     * https://mara.guide/mysteryitem.php
-     * https://www.marasites.com/?name=Dani&page=MysteryItemGuide
-     * https://mara.page/Dani/MysteryItemGuide2
-     * 
-     * If the answers image URL is is hosted on Marapets, add the image name and answer to knownItems.
-     * Example:
-     * 
-     * https://images.marapets.com/icefairy/jentnerkommeroggar.png
-     * 
-     * So you would add:
-     * "jentnerkommeroggar.png": "Heavy Concoction"
-     */
-
-    const knownItems = {
-        "sjdjdidosos.gif": "Ball Of Bronze Yarn",
-        "ikjjeesydepaaenfinda.png": "Nutcracker Action Figure",
-        "maanydemadennarmankan.png": "Spooks",
-        "tykkkeeeikkjedet.png": "Green Hick Plate",
-        "jentnerkommeroggar.png": "Heavy Concoction"
-    }
 
     const todaysItem = document.querySelector(".middleit .marapets_border").src.split("/")[4]
 
@@ -46,4 +27,3 @@
         document.querySelector("input[name='item']").value = knownItems[todaysItem]
     }
 })()
-
