@@ -1,11 +1,9 @@
-# Marascripts
+# Marascripts - README WIP
 
 These are userscripts for the digitial petsite [Marapets](https://www.marapets.com).
 
 ---
-
 ## **I do this for fun, and cannot guarantee that they always work 100%**
-
 ---
 
 ## Quests
@@ -48,7 +46,7 @@ These scripts automate many of the quests. Do not keep them enabled when not que
 These scripts do most of the simple non HTML/canvas games, and pet dailies, automatically.
 
 * [Simple Dailies](https://github.com/marascript/userscripts/raw/master/scripts/simpleDailies.js)
-  > Automatically does most all dailies around the site.
+  > Automatically does most all dailies around the site, you still need to go to the game.
   > ##### **KNOWN ISSUES**
   > * Still missing a couple.
 
