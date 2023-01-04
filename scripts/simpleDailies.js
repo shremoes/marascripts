@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Automates most dailies.
 // @author      marascripts
-// @version     1.2.1
+// @version     1.2.2
 // @grant       none
 // @match       https://www.marapets.com/ants.php
 // @match       https://www.marapets.com/vending.php
@@ -55,6 +55,7 @@
 // @match       https://www.marapets.com/graves.php*
 // @match       https://www.marapets.com/racing.php*
 // @match       https://www.marapets.com/jobs.php
+// @match       https://www.marapets.com/fruitmachine.php
 // @run-at      document-idle
 // @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/simpleDailies.user.js
 // @homepageURL https://github.com/marascript/userscripts
@@ -62,11 +63,6 @@
 // @license     MIT
 // ==/UserScript==
 /*jshint -W033 */
-
-/**
- * TODO: Fruit Machine
- * TODO: Daily Discount
- */
 
 (function () {
     "use strict"
@@ -171,6 +167,16 @@
         if (coins.length !== 0) {
             setTimeout(() => {
                 coins[Math.floor(Math.random() * coins.length)].click()
+            }, 1200)
+        }
+    }
+
+    //* Fruit Machine
+    if (path === "/fruitmachine.php") {
+        const button = document.getElementById("startSpin")
+        if (button) {
+            setTimeout(() => {
+                button.click()
             }, 1200)
         }
     }
