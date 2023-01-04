@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Automates most dailies.
 // @author      marascripts
-// @version     1.1.1
+// @version     1.2.1
 // @grant       none
 // @match       https://www.marapets.com/ants.php
 // @match       https://www.marapets.com/vending.php
@@ -53,6 +53,8 @@
 // @match       https://www.marapets.com/pancakes.php*
 // @match       https://www.marapets.com/bingo.php*
 // @match       https://www.marapets.com/graves.php*
+// @match       https://www.marapets.com/racing.php*
+// @match       https://www.marapets.com/jobs.php
 // @run-at      document-idle
 // @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/simpleDailies.user.js
 // @homepageURL https://github.com/marascript/userscripts
@@ -62,7 +64,6 @@
 /*jshint -W033 */
 
 /**
- * TODO: Newth Racing
  * TODO: Fruit Machine
  * TODO: Daily Discount
  */
@@ -95,7 +96,8 @@
         "/sugarstack.php",
         "/sultan.php",
         "/darkfairy.php",
-        "/graverobbing.php"
+        "/graverobbing.php",
+        "/jobs.php"
     ]
 
     if (oneClick.includes(path)) {
@@ -243,16 +245,20 @@
         pickRandom(".wormbox input")
     }
 
-    //* Plushie Machines, Nutty Tree, and Christmas Tree
+    //* Plushie Machines, Nutty Tree
     const randomButtons = [
         "/plushies.php",
         "/plushies2.php",
-        "/tree.php",
         "/nuttytree.php"
     ]
 
     if (randomButtons.includes(path)) {
         pickRandom("input[type='submit']")
+    }
+
+    //* Christmas Tree (Shake for avatar)
+    if (path === "/tree.php") {
+        document.querySelector("input[value='Shake Tree']").click()
     }
 
     //* Open Graves
@@ -267,14 +273,31 @@
         pickRandom(".middleit.flex-table #eachitemdiv a")
     }
 
+    //* Newth Racing (Hasty for avatar)
+    if (path === "/racing.php") {
+        const hasty = document.getElementById("option13")
+        if (hasty) {
+            hasty.checked = true
+            document.getElementById("option6").checked = true // 2500
+            document.querySelector("form input[type='submit']").click()
+        }
+    }
+
     //* Pancake Pile
     // Only picks from top row
     if (path === "/pancakes.php") {
-        const panOne = document.querySelector("a[href='pancakes.php?play=1&id=1']")
-        if (panOne) { panOne.click() }
+        const startGame = document.querySelector("input[value='Play for 400MP'")
+        if (startGame) {
+            startGame.click()
+        }
+
         else {
-            const panTwo = document.querySelector("a[href='pancakes.php?play=1&id=2']")
-            panTwo.click()
+            const panOne = document.querySelector("a[href='pancakes.php?play=1&id=1']")
+            if (panOne) { panOne.click() }
+            else {
+                const panTwo = document.querySelector("a[href='pancakes.php?play=1&id=2']")
+                panTwo.click()
+            }
         }
     }
 
