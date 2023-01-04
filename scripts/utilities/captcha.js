@@ -1,3 +1,5 @@
+/*jshint -W033 */
+
 /**
  * Script to include with others to target a captcha,
  * and once six numbers are entered, click submit.
