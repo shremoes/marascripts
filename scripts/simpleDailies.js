@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Automates most dailies.
 // @author      marascripts
-// @version     1.1.0
+// @version     1.1.1
 // @grant       none
 // @match       https://www.marapets.com/ants.php
 // @match       https://www.marapets.com/vending.php
@@ -51,6 +51,8 @@
 // @match       https://www.marapets.com/tree.php
 // @match       https://www.marapets.com/deal.php*
 // @match       https://www.marapets.com/pancakes.php*
+// @match       https://www.marapets.com/bingo.php*
+// @match       https://www.marapets.com/graves.php*
 // @run-at      document-idle
 // @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/simpleDailies.user.js
 // @homepageURL https://github.com/marascript/userscripts
@@ -255,7 +257,7 @@
 
     //* Open Graves
     if (path === "/graves.php") {
-        pickRandom(".flex-table .middleit")
+        pickRandom(".flex-table .middleit a")
     }
 
     //* Duck or Dive
@@ -273,6 +275,15 @@
         else {
             const panTwo = document.querySelector("a[href='pancakes.php?play=1&id=2']")
             panTwo.click()
+        }
+    }
+
+    //* Bingo (only free)
+    // TODO: Doesn't work...
+    if (path === "/bingo.php") {
+        const buyFreeTickets = document.querySelector("form[action='bingo.php?buyall=1&type=1'] input")
+        if (buyFreeTickets) {
+            buyFreeTickets.click()
         }
     }
 })()
