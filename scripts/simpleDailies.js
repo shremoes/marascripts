@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Automates most dailies.
 // @author      marascripts
-// @version     1.2.2
+// @version     1.2.3
 // @grant       none
 // @match       https://www.marapets.com/ants.php
 // @match       https://www.marapets.com/vending.php
@@ -273,9 +273,15 @@
     }
 
     //* Duck or Dive
-    // TODO: Look for special ducks
     // TODO: Pick best time to stop, maybe
     if (path === "/deal.php") {
+        const greyDuck = document.querySelector(".middleit.flex-table #eachitemdiv img[src='https://images.marapets.com/park/Duck3.png']")
+        const paleDuck = document.querySelector(".middleit.flex-table #eachitemdiv img[src='https://images.marapets.com/park/Duck4.png']")
+        const blackDuck = document.querySelector(".middleit.flex-table #eachitemdiv img[src='https://images.marapets.com/park/Duck2.png']")
+
+        if (paleDuck) { paleDuck.parentElement.parentElement.click() }
+        else if (greyDuck) { greyDuck.parentElement.parentElement.click() }
+        else if (blackDuck) { blackDuck.parentElement.parentElement.click() }
         pickRandom(".middleit.flex-table #eachitemdiv a")
     }
 
