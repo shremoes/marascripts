@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Automates battling.
 // @author      marascripts
-// @version     1.1.1
+// @version     1.1.2
 // @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/captcha.js
 // @grant       none
 // @match       https://www.marapets.com/battle.php*
@@ -33,7 +33,7 @@
             // ! Sometimes, the attack is too large and we don't heal.
             // ? You can subtract an amount from currentHealth, to heal sooner
             // ! If you subtract to much, it will get stuck in a healing loop
-            if (opponentsAttack >= currentHealth - opponentsAttack) { heal() }
+            if (opponentsAttack >= currentHealth) { heal() }
             else { attack() }
         }
 
