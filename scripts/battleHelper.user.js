@@ -29,7 +29,11 @@
             const currentHealth = parseInt(doc.querySelectorAll(".opponents2")[0].querySelector(".bigger.healthtxt").innerText)
             const opponentsAttack = parseInt(battleLogs[1].querySelector(".flex-table4.marapets_border.itempadding .itempadding.bigger").innerText.split(" ")[0])
 
-            if (opponentsAttack >= currentHealth - opponentsAttack + 10) { heal() }
+            // TODO: Better calculation
+            // ! Sometimes, the attack is too large and we don't heal.
+            // ? You can subtract an amount from currentHealth, to heal sooner
+            // ! If you subtract to much, it will get stuck in a healing loop
+            if (opponentsAttack >= currentHealth - opponentsAttack) { heal() }
             else { attack() }
         }
 
