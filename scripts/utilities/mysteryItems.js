@@ -154,5 +154,6 @@ const knownItems = {
     "lkfhkkksksksks.gif": "Chocolate Strawberry Treats",
     "ikkesakteikkjefort.png": "Firefly",
     "alskwieuvn.gif": "Naga Stamp",
-    "fldkdjjfjfjfjf.gif": "Mutant Squid Soup"
+    "fldkdjjfjfjfjf.gif": "Mutant Squid Soup",
+    "iopoiuyuio.gif": "Pork Stuffed Peppers"
 }
