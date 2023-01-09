@@ -12,6 +12,7 @@
  * https://www.marasites.com/?name=Dani&page=MysteryItemGuide
  * https://mara.page/Dani/MysteryItemGuide2
  * https://mara.page/Dani/tessssssssst
+ * https://marapics.blogspot.com/?view=flipcard
  * 
  * If the answers image URL is is hosted on Marapets, add the image name and answer to knownItems.
  * Example:
@@ -155,5 +156,22 @@ const knownItems = {
     "ikkesakteikkjefort.png": "Firefly",
     "alskwieuvn.gif": "Naga Stamp",
     "fldkdjjfjfjfjf.gif": "Mutant Squid Soup",
-    "iopoiuyuio.gif": "Pork Stuffed Peppers"
+    "iopoiuyuio.gif": "Pork Stuffed Peppers",
+    "vbvbxcxcsd.gif": "Christmas Pop Up Book",
+    "etetgdbcgd.gif": "Sea Water Book",
+    "jhgkukikyiyk.gif": "Beebot",
+    "nkjigydrawxscfv.gif": "Radiator Cap",
+    "kkgjdjslsls.gif": "Green Grint Foot",
+    "vxcdgpujeqaxdrg.gif": "Soda Farl",
+    "vbvnvmkioe.gif": "Snow Skin",
+    "hjyukyikyyktk.gif": "Jar of Roses",
+    "ggoggptyhg.gif": "Zoink Ice Sculpture",
+    "ccpwebyqxk.gif": "Bell",
+    "yyhmbjipwq.gif": "Sea Salt Wig",
+    "wewertrtyu.gif": "Trotters Sword",
+    "jjrghgmcet.gif": "Purple Flix",
+    "zzsowfnutg.gif": "Corrupted Yellow Glowing Egg",
+    "hervotam.gif": "Blueberry Soda",
+    "qbbxoprtjm.gif": "Eye Egg",
+    "sjsoisososo.gif": "Ebi Shrimp"
 }
