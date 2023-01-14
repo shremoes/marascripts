@@ -46,7 +46,7 @@
         if (itemToBuy) { itemToBuy.click() }
 
         const yourOffer = document.querySelector("div.middleit.flex-table div span.bigger")
-        if (document.URL.includes("do=buy") && yourOffer && !document.getElementById("securitycode")) {
+        if (document.URL.includes("do=buy") && yourOffer && !document.querySelector(".maralayoutmiddle .middleit img[width='250']")) {
             const buyButton = document.querySelector(".g-recaptcha")
             buyButton.click()
         }
