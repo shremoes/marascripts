@@ -173,5 +173,6 @@ const knownItems = {
     "zzsowfnutg.gif": "Corrupted Yellow Glowing Egg",
     "hervotam.gif": "Blueberry Soda",
     "qbbxoprtjm.gif": "Eye Egg",
-    "sjsoisososo.gif": "Ebi Shrimp"
+    "sjsoisososo.gif": "Ebi Shrimp",
+    "jiyrwdbnmm.gif": "Gonk Voodoo Doll"
 }
