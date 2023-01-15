@@ -40,7 +40,6 @@
                 // Get the last emoji used (the onclick)
                 const lastEmoticon = GM_getValue("lastEmoji", "")
 
-
                 for (const emoticon in emoticons) {
                     const emojiType = emoticons[emoticon].getAttribute("onclick")
                     // Compare the onclick event to the last, to avoid double post
