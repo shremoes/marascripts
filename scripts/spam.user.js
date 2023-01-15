@@ -30,7 +30,7 @@
 
         // Avoid posting more than every sixty seconds, or too fast
         const MAX_TIME_TO_WAIT = 125000
-        const MIN_TIME_TO_WAIT = 60000
+        const MIN_TIME_TO_WAIT = 70000
 
         if (URL.includes(`id=${MY_SPAM}`)) {
             setTimeout(() => {
