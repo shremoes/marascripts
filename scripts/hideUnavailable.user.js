@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Always hides unavailable games/dailies.
 // @author      marascripts
-// @version     1.0.0
+// @version     2.1.0
 // @grant       none
 // @match       https://www.marapets.com/free_games.php
 // @match       https://www.marapets.com/pay_games.php
@@ -18,9 +18,5 @@
 (function () {
     'use strict'
 
-    const allUnavailable = document.querySelectorAll(".fadegame")
-
-    for (const unavailable in allUnavailable) {
-        allUnavailable[unavailable].style.display = 'none'
-    }
+    document.getElementById("buttonhideun").click()
 })()

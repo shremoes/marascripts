@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Adds direct links to Maraforce to missing or Slatere Stalker avatars.
 // @author      marascripts
-// @version     1.0.0
+// @version     1.0.1
 // @grant       none
 // @match       https://www.marapets.com/stalker.php*
 // @match       https://www.marapets.com/avatars.php?missing=1*
