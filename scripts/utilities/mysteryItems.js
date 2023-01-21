@@ -175,5 +175,6 @@ const knownItems = {
     "qbbxoprtjm.gif": "Eye Egg",
     "sjsoisososo.gif": "Ebi Shrimp",
     "jiyrwdbnmm.gif": "Gonk Voodoo Doll",
-    "mnpoqwzxtj.gif": "Injured Jam Tart"
+    "mnpoqwzxtj.gif": "Injured Jam Tart",
+    "2017_winter_day.jpg": "Silver Necklace"
 }
