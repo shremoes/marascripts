@@ -174,5 +174,7 @@ const knownItems = {
     "hervotam.gif": "Blueberry Soda",
     "qbbxoprtjm.gif": "Eye Egg",
     "sjsoisososo.gif": "Ebi Shrimp",
-    "jiyrwdbnmm.gif": "Gonk Voodoo Doll"
+    "jiyrwdbnmm.gif": "Gonk Voodoo Doll",
+    "mnpoqwzxtj.gif": "Injured Jam Tart",
+    "2017_winter_day.jpg": "Silver Necklace"
 }
