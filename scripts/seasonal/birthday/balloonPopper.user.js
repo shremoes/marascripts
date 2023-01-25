@@ -3,11 +3,11 @@
 // @namespace   Marascripts
 // @description Click balloons when they appear.
 // @author      marascripts
-// @version     1.0.1
+// @version     1.0.2
 // @grant       none
 // @include     https://www.marapets.com/*
 // @run-at      document-idle
-// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/birthday/balloonPopper.user.js
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/seasonal/birthday/balloonPopper.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT

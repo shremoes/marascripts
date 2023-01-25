@@ -3,14 +3,14 @@
 // @namespace   Marascripts
 // @description Sings songs.
 // @author      marascripts
-// @version     1.0.1
+// @version     1.0.2
 // @grant       GM_setValue
 // @grant       GM_getValue
 // @grant       GM_registerMenuCommand
 // @match       https://www.marapets.com/profile.php?id=*
 // @match       https://www.marapets.com/online.php
 // @run-at      document-idle
-// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/elfember/caroler.user.js
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/seasonal/elfember/caroler.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT

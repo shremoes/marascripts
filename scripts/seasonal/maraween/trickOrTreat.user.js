@@ -3,14 +3,14 @@
 // @namespace   Marascripts
 // @description Trick or treats.
 // @author      marascripts
-// @version     1.0.1
+// @version     1.0.2
 // @grant       GM_setValue
 // @grant       GM_getValue
 // @grant       GM_registerMenuCommand
 // @match       https://www.marapets.com/profile.php?id=*
 // @match       https://www.marapets.com/online.php
 // @run-at      document-idle
-// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/maraween/trickOrTreat.user.js
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/seasonal/maraween/trickOrTreat.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT

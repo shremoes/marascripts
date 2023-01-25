@@ -3,11 +3,11 @@
 // @namespace   Marascripts
 // @description Clicks Elger every 15 minutes.
 // @author      marascripts
-// @version     1.0.0
+// @version     1.0.1
 // @grant       none
 // @match       https://www.marapets.com/elger.php*
 // @run-at      document-idle
-// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/maraween/elgerClicker.user.js
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/seasonal/maraween/elgerClicker.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT

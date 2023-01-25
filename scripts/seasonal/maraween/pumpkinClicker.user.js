@@ -3,12 +3,12 @@
 // @namespace   Marascripts
 // @description Clicks pumpkins as they appear around the site.
 // @author      marascripts
-// @version     1.1.0
+// @version     1.1.1
 // @grant       GM_setValue
 // @grant       GM_getValue
 // @match       https://www.marapets.com/*
 // @run-at      document-idle
-// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/maraween/pumpkinClicker.user.js
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/seasonal/maraween/pumpkinClicker.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT
