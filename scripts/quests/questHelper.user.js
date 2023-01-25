@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Quest automater.
 // @author      marascripts
-// @version     1.1.1
+// @version     1.1.2
 // @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/priceCheck.js
 // @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/captcha.js
 // @grant       GM_setValue
@@ -31,7 +31,7 @@
 // @match       https://www.marapets.com/leprechaun.php*
 // @license     MIT
 // @run-at      document-idle
-// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/questHelper.user.js
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/quests/questHelper.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT

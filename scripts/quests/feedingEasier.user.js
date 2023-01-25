@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Only shows available options for Aquarium (optionally Glow Worms), Hump Racing, Knutt House, Robot Repair, and Eleka Prison.
 // @author      marascripts
-// @version     1.0.0
+// @version     1.0.1
 // @grant       none
 // @match       https://www.marapets.com/aquarium.php*
 // @match       https://www.marapets.com/humpracing.php*
@@ -11,7 +11,7 @@
 // @match       https://www.marapets.com/robots.php*
 // @match       https://www.marapets.com/elekaprison.php*
 // @run-at      document-idle
-// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/feedingEasier.user.js
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/quests/feedingEasier.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT

@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Automates Snowman and Secret Santa quests.
 // @author      marascripts
-// @version     1.1.0
+// @version     1.1.1
 // @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/priceCheck.js
 // @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/captcha.js
 // @grant       none
@@ -15,7 +15,7 @@
 // @match       https://www.marapets.com/shops.php*
 // @match       https://www.marapets.com/attic.php*
 // @run-at      document-idle
-// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/snowmanSantaHelper.user.js
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/quests/snowmanSantaHelper.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT

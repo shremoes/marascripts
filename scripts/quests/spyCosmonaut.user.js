@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Automates Desert Spy and Cosmonaut quests.
 // @author      marascripts
-// @version     1.1.0
+// @version     1.1.1
 // @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/captcha.js
 // @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/priceCheck.js
 // @grant       none
@@ -11,7 +11,7 @@
 // @match       https://www.marapets.com/shop.php*
 // @match       https://www.marapets.com/cosmonaut.php*
 // @run-at      document-idle
-// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/spyCosmonaut.user.js
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/quests/spyCosmonaut.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT

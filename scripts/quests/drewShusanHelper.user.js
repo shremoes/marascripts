@@ -3,12 +3,12 @@
 // @namespace   Marascripts
 // @description Does Drew and Shusan, and prompts when item is missing.
 // @author      marascripts
-// @version     1.1.0
+// @version     1.1.1
 // @grant       none
 // @match       https://www.marapets.com/drew.php*
 // @match       https://www.marapets.com/socks.php*
 // @run-at      document-idle
-// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/drewShusanHelper.user.js
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/quests/drewShusanHelper.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT
