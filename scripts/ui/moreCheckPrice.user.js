@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Adds Check Price links to collection pages and shops.
 // @author      marascripts
-// @version     1.1.0
+// @version     1.1.1
 // @grant       none
 // @match       https://www.marapets.com/books.php*
 // @match       https://www.marapets.com/cds.php*
@@ -25,7 +25,7 @@
 // @match       https://www.marapets.com/shops.php*
 // @match       https://www.marapets.com/club.php*
 // @run-at      document-end
-// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/moreCheckPrice.user.js
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/ui/moreCheckPrice.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT
