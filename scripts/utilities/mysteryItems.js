@@ -177,5 +177,6 @@ const knownItems = {
     "jiyrwdbnmm.gif": "Gonk Voodoo Doll",
     "mnpoqwzxtj.gif": "Injured Jam Tart",
     "2017_winter_day.jpg": "Silver Necklace",
-    "gimpwort.gif": "Zoink Ice Sculpture"
+    "gimpwort.gif": "Zoink Ice Sculpture",
+    "dggepkkvvq.gif": "Beach"
 }
