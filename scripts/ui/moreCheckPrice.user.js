@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Adds Check Price links to collection pages and shops.
 // @author      marascripts
-// @version     1.1.2
+// @version     1.1.3
 // @grant       none
 // @match       https://www.marapets.com/books.php*
 // @match       https://www.marapets.com/cds.php*
@@ -66,7 +66,7 @@
     }
 
     if (document.URL.includes("stamps")) {
-        const stamps = document.querySelectorAll(".itemwidth.fixborders a")
+        const stamps = document.querySelectorAll("#eachitemdiv.itemwidth.fixborders a")
 
         for (const stamp in stamps) {
             if (stamps[stamp] instanceof Node) {
