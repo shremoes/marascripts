@@ -22,7 +22,6 @@
 /**
  * TODO: Computer repair and Percilla aren't working.
  * TODO: Show on collections/rewards pages.
- * TODO: After completing, numbers do not show.
  */
 
 (function () {
@@ -907,7 +906,7 @@
         }
     }
 
-    const petId = document.querySelector(".specialpet").parentElement.href.split("id=")[1]
+    const petId = document.querySelector(".petwidth a").href.split("id=")[1]
 
     if (actors.includes(petId)) { updateActor() }
     if (architects.includes(petId)) { updateArchitect() }
