@@ -1,3 +1,57 @@
+// ==UserScript==
+// @name        Job Training Assistant
+// @namespace   Violentmonkey Scripts
+// @match       https://www.marapets.com/school.php*
+// @match       https://www.marapets.com/gym.php*
+// @match       https://www.marapets.com/elitegym.php*
+// @match       https://www.marapets.com/university.php*
+// @match       https://www.marapets.com/pets.php*
+// @match				https://www.marapets.com/inn.php
+// @match       https://www.marapets.com/computer.php
+// @grant       none
+// @version     1.0
+// @author      -
+// @description 9/9/2022, 1:14:34 PM
+// ==/UserScript==
+/*jshint -W033 */
+
+const actors = []
+const architects = []
+const astronauts = []
+const athletes = []
+const bankers = []
+const entrepeneurs = []
+const chefs = []
+const clowns = []
+const doctors = []
+const fireFighters = []
+const hackers = []
+const journalists = []
+const mechanics = []
+const models = []
+const police = []
+const politicians = []
+const popStars = []
+const programmers = []
+const scientists = []
+const soldiers = []
+const spys = []
+const teachers = []
+const thieves = []
+const vets = []
+
+const petId = document.URL.split('id=')[1]
+
+function updateSkill (skill, needed) {
+    const toReplace = skill.parentElement.parentElement.querySelector(".text-right b")
+    const currentStats = toReplace.innerText.split("/")[0]
+    if (currentStats < needed) {
+        toReplace.innerText = `${currentStats}/${needed}`
+        toReplace.style.color = 'red'
+    }
+}
+
+
 // University
 const environment = document.querySelector("img[src='https://images.marapets.com/decade/pets/enviroment.png']")
 const computer = document.querySelector("img[src='https://images.marapets.com/decade/pets/computer.png']")
