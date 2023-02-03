@@ -44,7 +44,7 @@ const petId = document.URL.split('id=')[1]
 
 function updateSkill (skill, needed) {
     const toReplace = skill.parentElement.parentElement.querySelector(".text-right b")
-    const currentStats = toReplace.innerText
+    const currentStats = toReplace.innerText.split("/")[0]
     if (currentStats < needed) {
         toReplace.innerText = `${currentStats}/${needed}`
         toReplace.style.color = 'red'
