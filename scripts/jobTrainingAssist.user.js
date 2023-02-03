@@ -907,7 +907,7 @@
         }
     }
 
-    const petId = document.URL.split('id=')[1]
+    const petId = document.querySelector(".specialpet").parentElement.href.split("id=")[1]
 
     if (actors.includes(petId)) { updateActor() }
     if (architects.includes(petId)) { updateArchitect() }
