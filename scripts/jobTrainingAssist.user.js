@@ -1,56 +1,3 @@
-// ==UserScript==
-// @name        Job Training Assistant
-// @namespace   Violentmonkey Scripts
-// @match       https://www.marapets.com/school.php*
-// @match       https://www.marapets.com/gym.php*
-// @match       https://www.marapets.com/elitegym.php*
-// @match       https://www.marapets.com/university.php*
-// @match       https://www.marapets.com/pets.php*
-// @match				https://www.marapets.com/inn.php
-// @match       https://www.marapets.com/computer.php
-// @grant       none
-// @version     1.0
-// @author      -
-// @description 9/9/2022, 1:14:34 PM
-// ==/UserScript==
-/*jshint -W033 */
-
-const actors = []
-const architects = []
-const astronauts = []
-const athletes = []
-const bankers = []
-const entrepeneurs = []
-const chefs = []
-const clowns = []
-const doctors = []
-const fireFighters = []
-const hackers = []
-const journalists = []
-const mechanics = []
-const models = []
-const police = []
-const politicians = []
-const popStars = []
-const programmers = []
-const scientists = []
-const soldiers = []
-const spys = []
-const teachers = []
-const thieves = []
-const vets = []
-
-const petId = document.URL.split('id=')[1]
-
-function updateSkill (skill, needed) {
-    const toReplace = skill.parentElement.parentElement.querySelector(".text-right b")
-    const currentStats = toReplace.innerText.split("/")[0]
-    if (currentStats < needed) {
-        toReplace.innerText = `${currentStats}/${needed}`
-        toReplace.style.color = 'red'
-    }
-}
-
 // University
 const environment = document.querySelector("img[src='https://images.marapets.com/decade/pets/enviroment.png']")
 const computer = document.querySelector("img[src='https://images.marapets.com/decade/pets/computer.png']")
@@ -103,8 +50,26 @@ const atEliteGym = document.URL.includes('elitegym.php?do')
 const atPerscilla = document.URL === "https://www.marapets.com/inn.php"
 const atComputerRepair = document.URL === "https://www.marapets.com/computer.php"
 
+
+const petId = document.URL.split('id=')[1]
+
+function updateSkill (skill, needed) {
+    const toReplace = skill.parentElement.parentElement.querySelector(".text-right b")
+    const currentStats = toReplace.innerText.split("/")[0]
+
+    if (currentStats < needed) {
+        toReplace.innerText = `${currentStats}/${needed}`
+        toReplace.style.color = 'red'
+    }
+}
+
 // Actor
 function updateActor () {
+    if (onProfile || atEliteGym) {
+        updateSkill(coordination, 100)
+        updateSkill(balance, 130)
+    }
+
     if (onProfile || atSchool) {
         updateSkill(music, 120)
         updateSkill(language, 150)
@@ -120,10 +85,7 @@ function updateActor () {
         updateSkill(instruments, 200)
     }
 
-    if (onProfile || atEliteGym) {
-        updateSkill(coordination, 100)
-        updateSkill(balance, 130)
-    }
+
 
     if (onProfile || atUniversity) {
         updateSkill(sociology, 28)
@@ -136,6 +98,10 @@ function updateActor () {
 }
 
 function updateArchitect () {
+    if (onProfile || atEliteGym) {
+        updateSkill(coordination, 100)
+    }
+
     if (onProfile || atSchool) {
         updateSkill(art, 110)
         updateSkill(geography, 75)
@@ -151,10 +117,6 @@ function updateArchitect () {
         updateSkill(books, 95)
     }
 
-    if (onProfile || atEliteGym) {
-        updateSkill(coordination, 100)
-    }
-
     if (onProfile || atUniversity) {
         updateSkill(environment, 32)
         updateSkill(computer, 30)
@@ -163,6 +125,12 @@ function updateArchitect () {
 }
 
 function updateAstronaut () {
+    if (onProfile || atEliteGym) {
+        updateSkill(stamina, 300)
+        updateSkill(coordination, 200)
+        updateSkill(balance, 200)
+    }
+
     if (onProfile || atGym) {
         updateSkill(level, 300)
         updateSkill(strength, 300)
@@ -175,12 +143,6 @@ function updateAstronaut () {
         updateSkill(math, 300)
         updateSkill(science, 300)
         updateSkill(sports, 300)
-    }
-
-    if (onProfile || atEliteGym) {
-        updateSkill(stamina, 300)
-        updateSkill(coordination, 200)
-        updateSkill(balance, 200)
     }
 
     if (onProfile || atUniversity) {
@@ -206,6 +168,12 @@ function updateAstronaut () {
 }
 
 function updateAthlete () {
+    if (onProfile || atEliteGym) {
+        updateSkill(stamina, 200)
+        updateSkill(coordination, 200)
+        updateSkill(balance, 200)
+    }
+
     if (onProfile || atSchool) {
         updateSkill(sports, 250)
     }
@@ -217,11 +185,7 @@ function updateAthlete () {
         updateSkill(health, 250)
     }
 
-    if (onProfile || atEliteGym) {
-        updateSkill(stamina, 200)
-        updateSkill(coordination, 200)
-        updateSkill(balance, 200)
-    }
+
 
     if (onProfile || atPerscilla) {
         updateSkill(charisma, 100)
@@ -282,6 +246,11 @@ function updateEntrepeneur () {
 }
 
 function updateChef () {
+    if (onProfile || atEliteGym) {
+        updateSkill(stamina, 125)
+        updateSkill(coordination, 125)
+    }
+
     if (onProfile || atGym) {
         updateSkill(level, 125)
         updateSkill(health, 100)
@@ -306,14 +275,15 @@ function updateChef () {
         updateSkill(dvds, 125)
         updateSkill(books, 120)
     }
-
-    if (onProfile || atEliteGym) {
-        updateSkill(stamina, 125)
-        updateSkill(coordination, 125)
-    }
 }
 
 function updateClown () {
+    if (onProfile || atEliteGym) {
+        updateSkill(stamina, 200)
+        updateSkill(coordination, 250)
+        updateSkill(balance, 200)
+    }
+
     if (onProfile) {
         updateSkill(cds, 100)
         updateSkill(dvds, 100)
@@ -339,15 +309,14 @@ function updateClown () {
         updateSkill(music, 100)
         updateSkill(sports, 175)
     }
-
-    if (onProfile || atEliteGym) {
-        updateSkill(stamina, 200)
-        updateSkill(coordination, 250)
-        updateSkill(balance, 200)
-    }
 }
 
 function updateDoctor () {
+    if (onProfile || atEliteGym) {
+        updateSkill(stamina, 200)
+        updateSkill(coordination, 250)
+    }
+
     if (onProfile) {
         updateSkill(cds, 80)
         updateSkill(dvds, 60)
@@ -370,10 +339,7 @@ function updateDoctor () {
         updateSkill(science, 175)
     }
 
-    if (onProfile || atEliteGym) {
-        updateSkill(stamina, 200)
-        updateSkill(coordination, 250)
-    }
+
 
     if (onProfile || atUniversity) {
         updateSkill(humanities, 20)
@@ -384,6 +350,12 @@ function updateDoctor () {
 }
 
 function updateFireFighter () {
+    if (onProfile || atEliteGym) {
+        updateSkill(stamina, 200)
+        updateSkill(coordination, 100)
+        updateSkill(balance, 175)
+    }
+
     if (onProfile) {
         updateSkill(cds, 45)
         updateSkill(dvds, 55)
@@ -411,12 +383,6 @@ function updateFireFighter () {
         updateSkill(sports, 300)
     }
 
-    if (onProfile || atEliteGym) {
-        updateSkill(stamina, 200)
-        updateSkill(coordination, 100)
-        updateSkill(balance, 175)
-    }
-
     if (onProfile || atUniversity) {
         updateSkill(environment, 45)
         updateSkill(law, 45)
@@ -425,6 +391,10 @@ function updateFireFighter () {
 }
 
 function updateHacker () {
+    if (onProfile || atEliteGym) {
+        updateSkill(stamina, 200)
+    }
+
     if (onProfile) {
         updateSkill(cds, 100)
         updateSkill(dvds, 200)
@@ -446,10 +416,6 @@ function updateHacker () {
         updateSkill(science, 125)
     }
 
-    if (onProfile || atEliteGym) {
-        updateSkill(stamina, 200)
-    }
-
     if (onProfile || atUniversity) {
         updateSkill(politics, 38)
         updateSkill(computer, 45)
@@ -458,6 +424,10 @@ function updateHacker () {
 }
 
 function updateJournalist () {
+    if (onProfile || atEliteGym) {
+        updateSkill(stamina, 110)
+    }
+
     if (onProfile) {
         updateSkill(cds, 55)
         updateSkill(dvds, 50)
@@ -479,10 +449,6 @@ function updateJournalist () {
         updateSkill(historyy, 75)
     }
 
-    if (onProfile || atEliteGym) {
-        updateSkill(stamina, 110)
-    }
-
     if (onProfile || atUniversity) {
         updateSkill(humanities, 30)
         updateSkill(computer, 23)
@@ -491,6 +457,11 @@ function updateJournalist () {
 }
 
 function updateMechanic () {
+    if (onProfile || atEliteGym) {
+        updateSkill(balance, 80)
+        updateSkill(coordination, 70)
+    }
+
     if (onProfile) {
         updateSkill(cds, 90)
         updateSkill(dvds, 60)
@@ -512,10 +483,6 @@ function updateMechanic () {
         updateSkill(science, 120)
     }
 
-    if (onProfile || atEliteGym) {
-        updateSkill(balance, 80)
-        updateSkill(coordination, 70)
-    }
 
     if (onProfile || atUniversity) {
         updateSkill(business, 20)
@@ -524,6 +491,11 @@ function updateMechanic () {
 }
 
 function updateModel () {
+    if (onProfile || atEliteGym) {
+        updateSkill(balance, 200)
+        updateSkill(coordination, 200)
+    }
+
     if (onProfile) {
         updateSkill(cds, 150)
         updateSkill(dvds, 150)
@@ -544,10 +516,7 @@ function updateModel () {
         updateSkill(art, 100)
     }
 
-    if (onProfile || atEliteGym) {
-        updateSkill(balance, 200)
-        updateSkill(coordination, 200)
-    }
+
 
     if (onProfile || atUniversity) {
         updateSkill(business, 28)
@@ -555,6 +524,10 @@ function updateModel () {
 }
 
 function updatePoliceOfficer () {
+    if (onProfile || atEliteGym) {
+        updateSkill(stamina, 175)
+    }
+
     if (onProfile) {
         updateSkill(books, 100)
     }
@@ -577,9 +550,6 @@ function updatePoliceOfficer () {
         updateSkill(historyy, 75)
     }
 
-    if (onProfile || atEliteGym) {
-        updateSkill(stamina, 175)
-    }
 
     if (onProfile || atUniversity) {
         updateSkill(sociology, 45)
@@ -588,6 +558,10 @@ function updatePoliceOfficer () {
 }
 
 function updatePolitician () {
+    if (onProfile || atEliteGym) {
+        updateSkill(stamina, 200)
+    }
+
     if (onProfile) {
         updateSkill(books, 160)
     }
@@ -606,9 +580,7 @@ function updatePolitician () {
         updateSkill(historyy, 160)
     }
 
-    if (onProfile || atEliteGym) {
-        updateSkill(stamina, 200)
-    }
+
 
     if (onProfile || atUniversity) {
         updateSkill(sociology, 30)
@@ -618,6 +590,9 @@ function updatePolitician () {
 }
 
 function updatePopStar () {
+    if (onProfile || atEliteGym) {
+        updateSkill(coordination, 250)
+    }
     if (onProfile) {
         updateSkill(cds, 180)
         updateSkill(dvds, 200)
@@ -638,12 +613,14 @@ function updatePopStar () {
         updateSkill(music, 240)
     }
 
-    if (onProfile || atEliteGym) {
-        updateSkill(coordination, 250)
-    }
 }
 
 function updateProgrammer () {
+    if (onProfile || atEliteGym) {
+        updateSkill(stamina, 120)
+    }
+
+
     if (onProfile) {
         updateSkill(books, 200)
         updateSkill(dvds, 200)
@@ -663,9 +640,6 @@ function updateProgrammer () {
         updateSkill(science, 140)
     }
 
-    if (onProfile || atEliteGym) {
-        updateSkill(stamina, 120)
-    }
 
     if (onProfile || atUniversity) {
         updateSkill(business, 45)
@@ -674,6 +648,9 @@ function updateProgrammer () {
 }
 
 function updateScientist () {
+    if (onProfile || atEliteGym) {
+        updateSkill(coordination, 175)
+    }
     if (onProfile) {
         updateSkill(books, 170)
     }
@@ -692,9 +669,7 @@ function updateScientist () {
         updateSkill(science, 200)
     }
 
-    if (onProfile || atEliteGym) {
-        updateSkill(coordination, 175)
-    }
+
 
     if (onProfile || atUniversity) {
         updateSkill(environment, 45)
@@ -704,6 +679,12 @@ function updateScientist () {
 }
 
 function updateSoldier () {
+    if (onProfile || atEliteGym) {
+        updateSkill(coordination, 150)
+        updateSkill(stamina, 150)
+        updateSkill(balance, 225)
+    }
+
     if (onProfile) {
         updateSkill(books, 90)
         updateSkill(dvds, 150)
@@ -732,11 +713,7 @@ function updateSoldier () {
         updateSkill(sports, 100)
     }
 
-    if (onProfile || atEliteGym) {
-        updateSkill(coordination, 150)
-        updateSkill(stamina, 150)
-        updateSkill(balance, 225)
-    }
+
 
     if (onProfile || atUniversity) {
         updateSkill(business, 20)
@@ -745,6 +722,12 @@ function updateSoldier () {
 }
 
 function updateSpy () {
+    if (onProfile || atEliteGym) {
+        updateSkill(coordination, 125)
+        updateSkill(stamina, 125)
+        updateSkill(balance, 100)
+    }
+
     if (onProfile) {
         updateSkill(books, 95)
         updateSkill(spells, 70)
@@ -772,11 +755,6 @@ function updateSpy () {
         updateSkill(language, 120)
     }
 
-    if (onProfile || atEliteGym) {
-        updateSkill(coordination, 125)
-        updateSkill(stamina, 125)
-        updateSkill(balance, 100)
-    }
 
     if (onProfile || atUniversity) {
         updateSkill(law, 35)
@@ -785,6 +763,11 @@ function updateSpy () {
 }
 
 function updateTeacher () {
+    if (onProfile || atEliteGym) {
+        updateSkill(stamina, 150)
+    }
+
+
     if (onProfile) {
         updateSkill(books, 100)
         updateSkill(cds, 80)
@@ -810,10 +793,6 @@ function updateTeacher () {
         updateSkill(language, 200)
     }
 
-    if (onProfile || atEliteGym) {
-        updateSkill(stamina, 150)
-    }
-
     if (onProfile || atUniversity) {
         updateSkill(environment, 45)
         updateSkill(humanities, 45)
@@ -824,6 +803,11 @@ function updateTeacher () {
 }
 
 function updateThief () {
+    if (onProfile || atEliteGym) {
+        updateSkill(stamina, 160)
+        updateSkill(coordination, 20)
+    }
+
     if (onProfile) {
         updateSkill(cds, 70)
         updateSkill(dvds, 125)
@@ -848,10 +832,6 @@ function updateThief () {
         updateSkill(sports, 200)
     }
 
-    if (onProfile || atEliteGym) {
-        updateSkill(stamina, 160)
-        updateSkill(coordination, 20)
-    }
 
     if (onProfile || atUniversity) {
         updateSkill(law, 45)
@@ -859,6 +839,12 @@ function updateThief () {
 }
 
 function updateVterinarian () {
+    if (onProfile || atEliteGym) {
+        updateSkill(stamina, 125)
+        updateSkill(coordination, 100)
+        updateSkill(balance, 125)
+    }
+
     if (onProfile) {
         updateSkill(books, 110)
     }
@@ -879,12 +865,6 @@ function updateVterinarian () {
         updateSkill(science, 220)
         updateSkill(sports, 80)
         updateSkill(language, 70)
-    }
-
-    if (onProfile || atEliteGym) {
-        updateSkill(stamina, 125)
-        updateSkill(coordination, 100)
-        updateSkill(balance, 125)
     }
 
     if (onProfile || atUniversity) {
