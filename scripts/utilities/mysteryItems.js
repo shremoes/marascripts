@@ -179,5 +179,6 @@ const knownItems = {
     "2017_winter_day.jpg": "Silver Necklace",
     "gimpwort.gif": "Zoink Ice Sculpture",
     "dggepkkvvq.gif": "Beach",
-    "ksihfoskfi.gif": "Silver Necklace"
+    "ksihfoskfi.gif": "Silver Necklace",
+    "eefeegtreg.gif": "Lightning Shield"
 }
