@@ -180,5 +180,6 @@ const knownItems = {
     "gimpwort.gif": "Zoink Ice Sculpture",
     "dggepkkvvq.gif": "Beach",
     "ksihfoskfi.gif": "Silver Necklace",
-    "eefeegtreg.gif": "Lightning Shield"
+    "eefeegtreg.gif": "Lightning Shield",
+    "bnvmgkhjyutiwpf.gif": "Jar of Snow"
 }
