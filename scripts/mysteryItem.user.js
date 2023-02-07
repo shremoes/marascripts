@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Fills in known Mystery Items, WIP as I add more.
 // @author      marascripts
-// @version     1.1.2
+// @version     1.1.3
 // @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/mysteryItems.js     
 // @grant       none
 // @match       https://www.marapets.com/icefairy.php
