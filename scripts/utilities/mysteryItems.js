@@ -43,7 +43,7 @@ const knownItems = {
     "ghjgkydksk.gif": "Christmas Spork",
     "jskhysueo.gif": "Christmas Tree Yo Yo",
     "hjgkdlpqirbmxvd.gif": "Clown Muffin",
-    "bbjrwety.gif": "Cooker",
+    "bbjrwety.gif": "Zetlian Figurine",
     "sqprotidnsoewp.gif": "Dakota Notepad ",
     "jopoiujkio.gif": "Decadal Whip",
     "lplpkjkjhy.gif": "Deluxe Hot Dog",
