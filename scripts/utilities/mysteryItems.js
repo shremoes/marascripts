@@ -181,5 +181,6 @@ const knownItems = {
     "dggepkkvvq.gif": "Beach",
     "ksihfoskfi.gif": "Silver Necklace",
     "eefeegtreg.gif": "Lightning Shield",
-    "bnvmgkhjyutiwpf.gif": "Jar of Snow"
+    "bnvmgkhjyutiwpf.gif": "Jar of Snow",
+    "jfllhlhllksksksk.gif": "Vintage Diary"
 }
