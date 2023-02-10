@@ -27,3 +27,7 @@ _STRINGS.DICT = {
 	11: "a".split(""),
 	12: "a".split("")
 }
+
+// Memory
+// Takes less time to flip cards
+TIME_SHOW_NO_MATCH = 0 
