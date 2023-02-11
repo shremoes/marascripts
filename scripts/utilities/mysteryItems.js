@@ -183,5 +183,6 @@ const knownItems = {
     "eefeegtreg.gif": "Lightning Shield",
     "bnvmgkhjyutiwpf.gif": "Jar of Snow",
     "jfllhlhllksksksk.gif": "Vintage Diary",
-    "hssksksirtshs.gif": "The Lonely Spider"
+    "hssksksirtshs.gif": "The Lonely Spider",
+    "grapmomo.gif": "Spicy Scallop Handroll"
 }
