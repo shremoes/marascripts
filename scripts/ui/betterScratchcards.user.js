@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Improves scratchcards by adding a "Next Card" link, to make it more fun.
 // @author      marascripts
-// @version     1.0.2
+// @version     1.0.3
 // @grant       GM_setValue
 // @grant       GM_getValue
 // @match       https://www.marapets.com/scratchcards*
