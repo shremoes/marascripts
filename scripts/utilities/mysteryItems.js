@@ -184,5 +184,6 @@ const knownItems = {
     "bnvmgkhjyutiwpf.gif": "Jar of Snow",
     "jfllhlhllksksksk.gif": "Vintage Diary",
     "hssksksirtshs.gif": "The Lonely Spider",
-    "grapmomo.gif": "Spicy Scallop Handroll"
+    "grapmomo.gif": "Spicy Scallop Handroll",
+    "awsedrxdcfvgftg.gif": "Slime Ice Cream"
 }
