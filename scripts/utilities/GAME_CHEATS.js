@@ -31,3 +31,9 @@ _STRINGS.DICT = {
 // Memory
 // Takes less time to flip cards
 TIME_SHOW_NO_MATCH = 0 
+
+// Rune Rescue
+// Playing around
+BLOCK_DENSITY = 1 
+PLAYER_FRICTION = 900 
+BLOCK_FRICTION = .2 
