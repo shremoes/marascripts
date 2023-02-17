@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Automatically selects the best value job.
 // @author      marascripts
-// @version     1.1.0
+// @version     1.1.1
 // @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/captcha.js
 // @grant       none
 // @match       https://www.marapets.com/agency.php*
