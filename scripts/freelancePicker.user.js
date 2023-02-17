@@ -6,7 +6,7 @@
 // @version     1.1.0
 // @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/captcha.js
 // @grant       none
-// @match       https://www.marapets.com/agency.php
+// @match       https://www.marapets.com/agency.php*
 // @run-at      document-idle
 // @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/freelancePicker.user.js
 // @homepageURL https://github.com/marascript/userscripts
