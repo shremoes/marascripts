@@ -37,3 +37,7 @@ TIME_SHOW_NO_MATCH = 0
 BLOCK_DENSITY = 1 
 PLAYER_FRICTION = 900 
 BLOCK_FRICTION = .2 
+
+// Pumpkin Patch
+// Pumpkins don't move down
+NUM_LAUNCH_FOR_EARTHQUAKE = 9000
