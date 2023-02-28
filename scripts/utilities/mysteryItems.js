@@ -187,5 +187,6 @@ const knownItems = {
     "grapmomo.gif": "Spicy Scallop Handroll",
     "awsedrxdcfvgftg.gif": "Slime Ice Cream",
     "jjkukkkytrew.gif": "Grey Paffint",
-    "wsedrftgyhujkio.gif" : "Candy Corn Cake"
+    "wsedrftgyhujkio.gif" : "Candy Corn Cake",
+    "topafido.gif": "Rusty Twins Plushie"
 }
