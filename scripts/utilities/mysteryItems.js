@@ -188,5 +188,6 @@ const knownItems = {
     "awsedrxdcfvgftg.gif": "Slime Ice Cream",
     "jjkukkkytrew.gif": "Grey Paffint",
     "wsedrftgyhujkio.gif" : "Candy Corn Cake",
-    "topafido.gif": "Rusty Twins Plushie"
+    "topafido.gif": "Rusty Twins Plushie",
+    "vbfghjtuyercfwd.gif": "Cheese Potato"
 }
