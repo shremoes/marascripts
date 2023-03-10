@@ -190,5 +190,6 @@ const knownItems = {
     "wsedrftgyhujkio.gif" : "Candy Corn Cake",
     "topafido.gif": "Rusty Twins Plushie",
     "vbfghjtuyercfwd.gif": "Cheese Potato",
-    "hjgkfldseruyygt.gif": "Gummy Scorpion"
+    "hjgkfldseruyygt.gif": "Gummy Scorpion",
+    "jiyrwdbnmm.gif": "Gonk Voodoo Doll"
 }
