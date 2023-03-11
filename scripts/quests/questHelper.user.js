@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Quest automater.
 // @author      marascripts
-// @version     1.1.2
+// @version     1.1.3
 // @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/priceCheck.js
 // @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/captcha.js
 // @grant       GM_setValue
@@ -95,7 +95,7 @@
             if (thanksForBuying) { window.location = questURL }
         }
 
-        if (document.URL.includes("/shop.php?do=buy&id=")) {
+        if (document.URL.includes("/shop.php?do=buy&id=") && !document.querySelector("input[name='code']")) {
             const buyButton = document.querySelector("button")
             buyButton.click()
         }
