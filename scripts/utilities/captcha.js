@@ -14,8 +14,14 @@ if (captcha) {
     captcha.focus()
     captcha.oninput = () => {
         if (captcha.value.length === 6) {
-            const submit = document.querySelector("input[type='submit']")
-            submit.click()
+            const submitType = document.querySelector("input[type='submit']")
+            const submitButton = document.querySelector("button.g-recaptcha")
+            if (submitType) {
+                submitType.click()
+            }
+            else {
+                submitButton.click()
+            }
         }
     }
 }
