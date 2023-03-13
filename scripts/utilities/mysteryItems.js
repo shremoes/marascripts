@@ -176,7 +176,6 @@ const knownItems = {
     "sjsoisososo.gif": "Ebi Shrimp",
     "jiyrwdbnmm.gif": "Gonk Voodoo Doll",
     "mnpoqwzxtj.gif": "Injured Jam Tart",
-    "2017_winter_day.jpg": "Silver Necklace",
     "gimpwort.gif": "Zoink Ice Sculpture",
     "dggepkkvvq.gif": "Beach",
     "ksihfoskfi.gif": "Silver Necklace",
@@ -191,5 +190,6 @@ const knownItems = {
     "topafido.gif": "Rusty Twins Plushie",
     "vbfghjtuyercfwd.gif": "Cheese Potato",
     "hjgkfldseruyygt.gif": "Gummy Scorpion",
-    "jiyrwdbnmm.gif": "Gonk Voodoo Doll"
+    "jiyrwdbnmm.gif": "Gonk Voodoo Doll",
+    "predcfvggyujhsq.gif": "Eye Drops"
 }
