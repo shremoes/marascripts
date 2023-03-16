@@ -192,5 +192,6 @@ const knownItems = {
     "hjgkfldseruyygt.gif": "Gummy Scorpion",
     "jiyrwdbnmm.gif": "Gonk Voodoo Doll",
     "predcfvggyujhsq.gif": "Eye Drops",
-    "fhdsflhslsdhf.gif": "Andy"
+    "fhdsflhslsdhf.gif": "Andy",
+    "xcvbgfdswertpob.gif": "Winter Costume"
 }
