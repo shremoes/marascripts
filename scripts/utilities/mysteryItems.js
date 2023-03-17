@@ -193,5 +193,6 @@ const knownItems = {
     "jiyrwdbnmm.gif": "Gonk Voodoo Doll",
     "predcfvggyujhsq.gif": "Eye Drops",
     "fhdsflhslsdhf.gif": "Andy",
-    "xcvbgfdswertpob.gif": "Winter Costume"
+    "xcvbgfdswertpob.gif": "Winter Costume",
+    "shdksoisoso.gif": "Blitzen Horns"
 }
