@@ -34,7 +34,7 @@ const fakeCostumes = {
     "Chocolate": 68591,
     "Coral": 53729,
     "Cursed": 54662,
-    "Dalmation": 62990,
+    "Dalmatian": 62990,
     "Darkfairy": 72035,
     "Daylight": 50656,
     "Desert": 45226,
