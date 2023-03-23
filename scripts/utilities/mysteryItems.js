@@ -197,5 +197,6 @@ const knownItems = {
     "shdksoisoso.gif": "Blitzen Horns",
     "flkhkkdkdkdkd.gif": "Jumping Spider",
     "nnannbnncn.gif": "Corrupted Red Glowing Egg",
-    "ekalwofirt.gif": "Pink Fertiliser"
+    "ekalwofirt.gif": "Pink Fertiliser",
+    "didjwawa.gif": "Figure Skating"
 }
