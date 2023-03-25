@@ -199,5 +199,5 @@ const knownItems = {
     "nnannbnncn.gif": "Corrupted Red Glowing Egg",
     "ekalwofirt.gif": "Pink Fertiliser",
     "didjwawa.gif": "Figure Skating",
-    "ifhgmsyrr.gif": "Valentines Day"
+    "ifhgmsyrr.gif": "Valentine's Day"
 }
