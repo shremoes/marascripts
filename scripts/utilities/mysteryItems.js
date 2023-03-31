@@ -200,5 +200,6 @@ const knownItems = {
     "ekalwofirt.gif": "Pink Fertiliser",
     "didjwawa.gif": "Figure Skating",
     "ifhgmsyrr.gif": "Valentine's Day",
-    "cxcxcvcvbv.gif": "Homeless Fairy Wings"
+    "cxcxcvcvbv.gif": "Homeless Fairy Wings",
+    "ccbcchccgc.gif": "Digital Sugar Cube"
 }
