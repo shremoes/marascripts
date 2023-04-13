@@ -21,21 +21,18 @@
 (function () {
     'use strict'
 
-    Object.defineProperty(document, "hidden", { value: false })
-    Object.defineProperty(document, "mozHidden", { value: false })
-    Object.defineProperty(document, "msHidden", { value: false })
-    Object.defineProperty(document, "webkitHidden", { value: false })
-    Object.defineProperty(document, 'visibilityState', { get: function () { return "visible" } })
+    Object.defineProperties(document, {
+        hidden: { value: false },
+        mozHidden: { value: false },
+        msHidden: { value: false },
+        webkitHidden: { value: false },
+        visibilityState: { get: () => "visible" }
+    })
 
-    for (const event_name of [
-        "visibilitychange",
-        "webkitvisibilitychange",
-        "blur",
-        "mozvisibilitychange",
-        "msvisibilitychange"
-    ]) {
-        window.addEventListener(event_name, (event) => {
-            event.stopImmediatePropagation()
-        }, true)
-    }
+    ["visibilitychange", "webkitvisibilitychange", "blur", "mozvisibilitychange", "msvisibilitychange"]
+        .forEach(event_name => {
+            window.addEventListener(event_name, event => {
+                event.stopImmediatePropagation()
+            }, true)
+        })
 })()
