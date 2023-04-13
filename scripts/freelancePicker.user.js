@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Automatically selects the best value job.
 // @author      marascripts
-// @version     1.1.1
+// @version     2.0.0
 // @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/captcha.js
 // @grant       none
 // @match       https://www.marapets.com/agency.php*
@@ -18,38 +18,29 @@
 (function () {
     'use strict'
 
-    if (!document.querySelector(".bigger.middleit.comebackbox")) {
-        const unqualified = [...document.querySelectorAll(".fadeit3")]
-        const allJobs = [...document.querySelectorAll(".itemwidth.fixborders")]
+    /**
+     * * Set to 1 to pick the best MP/time reatio job.
+     * * Set to 0 to just pick the highest paying job.
+     */
+    const IGNORE_RATIO = 0
 
-        let bestRatio = 0
-        let bestJob = ""
+    const allJobs = [...document.querySelectorAll(".itemwidth.fixborders")]
+    const unqualified = [...document.querySelectorAll(".fadeit3")]
+    const availableJobs = allJobs.filter(job => !unqualified.includes(job))
 
-        for (const allJob of allJobs) {
-            if (!unqualified.includes(allJob)) {
-                const job = allJob.innerText.split(" ")
-                const time = getJobTime(job)
-                const ratio = getJobRatio(job, time)
+    const bestJob = availableJobs.reduce((best, job) => {
+        let pay = parseInt(job.innerText.split(" ")[0].split("MP")[0])
 
-                if (ratio > bestRatio) {
-                    bestRatio = ratio
-                    bestJob = allJob.id
-                }
-            }
+        if (!IGNORE_RATIO) {
+            const timeNumber = parseInt(job.innerText.split(" ")[1])
+            const time = timeNumber < 5 ? timeNumber * 60 : timeNumber
+            pay = pay / time
         }
 
-        document.querySelector(`#${bestJob} a`).click()
-    }
+        return pay > best.pay ? { id: job.id, pay } : best
+    }, { id: "", pay: 0 })
 
-    // TODO: Split thousand demonination jobs at comma
-    function getJobRatio (job, time) {
-        const pay = parseInt(job[0].split("MP")[0])
-        return pay / time
-    }
-
-    function getJobTime (job) {
-        const time = parseInt(job[1])
-        const timeUnit = job[2].split("\n")[0]
-        return timeUnit !== "minutes" ? time * 60 : time
+    if (bestJob.id) {
+        document.querySelector(`#${bestJob.id} a`).click()
     }
 })()
