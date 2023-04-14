@@ -204,5 +204,6 @@ const knownItems = {
     "ccbcchccgc.gif": "Digital Sugar Cube",
     "mnbvcfghjuytred.gif": "Purple Walee Balloon",
     "vpwygxot.gif": "Whirlpool Treasure Map 06",
-    "krindixi.gif": "Banana Pen"
+    "krindixi.gif": "Banana Pen",
+    "jsjdkdeoeoe.gif": "Eucalyptus"
 }
