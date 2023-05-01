@@ -206,5 +206,6 @@ const knownItems = {
     "vpwygxot.gif": "Whirlpool Treasure Map 06",
     "krindixi.gif": "Banana Pen",
     "jsjdkdeoeoe.gif": "Eucalyptus",
-    "ffgffdsasd.gif": "Beast in the Box"
+    "ffgffdsasd.gif": "Beast in the Box",
+    "yrwqkpkpnbvxxsd.gif": "Book of Beaches"
 }
