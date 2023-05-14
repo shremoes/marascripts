@@ -144,7 +144,7 @@ const knownItems = {
     "iihujnbhge.gif": "Alien Grapes",
     "ddaonncbrz.gif": "Feta",
     "ikjjeesydepaaenfinda.png": "Nutcracker Action Figure",
-    "tykkkeeeikkjedet.png": "Green HickPlate",
+    "tykkkeeeikkjedet.png": "Green Hick Plate",
     "daocriupos.gif": "Recycling",
     "maanydemadennarmankan.png": "Spooks",
     "zpxocidksl.gif": "Parpy",
