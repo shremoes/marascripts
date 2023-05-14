@@ -208,5 +208,6 @@ const knownItems = {
     "jsjdkdeoeoe.gif": "Eucalyptus",
     "ffgffdsasd.gif": "Beast in the Box",
     "yrwqkpkpnbvxxsd.gif": "Book of Beaches",
-    "xmnuyrgh.gif": "Fire Shower Charm"
+    "xmnuyrgh.gif": "Fire Shower Charm",
+    "swsedrfvbgyhjkl.gif": "Eye Egg"
 }
