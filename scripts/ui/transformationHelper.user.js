@@ -84,6 +84,7 @@
                 // Poisions (for Zombie)
                 if (poisons[petCostume]) {
                     createCheckPrice(petCostume, poisons[petCostume], "Poison")
+                    createCheckPrice(petCostume, 927, "Toxic Potion")
                 }
 
                 // Mummy Dolls (for Mummy)
