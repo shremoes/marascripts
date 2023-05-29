@@ -212,5 +212,6 @@ const knownItems = {
     "swsedrfvbgyhjkl.gif": "Eye Egg",
     "jkkkikikkk.gif": "Orange Watch Battery",
     "vghbnjlkiytrqdc.gif": "Cherry Safety Lolly",
-    "hjskkaieien.gif": "Bounchy Plushie"
+    "hjskkaieien.gif": "Bounchy Plushie",
+    "uyjhmnbhjurfcde.gif": "Memory Pets Stamp"
 }
