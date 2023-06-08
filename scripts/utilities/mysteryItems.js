@@ -214,5 +214,6 @@ const knownItems = {
     "vghbnjlkiytrqdc.gif": "Cherry Safety Lolly",
     "hjskkaieien.gif": "Bounchy Plushie",
     "uyjhmnbhjurfcde.gif": "Memory Pets Stamp",
-    "bjgyprewqxzdtyh.gif": "Private Dental Insurance Map 09"
+    "bjgyprewqxzdtyh.gif": "Private Dental Insurance Map 09",
+    "asdcvbhjkiopytr.gif": "Yellow Osafo Marshmallow"
 }
