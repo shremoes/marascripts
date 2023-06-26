@@ -176,6 +176,7 @@
     "xxpwbyzvcj.gif": "Peppermint Wig",
     "sanndaaaemmifeari.png": "Pink Doyow?",
     "ekalwofirt.gif": "Pink Fertiliser",
+    "aamlplplkj.gif": "Pink Jelly Sticky Hand",
     "jigipapa.gif": "Pistachio Nuts",
     "juiophf.gif": "Pistachio Nuts",
     "sjddisiisis.gif": "Plaster",
