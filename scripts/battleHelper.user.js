@@ -1,9 +1,8 @@
-// ==UserScript==
-// @name        Battle Helper
+// @name        _Battle Helper
 // @namespace   Marascripts
 // @description Automates battling.
 // @author      marascripts
-// @version     1.1.2
+// @version     1.2.0
 // @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/captcha.js
 // @grant       none
 // @match       https://www.marapets.com/battle.php*
@@ -24,36 +23,17 @@
     const doc = document
 
     function getOpponentsTurn () {
-        const battleLogs = doc.querySelectorAll(".battle_logs")
-        if (battleLogs[0].innerText !== "") {
-            const currentHealth = parseInt(doc.querySelectorAll(".opponents2")[0].querySelector(".bigger.healthtxt").innerText)
-            const opponentsAttack = parseInt(battleLogs[1].querySelector(".flex-table4.marapets_border.itempadding .itempadding.bigger").innerText.split(" ")[0])
+      const playerHealth = document.querySelector(".bigger.alsotry")?.innerText.split(" ")
+      if (playerHealth) {
+        const playerCurrent = parseInt(playerHealth[0])
 
-            // TODO: Better calculation
-            // ! Sometimes, the attack is too large and we don't heal.
-            // ? You can subtract an amount from currentHealth, to heal sooner
-            // ! If you subtract to much, it will get stuck in a healing loop
-            if (opponentsAttack >= currentHealth) { heal() }
-            else { attack() }
-        }
+        // Adding 25 to our health account for crits, may need to be adjusted
+        parseInt(playerHealth[2]) - playerCurrent + 25 >= playerCurrent ?
+          document.querySelector("input[value='Heal']")?.click()
+          : document.querySelector(".move1 input[type='submit']")?.click()
+      }
 
-        else { attack() }
-    }
-
-    function heal () {
-        const heal = doc.getElementById("heal")
-        if (heal) { heal.click() }
-
-        const confirmHeal = doc.querySelector("input[value='Heal']")
-        if (confirmHeal) { confirmHeal.click() }
-    }
-
-    function attack () {
-        const attack = doc.getElementById("attack")
-        if (attack) { attack.click() }
-
-        const confirmAttack = doc.querySelector("input[type='submit']")
-        if (confirmAttack) { confirmAttack.click() }
+       else { document.querySelector(".move1 input[type='submit']")?.click() }
     }
 
     function battleAgain () {
@@ -68,6 +48,7 @@
             battleAgain()
         }, 600)
     }
+
 
     if (!document.URL.includes("/battle.php")) {
         setTimeout(() => {
