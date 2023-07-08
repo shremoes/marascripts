@@ -54,6 +54,7 @@
     "hjkuikjgg.gif": "Bowling Ball",
     "hflkfhldfhlhf.gif": "Box of Tissues",
     "miteriokondrierogandrebusker.png": "Brown Rofling Plushie",
+    "aidnklwp.gif": "Bunny Hair Extension",
 
     "wsedrftgyhujkio.gif" : "Candy Corn Cake",
     "hfdlfhshfls.gif": "Candy Floss Trading Card",
