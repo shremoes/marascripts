@@ -36,6 +36,7 @@
     "sjdjdidosos.gif": "Ball of Bronze Yarn",
     "dfhsdfhslfh.gif": "Balloon Collecting Guide",
     "krindixi.gif": "Banana Pen",
+    "sjasiiiiis.gif": "Bat Cake",
     "gygygjgkgl.gif": "Battle Fairy Glowing Egg",
     "kkgweertpz.gif": "Bay Leaves",
     "dggepkkvvq.gif": "Beach",
