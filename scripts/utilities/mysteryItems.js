@@ -124,6 +124,7 @@
     "tykkkeeeikkjedet.png": "Green Hick Plate",
     "aslkalksjd.gif": "Green Whisp?",
     "tyjhkiskdlroytifv.gif": "Grilled Fish",
+    "einfjopms.gif": "Grimmus",
     "hjgkfldseruyygt.gif": "Gummy Scorpion",
 
     "jentnerkommeroggar.png": "Heavy Concoction",
