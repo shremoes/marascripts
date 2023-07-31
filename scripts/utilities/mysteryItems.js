@@ -73,6 +73,7 @@
     "hjgkdlpqirbmxvd.gif": "Clown Muffin",
     "nnannbnncn.gif": "Corrupted Red Glowing Egg",
     "zzsowfnutg.gif": "Corrupted Yellow Glowing Egg",
+    "flurgoob.gif": "Cyborg",
 
     "sqprotidnsoewp.gif": "Dakota Notepad ",
     "jopoiujkio.gif": "Decadal Whip",
