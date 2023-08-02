@@ -1,3 +1,4 @@
+// ==UserScript==
 // @name        _Battle Helper
 // @namespace   Marascripts
 // @description Automates battling.
