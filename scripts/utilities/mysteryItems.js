@@ -232,6 +232,7 @@
     "eoronbkdo.gif": "Sword of King Baspinar V",
 
     "uubbnnrrgh.gif": "Teen Party Hits",
+    "mjdyjtumkfm.gif": "Test Your Strength Potato",
     "oofjgjgjgjgjg.gif": "The Fates Scissor Book",
     "hssksksirtshs.gif": "The Lonely Spider",
     "wewertrtyu.gif": "Trotters Sword",
