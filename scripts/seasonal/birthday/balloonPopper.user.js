@@ -19,6 +19,6 @@
 
     const balloon = document.querySelector(".birthdayeventbox a")
     if (balloon) {
-        window.open(balloon.parentElement.href, 'balloon', 'width=100,height=100,top=0,left=0,resizable=no')
+        window.open(balloon.href, 'balloon', 'width=100,height=100,top=0,left=0,resizable=no')
     }
 })()
