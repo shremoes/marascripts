@@ -60,6 +60,7 @@
     "wsedrftgyhujkio.gif" : "Candy Corn Cake",
     "hfdlfhshfls.gif": "Candy Floss Trading Card",
     "omaeskapaaskulenaasann.png": "Candycane Pin Up Dress",
+    "zhxjckvlbp.gif": "Capsule Machine Token",
     "vbfghjtuyercfwd.gif": "Cheese Potato",
     "vghbnjlkiytrqdc.gif": "Cherry Safety Lolly",
     "hhepinbhvr.gif": "Cherry Sugar Glass?",
