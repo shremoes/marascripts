@@ -32,6 +32,7 @@
     "sdhflfhslhdf.gif": "Angel Hits",
     "ggyhtujfkroidfs.gif": "Angelic Wings",
     "ffjiaogfopfjgkdo.gif": "Anime Wig",
+    "sjsososos.gif": "Autumn Book",
 
     "sjdjdidosos.gif": "Ball of Bronze Yarn",
     "dfhsdfhslfh.gif": "Balloon Collecting Guide",
