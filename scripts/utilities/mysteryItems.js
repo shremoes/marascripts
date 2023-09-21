@@ -248,6 +248,7 @@
     "ectofrog.gif": "Vamps",
     "jfllhlhllksksksk.gif": "Vintage Diary",
 
+    "djkmykmkyimkd.gif": "Wheelee",
     "vpwygxot.gif": "Whirlpool Treasure Map 06",
     "gjepcnusdy.gif": "White Fly Trap",
     "xcvbgfdswertpob.gif": "Winter Costume",
