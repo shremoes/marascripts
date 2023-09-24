@@ -170,6 +170,7 @@
     "alskwieuvn.gif": "Naga Stamp",
     "dslhfsldhflkdf.gif": "New Male Certificate",
     "jsueosldkdkd.gif": "Newth Book",
+    "wdefvgbhytrghjk.gif": "Newth Box Ice Cream",
     "sjsjeoeofo.gif": "Newth Necklace",
     "ikjjeesydepaaenfinda.png": "Nutcracker Action Figure",
 
