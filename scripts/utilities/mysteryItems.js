@@ -32,6 +32,7 @@
     "sdhflfhslhdf.gif": "Angel Hits",
     "ggyhtujfkroidfs.gif": "Angelic Wings",
     "ffjiaogfopfjgkdo.gif": "Anime Wig",
+    "sjsososos.gif": "Autumn Book",
 
     "sjdjdidosos.gif": "Ball of Bronze Yarn",
     "dfhsdfhslfh.gif": "Balloon Collecting Guide",
@@ -60,6 +61,7 @@
     "wsedrftgyhujkio.gif" : "Candy Corn Cake",
     "hfdlfhshfls.gif": "Candy Floss Trading Card",
     "omaeskapaaskulenaasann.png": "Candycane Pin Up Dress",
+    "zhxjckvlbp.gif": "Capsule Machine Token",
     "vbfghjtuyercfwd.gif": "Cheese Potato",
     "vghbnjlkiytrqdc.gif": "Cherry Safety Lolly",
     "hhepinbhvr.gif": "Cherry Sugar Glass?",
@@ -121,6 +123,7 @@
     "jiyrwdbnmm.gif": "Gonk Voodoo Doll",
     "eenbvvioyt.gif": "Good Witch Skirt",
     "jjkukkkytrew.gif": "Grey Paffint",
+    "iiouikmjmg.gif": "Green Flow",
     "kkgjdjslsls.gif": "Green Grint Foot",
     "tykkkeeeikkjedet.png": "Green Hick Plate",
     "aslkalksjd.gif": "Green Whisp?",
@@ -167,6 +170,7 @@
     "alskwieuvn.gif": "Naga Stamp",
     "dslhfsldhflkdf.gif": "New Male Certificate",
     "jsueosldkdkd.gif": "Newth Book",
+    "wdefvgbhytrghjk.gif": "Newth Box Ice Cream",
     "sjsjeoeofo.gif": "Newth Necklace",
     "ikjjeesydepaaenfinda.png": "Nutcracker Action Figure",
 
@@ -245,6 +249,7 @@
     "ectofrog.gif": "Vamps",
     "jfllhlhllksksksk.gif": "Vintage Diary",
 
+    "djkmykmkyimkd.gif": "Wheelee",
     "vpwygxot.gif": "Whirlpool Treasure Map 06",
     "gjepcnusdy.gif": "White Fly Trap",
     "xcvbgfdswertpob.gif": "Winter Costume",
