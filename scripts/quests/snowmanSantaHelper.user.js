@@ -64,7 +64,7 @@
                     window.location.href = stock.includes("stock") && stock.split(" ")[0] !== "0" ? itemSource.parentElement.href : userShopLink.parentElement.href
                 }
                 else { window.location.href = userShopLink.parentElement.href }
-            }, 1000)
+            }, Math.floor(Math.random() * (6500 - 1400) + 1400))
         }
 
         else {
