@@ -248,6 +248,7 @@
 
         "asdcvbhjkiopytr.gif": "Yellow Osafo Marshmallow",
 
+        "tuyiuopkhjgdfsw.gif": "Zarplet",
         "bbjrwety.gif": "Zetlian Figurine",
         "ggoggptyhg.gif": "Zoink Ice Sculpture",
         "gimpwort.gif": "Zoink Ice Sculpture",
