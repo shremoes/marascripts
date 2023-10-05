@@ -97,6 +97,7 @@
         "sosofefivm.gif": "Falling Petals",
         "ddaonncbrz.gif": "Feta",
         "didjwawa.gif": "Figure Skating",
+        "pklzdfhgj.gif": "Filter",
         "xmnuyrgh.gif": "Fire Shower Charm",
         "siliofop.gif": "Fire Spell",
         "ikkesakteikkjefort.png": "Firefly",
