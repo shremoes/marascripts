@@ -127,6 +127,7 @@
         "hjgkfldseruyygt.gif": "Gummy Scorpion",
 
         "jentnerkommeroggar.png": "Heavy Concoction",
+        "fuyjjjkjukkiyki.gif": "Holiday Decorating Guide",
         "cxcxcvcvbv.gif": "Homeless Fairy Wings",
         "utokglapsgehrt.gif": "Hoop Earrings",
         "tyuwqopjnnhj.gif": "Hula Doll",
