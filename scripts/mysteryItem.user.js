@@ -204,6 +204,7 @@
 
         "popoiuyuio.gif": "Sand Cake",
         "yyhmbjipwq.gif": "Sea Salt Wig",
+        "hjkjhgfghy.gif": "Sea Salt Wig",
         "etetgdbcgd.gif": "Sea Water Book",
         "peotitehnmd.gif": "Seasonal Candycane",
         "hsgfjgcbnmc.gif": "Seasonal Vase",
