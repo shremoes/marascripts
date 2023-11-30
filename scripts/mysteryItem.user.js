@@ -21,7 +21,7 @@
     'use strict'
 
     const knownItems = {
-        "euwirywoqk.gif": "10th Birthday Cake?",
+        "euwirywoqk.gif": "10th Birthday Cake",
 
         "bbjkkeyccd.gif": "Alien Grapes",
         "iihujnbhge.gif": "Alien Grapes",
@@ -59,7 +59,7 @@
         "omaeskapaaskulenaasann.png": "Candycane Pin Up Dress",
         "vbfghjtuyercfwd.gif": "Cheese Potato",
         "vghbnjlkiytrqdc.gif": "Cherry Safety Lolly",
-        "hhepinbhvr.gif": "Cherry Sugar Glass?",
+        "hhepinbhvr.gif": "Cherry Sugar Glass",
         "jshshshshshs.gif": "Chibs Shield",
         "lkfhkkksksksks.gif": "Chocolate Strawberry Treats",
         "loaitsowor.gif": "Christmas Cake",
@@ -121,7 +121,7 @@
         "jjkukkkytrew.gif": "Grey Paffint",
         "kkgjdjslsls.gif": "Green Grint Foot",
         "tykkkeeeikkjedet.png": "Green Hick Plate",
-        "aslkalksjd.gif": "Green Whisp?",
+        "aslkalksjd.gif": "Green Whisp",
         "tyjhkiskdlroytifv.gif": "Grilled Fish",
         "einfjopms.gif": "Grimmus",
         "hjgkfldseruyygt.gif": "Gummy Scorpion",
@@ -135,7 +135,7 @@
         "bvgytokqarcxtuj.gif": "Ice Fairy Wings",
         "gfgflglmbmiss.gif": "Icy Cooker",
         "mnpoqwzxtj.gif": "Injured Jam Tart",
-        "kfjdkfjdhs.gif": "Invisible Soup?",
+        "kfjdkfjdhs.gif": "Invisible Soup",
         "mthawpro.gif": "Iris Seeds",
 
         "adgjloyecbtgkuz.gif": "Jar of Bricks ",
@@ -177,7 +177,7 @@
         "jjhhgghjkk.gif": "Peasant Fairy Gloves ",
         "dkfjghrutyvbxpq.gif": "Peeler",
         "xxpwbyzvcj.gif": "Peppermint Wig",
-        "sanndaaaemmifeari.png": "Pink Doyow?",
+        "sanndaaaemmifeari.png": "Pink Doyow",
         "ekalwofirt.gif": "Pink Fertiliser",
         "aamlplplkj.gif": "Pink Jelly Sticky Hand",
         "jigipapa.gif": "Pistachio Nuts",
@@ -188,6 +188,7 @@
         "ikiijuhhyk.gif": "Poop",
         "edcvfrtgbn.gif": "Popstar Scarf",
         "iopoiuyuio.gif": "Pork Stuffed Peppers",
+        "fhjuujhjk.gif": "Prison Songs",
         "bjgyprewqxzdtyh.gif": "Private Dental Insurance Map 09",
         "hfklkskeows.gif": "Psycho Destruction Ballads",
         "kslsosoos.gif": "Pumpee",
