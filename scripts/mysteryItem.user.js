@@ -31,6 +31,7 @@
         "ffjiaogfopfjgkdo.gif": "Anime Wig",
 
         "sjdjdidosos.gif": "Ball of Bronze Yarn",
+        "swinfhgyt.gif": "Ball of Gold Yarn",
         "dfhsdfhslfh.gif": "Balloon Collecting Guide",
         "krindixi.gif": "Banana Pen",
         "sjasiiiiis.gif": "Bat Cake",
