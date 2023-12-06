@@ -149,6 +149,7 @@
 
         "yfcwaxpkujjbtrf.gif": "Kawaii Beats",
         "vvuggihhoj.gif": "King Baspinar Beach Ball",
+        "sljdiddmddmd.gif": "King Baspinar Crown",
 
         "skddodoso.gif": "Ladybird",
         "owoqmsmnfjg.gif": "Leaf Charm",
