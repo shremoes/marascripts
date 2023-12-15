@@ -202,6 +202,7 @@
         "nkjigydrawxscfv.gif": "Radiator Cap",
         "okyhgygrdvvgbfd.gif": "Recycled Egg",
         "daocriupos.gif": "Recycling",
+        "fbvpwtyb.gif": "Red Pythonix Lumbar",
         "yuyugbgbvfredxz.gif": "Rugelach",
         "topafido.gif": "Rusty Twins Plushie",
 
