@@ -194,6 +194,7 @@
         "bjgyprewqxzdtyh.gif": "Private Dental Insurance Map 09",
         "hfklkskeows.gif": "Psycho Destruction Ballads",
         "kslsosoos.gif": "Pumpee",
+        "ghktktyukim.gif": "Purple Candy Cane",
         "jjrghgmcet.gif": "Purple Flix",
         "yampodot.gif": "Purple Pucu Potion",
         "sojuenhd.gif": "Purple Striped Worm",
