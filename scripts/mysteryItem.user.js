@@ -29,6 +29,7 @@
         "sdhflfhslhdf.gif": "Angel Hits",
         "ggyhtujfkroidfs.gif": "Angelic Wings",
         "ffjiaogfopfjgkdo.gif": "Anime Wig",
+        "penjhgsy.gif": "Azul Voodoo Doll",
 
         "sjdjdidosos.gif": "Ball of Bronze Yarn",
         "swinfhgyt.gif": "Ball of Gold Yarn",
