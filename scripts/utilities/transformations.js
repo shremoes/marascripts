@@ -10,6 +10,11 @@
  * ! NOTE: Websites like Greasy Fork will not allow this as it is too long.
  */
 
+// TODO: Add new Gobble items
+// TODO: Add new Rainbow potions
+// TODO: Add new Dalmation potions
+// TODO: Add new Digital potions
+
  const fakeCostumes = {
   "American": 62985,
   "Angel": 53733,
