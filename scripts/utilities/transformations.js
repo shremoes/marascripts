@@ -11,8 +11,6 @@
  */
 
 // TODO: Add new Gobble items
-// TODO: Add new Dalmation potions
-// TODO: Add new Digital potions
 
  const fakeCostumes = {
   "American": 62985,
@@ -1042,8 +1040,32 @@ const potions = {
   "Devil Murfin": 7721,
   "Devil Phanty": 20539,
   "Devil Vixen": 30659,
+  "Digital Addow": 86794,
+  "Digital Mordo": 86797,
+  "Digital Bolimo": 86799,
+  "Digital Chibs": 86802,
+  "Digital Crindol": 86801,
+  "Digital Dakota": 86804,
+  "Digital Doyle": 86806,
   "Digital Equilor": 7669,
+  "Digital Ercuw": 86808,
+  "Digital Fasoro": 86810,
+  "Digital Feliz": 86811,
+  "Digital Flab": 86813,
+  "Digital Gonk": 86816,
+  "Digital Grint": 86817,
   "Digital Huthiq": 8360,
+  "Digital Ideus": 86819,
+  "Digital Jessup": 86821,
+  "Digital Kaala": 86823,
+  "Digital Kidlet": 86824,
+  "Digital Knutt": 86825,
+  "Digital Kujo": 86827,
+  "Digital Lati": 86828,
+  "Digital Leido": 86829,
+  "Digital Limax": 86830,
+  "Digital Mordo": 86832,
+  "Digital Murfin": 86833,
   "Digital Quell": 9499,
   "Digital Yakubi": 7917,
   "Earthfairy Vixen": 30661,
