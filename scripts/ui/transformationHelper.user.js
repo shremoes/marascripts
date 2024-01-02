@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Adds Check Price links for missing transformations.
 // @author      marascripts
-// @version     2.0.0
+// @version     2.0.1
 // @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/transformations.js
 // @grant       none
 // @match       https://www.marapets.com/transformations.php*
