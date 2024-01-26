@@ -13,7 +13,7 @@
 // ==/UserScript==
 
 // TODO: Occasionally will try to buy stock under 100MP
- 
+
 (() => {
     'use strict'
 

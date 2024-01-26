@@ -102,7 +102,7 @@
     }
 
     //* Picks random element and clicks
-    function pickRandom (selector) {
+    function pickRandom(selector) {
         const elements = document.querySelectorAll(selector)
         elements[Math.floor(Math.random() * elements.length)].click()
     }

@@ -23,21 +23,21 @@
 
     const doc = document
 
-    function getOpponentsTurn () {
-      const playerHealth = document.querySelector(".bigger.alsotry")?.innerText.split(" ")
-      if (playerHealth) {
-        const playerCurrent = parseInt(playerHealth[0])
+    function getOpponentsTurn() {
+        const playerHealth = document.querySelector(".bigger.alsotry")?.innerText.split(" ")
+        if (playerHealth) {
+            const playerCurrent = parseInt(playerHealth[0])
 
-        // Adding 25 to our health account for crits, may need to be adjusted
-        parseInt(playerHealth[2]) - playerCurrent + 25 >= playerCurrent ?
-          document.querySelector("input[value='Heal']")?.click()
-          : document.querySelector(".move1 input[type='submit']")?.click()
-      }
+            // Adding 25 to our health account for crits, may need to be adjusted
+            parseInt(playerHealth[2]) - playerCurrent + 25 >= playerCurrent ?
+                document.querySelector("input[value='Heal']")?.click()
+                : document.querySelector(".move1 input[type='submit']")?.click()
+        }
 
-       else { document.querySelector(".move1 input[type='submit']")?.click() }
+        else { document.querySelector(".move1 input[type='submit']")?.click() }
     }
 
-    function battleAgain () {
+    function battleAgain() {
         const battleAgain = doc.querySelector(".g-recaptcha")
         if (battleAgain) { battleAgain.click() }
     }

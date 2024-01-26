@@ -20,7 +20,7 @@
     'use strict'
 
     // Function creates "Check Price" links
-    function createCheckPrice (item, itemId, label) {
+    function createCheckPrice(item, itemId, label) {
         const checkPrice = document.createElement("b")
         checkPrice.innerText = label
         checkPrice.classList.add("pricecheck")

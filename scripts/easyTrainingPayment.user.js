@@ -25,7 +25,7 @@
 (() => {
     'use strict'
 
-    function payFromAttic () {
+    function payFromAttic() {
         const radio = document.getElementById("location2")
         if (radio) {
             radio.click()
@@ -33,7 +33,7 @@
         }
     }
 
-    function setUrl () {
+    function setUrl() {
         const pet = document.querySelector(".petwidth a").href.split("?")[1]
 
         let url = ""
@@ -44,13 +44,13 @@
         GM_setValue("training", url)
     }
 
-    function getPayButton () {
+    function getPayButton() {
         const school = document.querySelector("input[value='Pay for Lesson']")
         const gyms = document.querySelector("input[value='Pay for Training']")
         return gyms ? gyms : school
     }
 
-    function clickShopItem () {
+    function clickShopItem() {
         const itemToBuy = GM_getValue("item")
         const allItems = document.querySelectorAll(".itempadding a span.bigger")
         allItems.forEach((item) => {
@@ -61,7 +61,7 @@
         })
     }
 
-    function goToItem (itemToBuy) {
+    function goToItem(itemToBuy) {
         setTimeout(() => {
             const userShopURL = getUserShop() // Direct URL to buy from user shop
             const inStockURL = checkInStock() // URL to the shop where item is sold

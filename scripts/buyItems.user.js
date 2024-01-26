@@ -25,7 +25,7 @@
     ** Comment out (//) stores you don't want to visit.
     ** Function will pick randomly from the "storesToVisit" variable.
     */
-    function findNewStore () {
+    function findNewStore() {
         const storesToVisit = [
             38, // Armour
             33, // Bakery

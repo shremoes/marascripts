@@ -31,7 +31,7 @@
 
     if (document.URL.includes("scratch=") && !document.querySelector(".middleit.flex-table .fixborders img")) {
         window.scrollTo(0, document.querySelector(".scratchcard_outside").offsetTop)
-        
+
         const cards = GM_getValue("links", [])
         const url = document.URL
         const newCards = cards.filter(card => card !== url)

@@ -30,7 +30,7 @@
 
     const captcha = document.querySelector("input[name='code']")
 
-    function getAttic () {
+    function getAttic() {
         const atticCount = document.querySelector(".pricecheckcontent .banned.same")
         return parseInt(atticCount.innerText.split(" ")[0]) === 0 ? null : atticCount.parentElement.href
     }

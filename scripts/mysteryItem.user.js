@@ -19,7 +19,7 @@
 
     const knownItems = {
         "euwirywoqk.gif": "10th Birthday Cake",
-        
+
         "bbjkkeyccd.gif": "Alien Grapes",
         "iihujnbhge.gif": "Alien Grapes",
         "fhdsflhslsdhf.gif": "Andy",
@@ -28,7 +28,7 @@
         "ffjiaogfopfjgkdo.gif": "Anime Wig",
         "sjsososos.gif": "Autumn Book",
         "penjhgsy.gif": "Azul Voodoo Doll",
-        
+
         "sjdjdidosos.gif": "Ball of Bronze Yarn",
         "swinfhgyt.gif": "Ball of Gold Yarn",
         "dfhsdfhslfh.gif": "Balloon Collecting Guide",
@@ -53,8 +53,8 @@
         "hflkfhldfhlhf.gif": "Box of Tissues",
         "miteriokondrierogandrebusker.png": "Brown Rofling Plushie",
         "aidnklwp.gif": "Bunny Hair Extension",
-        
-        "wsedrftgyhujkio.gif" : "Candy Corn Cake",
+
+        "wsedrftgyhujkio.gif": "Candy Corn Cake",
         "hfdlfhshfls.gif": "Candy Floss Trading Card",
         "omaeskapaaskulenaasann.png": "Candycane Pin Up Dress",
         "zhxjckvlbp.gif": "Capsule Machine Token",
@@ -72,7 +72,7 @@
         "nnannbnncn.gif": "Corrupted Red Glowing Egg",
         "zzsowfnutg.gif": "Corrupted Yellow Glowing Egg",
         "flurgoob.gif": "Cyborg",
-        
+
         "sqprotidnsoewp.gif": "Dakota Notepad ",
         "jopoiujkio.gif": "Decadal Whip",
         "lplpkjkjhy.gif": "Deluxe Hot Dog",
@@ -83,7 +83,7 @@
         "xvzbxvdgsfetrsf.gif": "Domino Plushie",
         "pimplsno.gif": "Drift Wood",
         "ljkhghjpoyjnmbg.gif": "Dukka Coin Skirt",
-        
+
         "rewertytre.gif": "Easter Pancakes",
         "sjsoisososo.gif": "Ebi Shrimp",
         "hhgyhtyuhtu.gif": "Elvis Wig",
@@ -94,7 +94,7 @@
         "predcfvggyujhsq.gif": "Eye Drops",
         "qbbxoprtjm.gif": "Eye Egg",
         "swsedrfvbgyhjkl.gif": "Eye Egg",
-        
+
         "sosofefivm.gif": "Falling Petals",
         "ddaonncbrz.gif": "Feta",
         "didjwawa.gif": "Figure Skating",
@@ -107,7 +107,7 @@
         "fgskfggfssf.gif": "Foh",
         "rtmiyghr.gif": "Football Attack Boot",
         "ityhnfmjkhjgj.gif": "Frozen Necklace",
-        
+
         "kpyrvgwwxdppyii.gif": "Garlic Necklace",
         "bbzxmppkuwttfdg.gif": "Ghost Floaties",
         "jffffklfllllllllllllll.gif": "Giant Red Apple",
@@ -127,19 +127,19 @@
         "tyjhkiskdlroytifv.gif": "Grilled Fish",
         "einfjopms.gif": "Grimmus",
         "hjgkfldseruyygt.gif": "Gummy Scorpion",
-        
+
         "jentnerkommeroggar.png": "Heavy Concoction",
         "fuyjjjkjukkiyki.gif": "Holiday Decorating Guide",
         "cxcxcvcvbv.gif": "Homeless Fairy Wings",
         "utokglapsgehrt.gif": "Hoop Earrings",
         "tyuwqopjnnhj.gif": "Hula Doll",
-        
+
         "bvgytokqarcxtuj.gif": "Ice Fairy Wings",
         "gfgflglmbmiss.gif": "Icy Cooker",
         "mnpoqwzxtj.gif": "Injured Jam Tart",
         "kfjdkfjdhs.gif": "Invisible Soup",
         "mthawpro.gif": "Iris Seeds",
-        
+
         "adgjloyecbtgkuz.gif": "Jar of Bricks ",
         "ykgkguicgh.gif": "Jar of Flowers",
         "hjyukyikyyktk.gif": "Jar of Roses",
@@ -147,11 +147,11 @@
         "shsisisise.gif": "Jasmine",
         "hjfdtyuioh.gif": "Jenoa Wig",
         "flkhkkdkdkdkd.gif": "Jumping Spider",
-        
+
         "yfcwaxpkujjbtrf.gif": "Kawaii Beats",
         "vvuggihhoj.gif": "King Baspinar Beach Ball",
         "sljdiddmddmd.gif": "King Baspinar Crown",
-        
+
         "skddodoso.gif": "Ladybird",
         "owoqmsmnfjg.gif": "Leaf Charm",
         "bopadomy.gif": "Leather Shoes",
@@ -159,24 +159,24 @@
         "eefeegtreg.gif": "Lightning Shield",
         "fghjhgkkfkg.gif": "Lump of Coal",
         "rtujtumnyy.gif": "Lxi Trading Card",
-        
+
         "uyjhmnbhjurfcde.gif": "Memory Pets Stamp",
         "jhuukikiki.gif": "Microphone",
         "sjsduyweyw.gif": "Motherboard",
         "pqowieurythgnvb.gif": "Mummy Poera Plushie",
         "fldkdjjfjfjfjf.gif": "Mutant Squid Soup",
         "mmecdefhop.gif": "Melted Snowman/Snowman Pancakes?",
-        
+
         "alskwieuvn.gif": "Naga Stamp",
         "dslhfsldhflkdf.gif": "New Male Certificate",
         "jsueosldkdkd.gif": "Newth Book",
         "wdefvgbhytrghjk.gif": "Newth Box Ice Cream",
         "sjsjeoeofo.gif": "Newth Necklace",
         "ikjjeesydepaaenfinda.png": "Nutcracker Action Figure",
-        
+
         "jdhshjsis.gif": "Obese Fairy Doll",
         "jkkkikikkk.gif": "Orange Watch Battery",
-        
+
         "zpxocidksl.gif": "Parpy",
         "dfgdfgggh.gif": "Peanuts",
         "jjhhgghjkk.gif": "Peasant Fairy Gloves ",
@@ -202,14 +202,14 @@
         "yampodot.gif": "Purple Pucu Potion",
         "sojuenhd.gif": "Purple Striped Worm",
         "mnbvcfghjuytred.gif": "Purple Walee Balloon",
-        
+
         "nkjigydrawxscfv.gif": "Radiator Cap",
         "okyhgygrdvvgbfd.gif": "Recycled Egg",
         "daocriupos.gif": "Recycling",
         "fbvpwtyb.gif": "Red Pythonix Lumbar",
         "yuyugbgbvfredxz.gif": "Rugelach",
         "topafido.gif": "Rusty Twins Plushie",
-        
+
         "popoiuyuio.gif": "Sand Cake",
         "yyhmbjipwq.gif": "Sea Salt Wig",
         "hjkjhgfghy.gif": "Sea Salt Wig",
@@ -238,7 +238,7 @@
         "fjfjdkdksl.gif": "Strobe Pancakes",
         "ddppddkkij.gif": "Summer Adorab",
         "eoronbkdo.gif": "Sword of King Baspinar V",
-        
+
         "uubbnnrrgh.gif": "Teen Party Hits",
         "hffahlksqop.gif": "Tentacle Hors Doeuvres",
         "mjdyjtumkfm.gif": "Test Your Strength Potato",
@@ -247,20 +247,20 @@
         "wewertrtyu.gif": "Trotters Sword",
         "zrtypumo.gif": "Trowel",
         "frftfgfvfc.gif": "Tundra Stamp",
-        
+
         "uobhrdxqpkpkgyy.gif": "UFO Stamp",
-        
+
         "ifhgmsyrr.gif": "Valentine's Day",
         "ectofrog.gif": "Vamps",
         "jfllhlhllksksksk.gif": "Vintage Diary",
-        
+
         "djkmykmkyimkd.gif": "Wheelee",
         "vpwygxot.gif": "Whirlpool Treasure Map 06",
         "gjepcnusdy.gif": "White Fly Trap",
         "xcvbgfdswertpob.gif": "Winter Costume",
-        
+
         "asdcvbhjkiopytr.gif": "Yellow Osafo Marshmallow",
-        
+
         "tuyiuopkhjgdfsw.gif": "Zarplet",
         "bbjrwety.gif": "Zetlian Figurine",
         "ggoggptyhg.gif": "Zoink Ice Sculpture",

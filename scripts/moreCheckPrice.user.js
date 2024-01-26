@@ -34,7 +34,7 @@
 (() => {
     'use strict'
 
-    function createCheckPrice (item, itemId) {
+    function createCheckPrice(item, itemId) {
         const checkPrice = document.createElement("b")
         checkPrice.innerText = "Check Price"
         checkPrice.classList.add("pricecheck")

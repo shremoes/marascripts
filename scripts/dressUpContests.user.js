@@ -12,15 +12,15 @@
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT
 // ==/UserScript==
-    
+
 // TODO: Show on the News page also.
 
 (() => {
     "use strict"
-    
+
     // "The theme this week is []"
     const themeBanner = document.querySelector(".middleit .manager");
-    
+
     // If blank, show the theme
     if (themeBanner.innerText === "") {
         /**
@@ -137,13 +137,13 @@
             51: "Santa's Helper",
             52: "New Year's Ball"
         };
-    
+
         const themes = document.URL.includes("ugly") ? uglyContest : beautyContest;
         const week = getWeek();
-    
+
         themeBanner.innerText = themes[week];
     }
-    
+
     /**
      * Returns the week of the current year
      * https://stackoverflow.com/questions/6117814/get-week-of-year-in-javascript-like-in-php

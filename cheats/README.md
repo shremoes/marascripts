@@ -3,9 +3,8 @@
 **These are not userscripts!**
 These are small snippets meant to pasted in the browser console while playing games on Marapets.
 
-
 | Game                 | Description                       |
-|----------------------|-----------------------------------|
+| -------------------- | --------------------------------- |
 | Donut Fall           | Makes jumping much faster         |
 | Fairy Flight         | The ceiling and ground don't hurt |
 | Memory               | Flip cards faster                 |

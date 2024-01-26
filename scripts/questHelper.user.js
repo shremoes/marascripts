@@ -42,11 +42,11 @@
 (() => {
     'use strict'
 
-    function checkCaptcha () {
+    function checkCaptcha() {
         return document.getElementById("securitycode") ? true : false
     }
 
-    function setQuestUrl () {
+    function setQuestUrl() {
         const questGiver = document.querySelector(".maralayoutmiddle .mainfeature_start .mainfeature_npc")
         if (questGiver) {
             const moreQuests = questGiver.innerText.trim()
@@ -57,7 +57,7 @@
         }
     }
 
-    async function checkFirstItem () {
+    async function checkFirstItem() {
         const questItems = getQuestItems()
         localStorage.setItem("items", questItems)
 
@@ -70,7 +70,7 @@
         } else if (!checkCaptcha()) { document.querySelector("input[value='Complete Quest']").click() }
     }
 
-    function getLocation () {
+    function getLocation() {
         setQuestUrl()
         const questURL = localStorage.getItem("quest", "")
 

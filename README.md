@@ -3,9 +3,13 @@
 These are userscripts for the digitial petsite [Marapets](https://www.marapets.com).
 
 ---
+
 ## **I do this for fun, and cannot guarantee that they always work 100%**
+
 ## Some scripts are meant to be enabled only while doing the activity, or they will break other features
+
 ## Check the script for settings they will be in CAPITAL LETTERS
+
 ---
 
 [Always Active](https://raw.githubusercontent.com/marascript/userscripts/master/scripts/alwaysActive.user.js) - Play games without the tab being focused  
@@ -33,10 +37,10 @@ These are userscripts for the digitial petsite [Marapets](https://www.marapets.c
 [Spam Forum Poster](https://raw.githubusercontent.com/marascript/userscripts/master/scripts/spam.user.js) - Post random emojis in the Spam forum  
 [Spy and Cosmonaut Helper](https://raw.githubusercontent.com/marascript/userscripts/master/scripts/spyCosmonaut.user.js) - Automates buying the required item  
 [Stock Market Investor](https://raw.githubusercontent.com/marascript/userscripts/master/scripts/stockHelper.user.js) - Buys the cheapest stock  
-[Transformation Collection Helper](https://raw.githubusercontent.com/marascript/userscripts/master/scripts/transformationHelper.user.js) - Lists all available options for a transformation  
-  
+[Transformation Collection Helper](https://raw.githubusercontent.com/marascript/userscripts/master/scripts/transformationHelper.user.js) - Lists all available options for a transformation
+
 [Event Quester](https://raw.githubusercontent.com/marascript/userscripts/master/scripts/seasonal/eventClicker.user.js) - Does the seasonal visiting quests  
 [Event Item Clicker](https://raw.githubusercontent.com/marascript/userscripts/master/scripts/seasonal/eventItemClicker.user.js) - Clicks seasonal boxes around the site  
-[Visit Online Players](https://raw.githubusercontent.com/marascript/userscripts/master/scripts/seasonal/onlinePlayerVisitor.user.js) - Visit all the online players during events  
-  
-[Page Refresher](https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/refresher.user.js) - Enter URLs to automatically refresh pages  
+[Visit Online Players](https://raw.githubusercontent.com/marascript/userscripts/master/scripts/seasonal/onlinePlayerVisitor.user.js) - Visit all the online players during events
+
+[Page Refresher](https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/refresher.user.js) - Enter URLs to automatically refresh pages

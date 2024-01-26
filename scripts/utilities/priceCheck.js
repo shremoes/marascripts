@@ -6,14 +6,14 @@
  */
 
 /** Compares user shop price to shop price */
-function isUserShopCheaper () {
+function isUserShopCheaper() {
     const userPrice = parseInt(document.querySelector(".alsotry.same.strong").innerText.split(" ")[2].split("MP")[0].replace(/,/g, ""))
     const shopPrice = parseInt(document.querySelector("span.sitedate.same.italic").innerText.split(" ").pop().split("MP")[0].replace(/,/g, ""))
     return shopPrice <= userPrice ? false : true
 }
 
 /** Checks if an item is in stock */
-function checkInStock () {
+function checkInStock() {
     const itemSource = document.querySelector(".pricechecktable .sitedate.same.italic")
     if (itemSource) {
         const stock = itemSource.innerText
@@ -21,45 +21,45 @@ function checkInStock () {
     } else { return null }
 }
 
-/**
+/** 
  * Checks if item is retired
  * TODO: Update for new retired style
  */
-function checkRetired () {
+function checkRetired() {
     const retired = document.querySelector(".pricechecktable .banned.same.italic")
     const retiredAlt = document.querySelector(".pricechecktable .offline.same.italic")
     return retired || retiredAlt ? true : false
 }
 
 /** Checks if we have the item in the attic */
-function getAttic () {
+function getAttic() {
     const atticCount = document.querySelector(".pricecheckcontent .banned.same")
     return parseInt(atticCount.innerText.split(" ")[0]) === 0 ? null : atticCount.parentElement.href
 }
 
 /** Checks if sold in user shop and returns URL */
-function getUserShop () {
+function getUserShop() {
     const userShopLink = document.querySelector(".pricechecktable .alsotry.same.strong")
     return userShopLink ? userShopLink.parentElement.href : null
 }
 
 /** Clicks "Check Price" based on items id */
-function priceCheckById (itemId) {
+function priceCheckById(itemId) {
     document.querySelector(`a[data-id='${itemId}']`).click()
 }
 
 /** Clicks "Check Price", for use if there is only one itme */
-function priceCheck () {
+function priceCheck() {
     document.querySelector(".dopricecheck").click()
 }
 
 /** Goes to the a URL */
-function goTo (url) {
+function goTo(url) {
     location.href = url
 }
 
 /** Finds best price for item and returns the URL */
-function doPriceCheck () {
+function doPriceCheck() {
     let itemURL = ""
 
     const atticURL = getAttic()
@@ -85,7 +85,7 @@ function doPriceCheck () {
 /** Gets quest items
  * TODO: Don't base of checkmark
  */
-function getQuestItems () {
+function getQuestItems() {
     const questItemsTable = document.querySelector(".bigsearchbox.middleit .flex-table2")
 
     if (questItemsTable) {

@@ -23,12 +23,12 @@
 (() => {
     'use strict'
 
-    function checkPrice () {
+    function checkPrice() {
         const priceCheck = document.querySelector(".dopricecheck")
         priceCheck.click()
     }
 
-    function beginQuest () {
+    function beginQuest() {
         const accept = document.querySelector("input[value='Accept Quest']")
         const spyAgain = document.querySelector("input[value='Quest Desert Spy Again']")
         const cosmoAgain = document.querySelector("input[value='Quest Cosmonaut Again']")
@@ -39,7 +39,7 @@
         else { return }
     }
 
-    function buyItem () {
+    function buyItem() {
         const itemToBuy = document.querySelector("div.marapets_border5 a")
         if (itemToBuy) { itemToBuy.click() }
 

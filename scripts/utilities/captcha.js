@@ -14,8 +14,8 @@ if (captcha) {
         if (captcha.value.length === 6) {
             // TODO: Find consistent selector
             const submitButton = document.querySelector("input[type='submit']")
-            ? document.querySelector("input[type='submit']")
-            : document.querySelector("button.g-recaptcha")
+                ? document.querySelector("input[type='submit']")
+                : document.querySelector("button.g-recaptcha")
 
             submitButton.click()
         }

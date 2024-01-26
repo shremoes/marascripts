@@ -107,7 +107,7 @@
     const atPerscilla = document.URL === "https://www.marapets.com/inn.php"
     const atComputerRepair = document.URL === "https://www.marapets.com/computer.php"
 
-    function updateSkill (skill, needed) {
+    function updateSkill(skill, needed) {
         const toReplace = skill.parentElement.parentElement.querySelector(".text-right b")
         const currentStats = toReplace.innerText.split("/")[0]
 
@@ -118,7 +118,7 @@
     }
 
     // Actor
-    function updateActor () {
+    function updateActor() {
         if (onProfile || atEliteGym) {
             updateSkill(coordination, 100)
             updateSkill(balance, 130)
@@ -149,7 +149,7 @@
         }
     }
 
-    function updateArchitect () {
+    function updateArchitect() {
         if (onProfile || atEliteGym) {
             updateSkill(coordination, 100)
         }
@@ -176,7 +176,7 @@
         }
     }
 
-    function updateAstronaut () {
+    function updateAstronaut() {
         if (onProfile || atEliteGym) {
             updateSkill(stamina, 300)
             updateSkill(coordination, 200)
@@ -219,7 +219,7 @@
         }
     }
 
-    function updateAthlete () {
+    function updateAthlete() {
         if (onProfile || atEliteGym) {
             updateSkill(stamina, 200)
             updateSkill(coordination, 200)
@@ -246,7 +246,7 @@
         }
     }
 
-    function updateBanker () {
+    function updateBanker() {
         if (onProfile || atSchool) {
             updateSkill(math, 200)
         }
@@ -273,7 +273,7 @@
         }
     }
 
-    function updateEntrepeneur () {
+    function updateEntrepeneur() {
         if (onProfile || atPerscilla) {
             updateSkill(charisma, 175)
         }
@@ -295,7 +295,7 @@
         }
     }
 
-    function updateChef () {
+    function updateChef() {
         if (onProfile || atEliteGym) {
             updateSkill(stamina, 125)
             updateSkill(coordination, 125)
@@ -327,7 +327,7 @@
         }
     }
 
-    function updateClown () {
+    function updateClown() {
         if (onProfile || atEliteGym) {
             updateSkill(stamina, 200)
             updateSkill(coordination, 250)
@@ -361,7 +361,7 @@
         }
     }
 
-    function updateDoctor () {
+    function updateDoctor() {
         if (onProfile || atEliteGym) {
             updateSkill(stamina, 200)
             updateSkill(coordination, 250)
@@ -397,7 +397,7 @@
         }
     }
 
-    function updateFireFighter () {
+    function updateFireFighter() {
         if (onProfile || atEliteGym) {
             updateSkill(stamina, 200)
             updateSkill(coordination, 100)
@@ -438,7 +438,7 @@
 
     }
 
-    function updateHacker () {
+    function updateHacker() {
         if (onProfile || atEliteGym) {
             updateSkill(stamina, 200)
         }
@@ -471,7 +471,7 @@
         }
     }
 
-    function updateJournalist () {
+    function updateJournalist() {
         if (onProfile || atEliteGym) {
             updateSkill(stamina, 110)
         }
@@ -504,7 +504,7 @@
         }
     }
 
-    function updateMechanic () {
+    function updateMechanic() {
         if (onProfile || atEliteGym) {
             updateSkill(balance, 80)
             updateSkill(coordination, 70)
@@ -537,7 +537,7 @@
         }
     }
 
-    function updateModel () {
+    function updateModel() {
         if (onProfile || atEliteGym) {
             updateSkill(balance, 200)
             updateSkill(coordination, 200)
@@ -568,7 +568,7 @@
         }
     }
 
-    function updatePoliceOfficer () {
+    function updatePoliceOfficer() {
         if (onProfile || atEliteGym) {
             updateSkill(stamina, 175)
         }
@@ -601,7 +601,7 @@
         }
     }
 
-    function updatePolitician () {
+    function updatePolitician() {
         if (onProfile || atEliteGym) {
             updateSkill(stamina, 200)
         }
@@ -631,7 +631,7 @@
         }
     }
 
-    function updatePopStar () {
+    function updatePopStar() {
         if (onProfile || atEliteGym) {
             updateSkill(coordination, 250)
         }
@@ -656,7 +656,7 @@
         }
     }
 
-    function updateProgrammer () {
+    function updateProgrammer() {
         if (onProfile || atEliteGym) {
             updateSkill(stamina, 120)
         }
@@ -686,7 +686,7 @@
         }
     }
 
-    function updateScientist () {
+    function updateScientist() {
         if (onProfile || atEliteGym) {
             updateSkill(coordination, 175)
         }
@@ -715,7 +715,7 @@
         }
     }
 
-    function updateSoldier () {
+    function updateSoldier() {
         if (onProfile || atEliteGym) {
             updateSkill(coordination, 150)
             updateSkill(stamina, 150)
@@ -756,7 +756,7 @@
         }
     }
 
-    function updateSpy () {
+    function updateSpy() {
         if (onProfile || atEliteGym) {
             updateSkill(coordination, 125)
             updateSkill(stamina, 125)
@@ -796,7 +796,7 @@
         }
     }
 
-    function updateTeacher () {
+    function updateTeacher() {
         if (onProfile || atEliteGym) {
             updateSkill(stamina, 150)
         }
@@ -835,7 +835,7 @@
         }
     }
 
-    function updateThief () {
+    function updateThief() {
         if (onProfile || atEliteGym) {
             updateSkill(stamina, 160)
             updateSkill(coordination, 20)
@@ -870,7 +870,7 @@
         }
     }
 
-    function updateVterinarian () {
+    function updateVterinarian() {
         if (onProfile || atEliteGym) {
             updateSkill(stamina, 125)
             updateSkill(coordination, 100)
