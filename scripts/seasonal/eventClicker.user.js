@@ -11,6 +11,10 @@
 // @license     MIT
 // ==/UserScript==
 
+/**
+ * ! Conflicts with other questing scripts.
+ */
+
 (() => {
     'use strict'
 
