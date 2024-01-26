@@ -7,7 +7,7 @@
 // @grant       none
 // @match       https://www.marapets.com/drew.php*
 // @match       https://www.marapets.com/socks.php*
-// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/quests/drewShusanHelper.user.js
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/drewShusanHelper.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT

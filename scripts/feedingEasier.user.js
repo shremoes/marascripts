@@ -10,7 +10,7 @@
 // @match       https://www.marapets.com/knutthouse.php*
 // @match       https://www.marapets.com/robots.php*
 // @match       https://www.marapets.com/elekaprison.php*
-// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/quests/feedingEasier.user.js
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/feedingEasier.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT

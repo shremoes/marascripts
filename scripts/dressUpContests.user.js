@@ -7,6 +7,9 @@
 // @grant       none
 // @match       https://www.marapets.com/beautycontest.php*
 // @match       https://www.marapets.com/uglycontest.php*
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/dressUpContests.user.js
+// @homepageURL https://github.com/marascript/userscripts
+// @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT
 // ==/UserScript==
     

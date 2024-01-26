@@ -7,7 +7,7 @@
 // @grant       GM_setValue
 // @grant       GM_getValue
 // @match       https://www.marapets.com/scratchcards*
-// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/ui/betterScratchcards.user.js
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/betterScratchcards.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT

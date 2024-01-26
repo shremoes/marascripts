@@ -7,6 +7,7 @@
 // @grant       none
 // @match       https://www.marapets.com/stalker.php*
 // @match       https://www.marapets.com/avatars.php?missing=1*
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/avatarSolutionLinker.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT
