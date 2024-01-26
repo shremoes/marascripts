@@ -1,5 +1,9 @@
-/*jshint -W033 */
-/*jshint -W098 */
+/**
+ * Various helper functions for price checking.
+ * 
+ * Paste the following in any userscript:
+ * @require https://github.com/marascript/userscripts/raw/master/scripts/utilities/priceCheck.js
+ */
 
 /** Compares user shop price to shop price */
 function isUserShopCheaper () {
