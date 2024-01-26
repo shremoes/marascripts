@@ -25,15 +25,13 @@
 // @match       https://www.marapets.com/shops.php*
 // @match       https://www.marapets.com/club.php*
 // @run-at      document-end
-// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/ui/moreCheckPrice.user.js
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/moreCheckPrice.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT
 // ==/UserScript==
-/*jshint -W033 */
-/*jshint -W107 */
 
-(function () {
+(() => {
     'use strict'
 
     function createCheckPrice (item, itemId) {
