@@ -4,6 +4,8 @@ These are userscripts for the digitial petsite [Marapets](https://www.marapets.c
 
 ---
 ## **I do this for fun, and cannot guarantee that they always work 100%**
+## Some scripts are meant to be enabled only while doing the activity, or they will break other features
+## Check the script for settings they will be in CAPITAL LETTERS
 ---
 
 [Always Active](https://raw.githubusercontent.com/marascript/userscripts/master/scripts/alwaysActive.user.js) - Play games without the tab being focused  
