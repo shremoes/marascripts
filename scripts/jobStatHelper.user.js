@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name        Job Training Assistant
+// @name        Job Stat Helper
 // @namespace   Marascripts
 // @description Shows stats needed for each job on training pages, and profiles.
 // @author      marascripts
@@ -12,12 +12,11 @@
 // @match       https://www.marapets.com/pets.php*
 // @match		https://www.marapets.com/inn.php
 // @match       https://www.marapets.com/computer.php
-// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/jobTrainingAssist.user.js
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/jobStatHelper.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT
 // ==/UserScript==
-/*jshint -W033 */
 
 /**
  * TODO: Computer repair and Percilla aren't working.

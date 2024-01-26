@@ -6,18 +6,15 @@
 // @version     1.1.3
 // @grant       GM.setValue
 // @grant       GM_getValue
-// @version     1.0
+// @version     1.0.0
 // @match       https://www.marapets.com/shop.php*
-// @run-at      document-idle
 // @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/buyItems.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT
 // ==/UserScript==
-/*jshint -W033 */
-/*jshint -W117 */ // Avoid JSHint errors in editor for GM* functions
 
-(function () {
+(() => {
     'use strict'
 
     const doc = document
