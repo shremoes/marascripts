@@ -16,14 +16,13 @@
 // @match       https://www.marapets.com/feature_games.php
 // @match       https://www.marapets.com/all_games.php
 // @match       https://www.marapets.com/favourites.php
-// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/ui/hideUnavailable.user.js
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/hideUnavailable.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL  https://github.com/marascript/userscripts/issues
 // @license     MIT
 // ==/UserScript==
-/*jshint -W033 */
 
-(function () {
+(() => {
     'use strict'
 
     document.getElementById("buttonhideun").click()
