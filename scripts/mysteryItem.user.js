@@ -6,18 +6,15 @@
 // @version     1.1.14
 // @grant       none
 // @match       https://www.marapets.com/icefairy.php
-// @run-at      document-idle
 // @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/mysteryItem.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT
 // ==/UserScript==
-/*jshint -W033 */
-/*jshint -W117 */
 
 // ! Some answers may be incorrect or misspelled.
 
-(function () {
+(() => {
     'use strict'
 
     const knownItems = {
