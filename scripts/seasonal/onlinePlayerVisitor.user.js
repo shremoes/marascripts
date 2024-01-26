@@ -1,26 +1,32 @@
 // ==UserScript==
-// @name        Inviter
+// @name        Online Players Visitor
 // @namespace   Marascripts
-// @description Birthdays
+// @description Visits online players during events.
 // @author      marascripts
 // @version     1.0.2
 // @grant       GM_setValue
 // @grant       GM_getValue
-// @grant       GM_registerMenuCommand
 // @match       https://www.marapets.com/profile.php?id=*
 // @match       https://www.marapets.com/online.php
-// @run-at      document-idle
+// @homepageURL https://github.com/marascript/userscripts
+// @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT
 // ==/UserScript==
-/*jshint -W033 */
-/*jshint -W117 */ // Avoid JSHint errors in editor for GM* functions
 
-(function () {
+// TODO: Clear entries when done
+
+(() => {
     'use strict'
 
-    const visited = GM_getValue("visited", [])
+    /**
+     * Set to either one of the following:
+     * birthday
+     * christmas
+     * halloween
+     */
+    const holiday = "birthday"
 
-    GM_registerMenuCommand("Reset visited", function () { GM_setValue("visited", []) })
+    const visited = GM_getValue("visited", [])
 
     if (document.URL.includes("online")) {
         const allOnline = document.querySelectorAll(".mainfeature_start a")
@@ -35,7 +41,7 @@
         for (const profile in allOnline) {
             const href = allOnline[profile].href
             if (href && href !== "" && href.includes("id=")) {
-                const goTo = allOnline[profile].href + "&birthday=1"
+                const goTo = allOnline[profile].href + `&${holiday}=1`
                 setTimeout(() => {
                     location.href = goTo
                 }, Math.random() * (2000 - 1500) + 1500)
@@ -44,7 +50,7 @@
         }
     }
 
-    if (document.URL.includes("profile") && document.URL.includes("&birthday=1")) {
+    if (document.URL.includes("profile") && document.URL.includes(`&${holiday}=1`)) {
         visited.push(location.href.split("&")[0])
         GM_setValue("visited", visited)
         setTimeout(() => {
