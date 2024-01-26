@@ -56,15 +56,13 @@
 // @match       https://www.marapets.com/racing.php*
 // @match       https://www.marapets.com/jobs.php
 // @match       https://www.marapets.com/fruitmachine.php
-// @run-at      document-idle
 // @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/simpleDailies.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT
 // ==/UserScript==
-/*jshint -W033 */
 
-(function () {
+(() => {
     "use strict"
     const path = location.pathname
 
@@ -107,14 +105,6 @@
     function pickRandom (selector) {
         const elements = document.querySelectorAll(selector)
         elements[Math.floor(Math.random() * elements.length)].click()
-    }
-
-    //* Free Bingo tickets
-    if (path === "/bingo.php") {
-        const buyAllFree = document.querySelector("form[action='bingo.php?buyall=1&type=1'] input")
-        if (buyAllFree) {
-            buyAllFree.click()
-        }
     }
 
     //* Guess the Weight
@@ -310,15 +300,6 @@
                 const panTwo = document.querySelector("a[href='pancakes.php?play=1&id=2']")
                 panTwo.click()
             }
-        }
-    }
-
-    //* Bingo (only free)
-    // TODO: Doesn't work...
-    if (path === "/bingo.php") {
-        const buyFreeTickets = document.querySelector("form[action='bingo.php?buyall=1&type=1'] input")
-        if (buyFreeTickets) {
-            buyFreeTickets.click()
         }
     }
 })()

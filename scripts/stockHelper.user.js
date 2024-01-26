@@ -6,19 +6,15 @@
 // @version     1.0.1
 // @grant       none
 // @match       https://www.marapets.com/shares.php*
-// @run-at      document-idle
 // @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/stockHelper.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT
 // ==/UserScript==
-/*jshint -W033 */
 
-/**
- * TODO: Will try to buy stock under 100MP
- */
-
-(function () {
+// TODO: Occasionally will try to buy stock under 100MP
+ 
+(() => {
     'use strict'
 
     if (!document.querySelector(".middleit.comebackbox")) {

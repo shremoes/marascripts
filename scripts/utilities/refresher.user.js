@@ -5,24 +5,21 @@
 // @author      marascripts
 // @version     1.0.0
 // @grant       none
-// @match       
-// @run-at      document-idle
-// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/refresher.user.js
+// @match       ADD YOUR LINKS HERE
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT
 // ==/UserScript==
-/*jshint -W033 */
 
 /**
  * ! Add URLS you want to match on their own line in the block above
- * ! This won't do anything unless another script interact with the page
+ * ! This won't do anything unless another script interacts with the page
  * 
  * * This just reloads the page, and if another script clicks or does something
  * * this will do it again, and then go back to the original page.
  */
 
-(function () {
+(() => {
     'use strict'
 
     // * Set the amount of time in milliseconds

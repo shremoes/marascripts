@@ -6,15 +6,13 @@
 // @version     1.0.0
 // @grant       none
 // @match       https://www.marapets.com/competitions.php*
-// @run-at      document-idle
 // @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/olympicsHelper.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT
 // ==/UserScript==
-/*jshint -W033 */
 
-(function () {
+(() => {
     'use strict'
 
     const events = document.querySelectorAll(".eachpet_box.marapets_border")

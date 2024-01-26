@@ -9,21 +9,19 @@
 // @match       https://www.marapets.com/bpbank.php
 // @match       https://www.marapets.com/rpbank.php
 // @match       https://www.marapets.com/bank.php
-// @run-at      document-idle
 // @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/bankingAssistant.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT
 // ==/UserScript==
-/*jshint -W033 */
 
-(function () {
+(() => {
     'use strict'
 
     // At ATM automatically fill in PIN fields
     if (location.pathname === "/atm.php") {
         /**
-         * * Put PIN here.
+         * * Put PIN here. Don't think it matters though.
          */
         const MY_PIN = "0000"
 

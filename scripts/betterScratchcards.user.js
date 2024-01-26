@@ -7,16 +7,13 @@
 // @grant       GM_setValue
 // @grant       GM_getValue
 // @match       https://www.marapets.com/scratchcards*
-// @run-at      document-idle
-// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/ui/betterScratchcards.user.js
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/betterScratchcards.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT
 // ==/UserScript==
-/*jshint -W033 */
-/*jshint -W117 */ // Avoid JSHint errors in editor for GM* functions
 
-(function () {
+(() => {
     'use strict'
 
     // If we are on scratchcard selection page, save all links for use later

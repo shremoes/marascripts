@@ -7,16 +7,13 @@
 // @grant       GM_setValue
 // @grant       GM_getValue
 // @match       https://www.marapets.com/topics.php*
-// @run-at      document-idle
 // @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/spam.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT
 // ==/UserScript==
-/*jshint -W033 */
-/*jshint -W117 */ // Avoid JSHint errors in editor for GM* functions
 
-(function () {
+(() => {
     'use strict'
 
     const URL = document.URL

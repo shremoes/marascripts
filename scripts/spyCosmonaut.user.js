@@ -10,19 +10,17 @@
 // @match       https://www.marapets.com/spy.php*
 // @match       https://www.marapets.com/shop.php*
 // @match       https://www.marapets.com/cosmonaut.php*
-// @run-at      document-idle
-// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/quests/spyCosmonaut.user.js
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/spyCosmonaut.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT
 // ==/UserScript==
-/*jshint -W033 */
 
 /**
- * TODO: Use the utilities file for checking prices.
+ * ! Conflicts with other questing scripts.
  */
 
-(function () {
+(() => {
     'use strict'
 
     function checkPrice () {

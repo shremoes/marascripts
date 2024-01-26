@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name        Pet Training Helper
+// @name        Easy Training Payment
 // @namespace   Marascripts
 // @description Pays for pet training and school.
 // @author      marascripts
@@ -12,20 +12,17 @@
 // @match       https://www.marapets.com/elitegym.php*
 // @match       https://www.marapets.com/shops.php*
 // @match       https://www.marapets.com/shop.php*
-// @run-at      document-idle
-// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/petTraining.user.js
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/easyTrainingPayment.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT
 // ==/UserScript==
-/*jshint -W033 */
-/*jshint -W117 */ // Avoid JSHint errors in editor for GM* functions
 
 /**
  * TODO: Use utilities file for checking prices.
  */
 
-(function () {
+(() => {
     'use strict'
 
     function payFromAttic () {

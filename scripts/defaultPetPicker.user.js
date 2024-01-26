@@ -17,15 +17,15 @@
 // @match       https://www.marapets.com/elekafountain.php
 // @match       https://www.marapets.com/rollercoaster.php
 // @match       https://www.marapets.com/portal.php
-// @run-at      document-idle
 // @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/defaultPetPicker.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT
 // ==/UserScript==
-/*jshint -W033 */
 
-(function () {
+// TODO: Add option to set a pet ID
+
+(() => {
     'use strict'
 
     const defaultPetImg = document.querySelector(".defaultpet")

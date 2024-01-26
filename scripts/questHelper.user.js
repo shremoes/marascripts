@@ -6,8 +6,7 @@
 // @version     1.1.3
 // @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/priceCheck.js
 // @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/captcha.js
-// @grant       GM_setValue
-// @grant       GM_getValue
+// @grant       none
 // @match       https://www.marapets.com/carpenter.php*
 // @match       https://www.marapets.com/shop.php*
 // @match       https://www.marapets.com/shops.php*
@@ -30,16 +29,17 @@
 // @match       https://www.marapets.com/truck.php*
 // @match       https://www.marapets.com/leprechaun.php*
 // @license     MIT
-// @run-at      document-idle
-// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/quests/questHelper.user.js
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/questHelper.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT
 // ==/UserScript==
-/*jshint -W033 */
-/*jshint -W117 */ // Avoid JSHint errors in editor for GM* functions
 
-(function () {
+/**
+ * ! Conflicts with other questing scripts.
+ */
+
+(() => {
     'use strict'
 
     function checkCaptcha () {
@@ -52,14 +52,14 @@
             const moreQuests = questGiver.innerText.trim()
             if (moreQuests === "Complete more Quests") {
                 const questUrl = document.URL.split("?")[0]
-                GM_setValue("quest", questUrl)
+                localStorage.setItem("quest", questUrl)
             }
         }
     }
 
     async function checkFirstItem () {
         const questItems = getQuestItems()
-        GM_setValue("items", questItems)
+        localStorage.setItem("items", questItems)
 
         if (questItems[0]) {
             priceCheckById(questItems[0].check)
@@ -72,7 +72,7 @@
 
     function getLocation () {
         setQuestUrl()
-        const questURL = GM_getValue("quest", "")
+        const questURL = localStorage.getItem("quest", "")
 
         if (document.URL.includes(questURL)) {
             const message = document.querySelector(".maralayoutmiddle div.bigger.middleit.btmpad6")

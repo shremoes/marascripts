@@ -14,19 +14,18 @@
 // @match       https://www.marapets.com/shop.php*
 // @match       https://www.marapets.com/shops.php*
 // @match       https://www.marapets.com/attic.php*
-// @run-at      document-idle
-// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/quests/snowmanSantaHelper.user.js
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/snowmanSantaHelper.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT
 // ==/UserScript==
-/*jshint -W033 */
 
 /**
- * TODO: Use the utilities file for checking prices.
+ * TODO: Use the utilities file for checking prices and captchas.
+ * ! Conflicts with other questing scripts.
  */
 
-(function () {
+(() => {
     "use strict"
 
     const captcha = document.querySelector("input[name='code']")

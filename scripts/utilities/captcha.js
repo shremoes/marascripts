@@ -1,5 +1,3 @@
-/*jshint -W033 */
-
 /**
  * Script to include with others to target a captcha,
  * and once six numbers are entered, click submit.
@@ -14,14 +12,12 @@ if (captcha) {
     captcha.focus()
     captcha.oninput = () => {
         if (captcha.value.length === 6) {
-            const submitType = document.querySelector("input[type='submit']")
-            const submitButton = document.querySelector("button.g-recaptcha")
-            if (submitType) {
-                submitType.click()
-            }
-            else {
-                submitButton.click()
-            }
+            // TODO: Find consistent selector
+            const submitButton = document.querySelector("input[type='submit']")
+            ? document.querySelector("input[type='submit']")
+            : document.querySelector("button.g-recaptcha")
+
+            submitButton.click()
         }
     }
 }

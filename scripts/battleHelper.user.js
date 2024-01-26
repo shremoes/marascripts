@@ -10,15 +10,15 @@
 // @match       https://www.marapets.com/talon.php*
 // @match       https://www.marapets.com/sumo.php*
 // @match       https://www.marapets.com/knight.php*
-// @run-at      document-idle
 // @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/battleHelper.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT
 // ==/UserScript==
-/*jshint -W033 */
 
-(function () {
+// TODO: Add an easier way to stop
+
+(() => {
     'use strict'
 
     const doc = document
@@ -42,14 +42,12 @@
         if (battleAgain) { battleAgain.click() }
     }
 
-    // If there is no captcha, proceed
     if (!doc.querySelector(".middleit .more.italic") && doc.querySelector(".opponents")) {
         setTimeout(() => {
             getOpponentsTurn()
             battleAgain()
         }, 600)
     }
-
 
     if (!document.URL.includes("/battle.php")) {
         setTimeout(() => {

@@ -1,24 +1,25 @@
 // ==UserScript==
 // @name        Avatar Solution Linker
 // @namespace   Marascripts
-// @description Adds direct links to Maraforce to missing or Slatere Stalker avatars.
+// @description Adds direct links to Maraforce to missing or Slater Stalker avatars.
 // @author      marascripts
 // @version     1.0.2
 // @grant       none
 // @match       https://www.marapets.com/stalker.php*
 // @match       https://www.marapets.com/avatars.php?missing=1*
-// @run-at      document-idle
-// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/ui/avatarSolutionLinker.user.js
+// @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/avatarSolutionLinker.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT
 // ==/UserScript==
-/*jshint -W033 */
 
-(function () {
+(() => {
     'use strict'
 
-    if (document.URL.includes("/avatars.php")) {
+    // Set to 1 if you have the giftbox
+    const HAS_GIFTBOX = 0
+
+    if (document.URL.includes("/avatars.php") && HAS_GIFTBOX) {
         const missingAvatars = document.querySelectorAll("#eachitemdiv")
 
         for (const avatar in missingAvatars) {
