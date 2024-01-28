@@ -176,6 +176,7 @@
 
         "jdhshjsis.gif": "Obese Fairy Doll",
         "jkkkikikkk.gif": "Orange Watch Battery",
+        "grimpond.gif": "Osafo Backpack",
 
         "zpxocidksl.gif": "Parpy",
         "dfgdfgggh.gif": "Peanuts",
