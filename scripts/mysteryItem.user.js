@@ -246,6 +246,7 @@
         "oofjgjgjgjgjg.gif": "The Fates Scissor Book",
         "hssksksirtshs.gif": "The Lonely Spider",
         "wewertrtyu.gif": "Trotters Sword",
+        "jjjdjieiwowmcm.gif": "Trotters Sword",
         "zrtypumo.gif": "Trowel",
         "frftfgfvfc.gif": "Tundra Stamp",
 

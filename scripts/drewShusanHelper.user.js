@@ -12,7 +12,6 @@
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT
 // ==/UserScript==
-/*jshint -W033 */
 
 /**
  * Completes Drew/Shusan quests and accepts the next one.
@@ -29,14 +28,10 @@
         const itemsRequested = document.querySelectorAll(".dopricecheck").length
         const checks = document.querySelectorAll("img[src='https://images.marapets.com/tick.png']").length
 
-        // If we don't have all items, show an alert.
-        // Due to the cost of some items, and that some are unbuyable, this is the best option.
         if (checks !== itemsRequested) {
             alert("Missing items.")
         }
 
-        // If we have all items complete the quest, if we have a captch
-        // wait for six numbers, then complete the quest.
         else {
             const captcha = document.querySelector("input[name='code']")
             const complete = document.querySelector("input[type='submit']")
@@ -53,7 +48,6 @@
         }
     }
 
-    // If we can quest again, click the button.
     const questAgain = document.querySelector(".middleit input")
     if (questAgain.value.includes("Again")) {
         questAgain.click()
