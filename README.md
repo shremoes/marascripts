@@ -31,7 +31,7 @@ These are userscripts for the digitial petsite [Marapets](https://www.marapets.c
 [Mystery Item Guesser](https://raw.githubusercontent.com/marascript/userscripts/master/scripts/mysteryItem.user.js) - Fill in known mystery items automatically  
 [Olympics Helper](https://raw.githubusercontent.com/marascript/userscripts/master/scripts/olympicsHelper.user.js) - Enter the best event for all your pets  
 [Quest Helper](https://raw.githubusercontent.com/marascript/userscripts/master/scripts/questHelper.user.js) - Questing made easier  
-[Scroll to Top](https://raw.githubusercontent.com/marascript/userscripts/master/scripts/scrollToTop.user.js)  
+[Scroll to Top](https://raw.githubusercontent.com/marascript/userscripts/master/scripts/scrollToTop.user.js) - Add scroll to top button to every page  
 [Shop Pricer Easy Mode](https://raw.githubusercontent.com/marascript/userscripts/master/scripts/shopPricer.user.js) - Price all pages in your shop with one click  
 [Simple Dailies](https://raw.githubusercontent.com/marascript/userscripts/master/scripts/simpleDailies.js) - Automates all the clicking dailies around the site  
 [Snowman and Secret Santa Helper](https://raw.githubusercontent.com/marascript/userscripts/master/scripts/snowmanSantaHelper.user.js) - Automates the quests  
