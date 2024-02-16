@@ -154,6 +154,7 @@
 
         "skddodoso.gif": "Ladybird",
         "owoqmsmnfjg.gif": "Leaf Charm",
+        "jsjhdhsdsis.gif": "Leaf Charm",
         "bopadomy.gif": "Leather Shoes",
         "aloftisheog.gif": "Light Up Ushunda",
         "eefeegtreg.gif": "Lightning Shield",
