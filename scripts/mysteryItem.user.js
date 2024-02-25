@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Fills in known Mystery Items, WIP as I add more.
 // @author      marascripts
-// @version     1.1.15
+// @version     1.1.16
 // @grant       none
 // @match       https://www.marapets.com/icefairy.php
 // @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/mysteryItem.user.js
@@ -102,7 +102,7 @@
         "xmnuyrgh.gif": "Fire Shower Charm",
         "siliofop.gif": "Fire Spell",
         "ikkesakteikkjefort.png": "Firefly",
-        "gfjdghkkgk.gi": "Fish Heads",
+        "gfjdghkkgk.gif": "Fish Heads",
         "spsotnsiotg.gif": "Flower Bed",
         "oknjuhvgtfxdsaw.gif": "Flower Beetle",
         "fgskfggfssf.gif": "Foh",
