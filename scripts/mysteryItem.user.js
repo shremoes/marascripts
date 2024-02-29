@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Fills in known Mystery Items, WIP as I add more.
 // @author      marascripts
-// @version     1.1.16
+// @version     1.1.17
 // @grant       none
 // @match       https://www.marapets.com/icefairy.php
 // @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/mysteryItem.user.js
@@ -111,6 +111,7 @@
 
         "kpyrvgwwxdppyii.gif": "Garlic Necklace",
         "bbzxmppkuwttfdg.gif": "Ghost Floaties",
+        "werfvcxzasdewqa.gif": "Giant Pitcher",
         "jffffklfllllllllllllll.gif": "Giant Red Apple",
         "ddasffsgddhyggf.gif": "Giant Salad",
         "rrybyvgwee.gif": "Giant Squash",
