@@ -5,7 +5,7 @@
 // @author      marascripts
 // @version     1.0.1
 // @grant       none
-// @match       https://www.marapets.com*
+// @match       https://www.marapets.com/*
 // @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/scrollToTop.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
