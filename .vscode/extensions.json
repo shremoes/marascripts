@@ -3,6 +3,9 @@
     "adpyke.vscode-userscript",
     "esbenp.prettier-vscode",
     "visualstudioexptteam.vscodeintellicode",
-    "VisualStudioExptTeam.intellicode-api-usage-examples"
+    "visualstudioexptteam.intellicode-api-usage-examples",
+    "yzhang.markdown-all-in-one",
+    "sburg.vscode-javascript-booster",
+    "ms-vscode.vscode-typescript-next"
   ]
 }
