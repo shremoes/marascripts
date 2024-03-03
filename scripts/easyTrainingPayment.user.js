@@ -20,10 +20,34 @@
 
 /**
  * TODO: Use utilities file for checking prices.
+ * TODO: Add button for autopay, instead of automatically doing it.
  */
 
 (() => {
     'use strict'
+
+    let autoPay = GM_getValue("pay", false)
+
+    function makeButton() {
+        const payBtn = document.createElement("input")
+        payBtn.value = "Auto-pay"
+        payBtn.type = "button"
+        payBtn.style.padding = "4px 16px"
+        payBtn.style.fontSize = "1.333rem"
+
+        payBtn.onclick = () => {
+            GM_setValue("pay", true)
+            payFromAttic()
+            getPayButton().click()
+        }
+
+        const btnContainer = document.createElement("div")
+        btnContainer.classList.add("flex-buttons")
+        btnContainer.appendChild(payBtn)
+
+        const buttonRow = document.querySelector(".width50")?.nextElementSibling
+        buttonRow.appendChild(btnContainer)
+    }
 
     function payFromAttic() {
         const radio = document.getElementById("location2")
@@ -85,58 +109,57 @@
 
     const TRAINING_URL = GM_getValue("training", "")
 
-    if (!document.URL.includes("shop") && document.URL.includes("?do=")) {
-        setUrl()
+    if (autoPay === true) {
+        if (!document.URL.includes("shop") && document.URL.includes("?do=")) {
+            setUrl()
 
-        const paid = document.querySelector(".maralayoutmiddle span.bigger.middleit")
-        if (paid) {
-            if (paid.innerText.search("will be finished") > 0) {
-                GM_setValue("attic", 0)
-                GM_setValue("training", "")
-                const goTo = document.URL.split("?")[0]
-                window.location.href = goTo
-            }
-        }
-
-        const payForTraining = getPayButton()
-        if (payForTraining) {
-            const paidFromAttic = GM_getValue("attic", 0)
-            if (paidFromAttic === 0) {
-                payFromAttic()
-                payForTraining.click()
+            const paid = document.querySelector(".maralayoutmiddle span.bigger.middleit")
+            if (paid) {
+                if (paid.innerText.search("will be finished") > 0) {
+                    GM_setValue("attic", 0)
+                    GM_setValue("training", "")
+                    GM_setValue("pay", false)
+                    const goTo = document.URL.split("?")[0]
+                    window.location.href = goTo
+                }
             }
 
-            if (GM_getValue("bought", 0) === 1) {
-                GM_setValue("bought", 0)
-                payForTraining.click()
-            } else {
-                const itemToBuy = document.querySelectorAll(".middleit.flex-table .itemwidth.fixborders a")[0]
-                if (itemToBuy) {
-                    itemToBuy.click()
-                    goToItem(itemToBuy)
+            const payForTraining = getPayButton()
+            if (payForTraining) {
+                if (GM_getValue("bought", 0) === 1) {
+                    GM_setValue("bought", 0)
+                    payForTraining.click()
+                } else {
+                    const itemToBuy = document.querySelectorAll(".middleit.flex-table .itemwidth.fixborders a")[0]
+                    if (itemToBuy) {
+                        itemToBuy.click()
+                        goToItem(itemToBuy)
+                    }
                 }
             }
         }
+
+        if (document.URL.includes("/shops.php")) {
+            GM_setValue("bought", 1)
+            window.location.href = TRAINING_URL
+        }
+
+        if (document.URL.includes("/shop.php")) {
+            clickShopItem()
+        }
+
+        if (document.URL.includes("/shop.php?do=buy&id=")) {
+            const buyButton = document.querySelector("button")
+            buyButton.click()
+        }
+
+        const thanksForBuying = document.querySelector(".bigger.middleit.btmpad6")
+        if (thanksForBuying) {
+            GM_setValue("bought", 1)
+            GM_setValue("item", "")
+            window.location = TRAINING_URL
+        }
     }
 
-    if (document.URL.includes("/shops.php")) {
-        GM_setValue("bought", 1)
-        window.location.href = TRAINING_URL
-    }
-
-    if (document.URL.includes("/shop.php")) {
-        clickShopItem()
-    }
-
-    if (document.URL.includes("/shop.php?do=buy&id=")) {
-        const buyButton = document.querySelector("button")
-        buyButton.click()
-    }
-
-    const thanksForBuying = document.querySelector(".bigger.middleit.btmpad6")
-    if (thanksForBuying) {
-        GM_setValue("bought", 1)
-        GM_setValue("item", "")
-        window.location = TRAINING_URL
-    }
+    makeButton()
 })()
