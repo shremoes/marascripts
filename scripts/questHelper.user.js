@@ -3,10 +3,11 @@
 // @namespace   Marascripts
 // @description Quest automater.
 // @author      marascripts
-// @version     1.1.3
+// @version     1.2.0
 // @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/priceCheck.js
 // @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/captcha.js
-// @grant       none
+// @grant       GM_setValue
+// @grant       GM_getValue
 // @match       https://www.marapets.com/carpenter.php*
 // @match       https://www.marapets.com/shop.php*
 // @match       https://www.marapets.com/shops.php*
@@ -37,6 +38,10 @@
 
 /**
  * ! Conflicts with other questing scripts.
+ * TODO: Log cost vs. reward, and prizes
+ * TODO: Allow setting limit for all quests
+ * TODO: Save requested items instead of using image selectors
+ * TODO: Fix duplicate item bug
  */
 
 (() => {
@@ -106,6 +111,22 @@
                 if (inventory) { inventory.click() }
             }
             else { window.location.href = questURL }
+        }
+
+        /**
+         * Computer Repair settings
+         * ? For jobs, you can set the amount of quests to do for Magic stats
+         * Set this to the amount of quests to do.
+         */
+        let questsToDo = 0
+
+        const questsProgress = GM_getValue("comp_quests", 0)
+        const questComp = document.querySelector("input[value='Quest Computer Repair Again']")
+
+        if (questComp && questsToDo !== questsProgress) {
+            GM_setValue("comp_quests", questsProgress + 1)
+            console.log(questsProgress)
+            questComp.click()
         }
 
         if (document.URL.includes("/viewstock.php")) { window.location.href = questURL }
