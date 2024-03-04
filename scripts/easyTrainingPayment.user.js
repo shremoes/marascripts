@@ -45,7 +45,7 @@
         btnContainer.classList.add("flex-buttons")
         btnContainer.appendChild(payBtn)
 
-        const buttonRow = document.querySelector(".width50")?.nextElementSibling
+        const buttonRow = document.querySelector(".width50")
         buttonRow.appendChild(btnContainer)
     }
 
