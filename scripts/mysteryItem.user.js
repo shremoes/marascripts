@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Fills in known Mystery Items, WIP as I add more.
 // @author      marascripts
-// @version     1.1.17
+// @version     1.1.18
 // @grant       none
 // @match       https://www.marapets.com/icefairy.php
 // @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/mysteryItem.user.js
@@ -44,6 +44,7 @@
         "hgjkslroswi.gif": "Blackjack Toy",
         "shdksoisoso.gif": "Blitzen Horns",
         "plokijuhgrfedws.gif": "Blue Drab",
+        "gjtimvnmnirewp.gif": "Blue Fatty",
         "hervotam.gif": "Blueberry Soda",
         "yrwqkpkpnbvxxsd.gif": "Book of Beaches",
         "ddfouybeth.gif": "Book Of Bees",
