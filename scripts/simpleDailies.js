@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Automates most dailies.
 // @author      marascripts
-// @version     1.2.3
+// @version     1.2.4
 // @grant       none
 // @match       https://www.marapets.com/ants.php
 // @match       https://www.marapets.com/vending.php
@@ -277,10 +277,12 @@
 
     //* Newth Racing (Hasty for avatar)
     if (path === "/racing.php") {
-        const hasty = document.getElementById("option13")
-        if (hasty) {
-            hasty.checked = true
-            document.getElementById("option6").checked = true // 2500
+				// option13 for Hasty avatar
+        // option20 for Snazzy (most reward)
+        const newth = document.getElementById("option20")
+        if (newth) {
+            newth.checked = true
+            document.getElementById("option6").checked = true
             document.querySelector("form input[type='submit']").click()
         }
     }
