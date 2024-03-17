@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Fills in known Mystery Items, WIP as I add more.
 // @author      marascripts
-// @version     1.1.18
+// @version     1.1.19
 // @grant       none
 // @match       https://www.marapets.com/icefairy.php
 // @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/mysteryItem.user.js
@@ -176,6 +176,7 @@
         "jsueosldkdkd.gif": "Newth Book",
         "wdefvgbhytrghjk.gif": "Newth Box Ice Cream",
         "sjsjeoeofo.gif": "Newth Necklace",
+        "zxcdsaqwerfvbgt.gif": "Nightmare Notes",
         "ikjjeesydepaaenfinda.png": "Nutcracker Action Figure",
 
         "jdhshjsis.gif": "Obese Fairy Doll",
