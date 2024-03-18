@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Automates battling.
 // @author      marascripts
-// @version     1.3.0
+// @version     1.3.1
 // @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/captcha.js
 // @grant       none
 // @match       https://www.marapets.com/battle.php*
@@ -21,23 +21,26 @@
 (() => {
     'use strict'
 
+    // * USER VARIABLES *
+
     /**
-     * ? Time between actions, increase for more time
-     * Default 100
+     * * Time between actions, increase for more time
+     * ? Default 100
      */
     const BATTLE_AGAIN_TIME = 100
 
     /**
-     * ? Increase to heal more often
-     * Default 25
+     * * Increase to heal more often
+     * ? Default 25
      */
     const HEALTH_VARIANCE = 25
 
 
+
     const doc = document
-    if (!doc.querySelector(".middleit .more.italic") && doc.querySelector(".opponents")) {
+    if (!doc.querySelector('.middleit .more.italic') && doc.querySelector('.opponents')) {
         setTimeout(() => {
-            const playerHealth = doc.querySelector(".bigger.alsotry")?.innerText.split(" ")
+            const playerHealth = doc.querySelector('.bigger.alsotry')?.innerText.split(' ')
             const attack = doc.querySelector(".move1 input[type='submit']")
             if (playerHealth) {
                 const playerCurrent = parseInt(playerHealth[0])
@@ -48,13 +51,13 @@
             }
 
             else { attack?.click() }
-            doc.querySelector(".g-recaptcha")?.click()
+            doc.querySelector('.g-recaptcha')?.click()
         }, BATTLE_AGAIN_TIME)
     }
 
-    if (!doc.URL.includes("/battle.php")) {
+    if (!doc.URL.includes('/battle.php')) {
         setTimeout(() => {
-            const startBattle = doc.querySelector("button.g-recaptcha")
+            const startBattle = doc.querySelector('button.g-recaptcha')
             const questAgain = doc.querySelector("form[action='?do=quest'] input")
             const battleAction = startBattle ? startBattle : questAgain
 
