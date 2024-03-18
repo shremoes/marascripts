@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Automates battling.
 // @author      marascripts
-// @version     1.2.1
+// @version     1.3.0
 // @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/captcha.js
 // @grant       none
 // @match       https://www.marapets.com/battle.php*
@@ -21,41 +21,44 @@
 (() => {
     'use strict'
 
+    /**
+     * ? Time between actions, increase for more time
+     * Default 100
+     */
+    const BATTLE_AGAIN_TIME = 100
+
+    /**
+     * ? Increase to heal more often
+     * Default 25
+     */
+    const HEALTH_VARIANCE = 25
+
+
     const doc = document
-
-    function getOpponentsTurn() {
-        const playerHealth = document.querySelector(".bigger.alsotry")?.innerText.split(" ")
-        if (playerHealth) {
-            const playerCurrent = parseInt(playerHealth[0])
-
-            // Adding 25 to our health account for crits, may need to be adjusted
-            parseInt(playerHealth[2]) - playerCurrent + 25 >= playerCurrent ?
-                document.querySelector("input[value='Heal']")?.click()
-                : document.querySelector(".move1 input[type='submit']")?.click()
-        }
-
-        else { document.querySelector(".move1 input[type='submit']")?.click() }
-    }
-
-    function battleAgain() {
-        const battleAgain = doc.querySelector(".g-recaptcha")
-        if (battleAgain) { battleAgain.click() }
-    }
-
     if (!doc.querySelector(".middleit .more.italic") && doc.querySelector(".opponents")) {
         setTimeout(() => {
-            getOpponentsTurn()
-            battleAgain()
-        }, 600)
+            const playerHealth = doc.querySelector(".bigger.alsotry")?.innerText.split(" ")
+            const attack = doc.querySelector(".move1 input[type='submit']")
+            if (playerHealth) {
+                const playerCurrent = parseInt(playerHealth[0])
+
+                parseInt(playerHealth[2]) - playerCurrent + HEALTH_VARIANCE >= playerCurrent ?
+                    doc.querySelector("input[value='Heal']")?.click()
+                    : attack?.click()
+            }
+
+            else { attack?.click() }
+            doc.querySelector(".g-recaptcha")?.click()
+        }, BATTLE_AGAIN_TIME)
     }
 
-    if (!document.URL.includes("/battle.php")) {
+    if (!doc.URL.includes("/battle.php")) {
         setTimeout(() => {
             const startBattle = doc.querySelector("button.g-recaptcha")
             const questAgain = doc.querySelector("form[action='?do=quest'] input")
-
             const battleAction = startBattle ? startBattle : questAgain
+
             battleAction.click()
-        }, 750)
+        }, 150)
     }
 })()
