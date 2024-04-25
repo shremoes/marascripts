@@ -20,7 +20,7 @@ These are userscripts for the digitial petsite [Marapets](https://www.marapets.c
 [Buy Items](https://raw.githubusercontent.com/marascript/userscripts/master/scripts/buyItems.user.js) - Restocker  
 [Default Pet Picker](https://raw.githubusercontent.com/marascript/userscripts/master/scripts/defaultPetPicker.user.js) - Pick your default pet automatically on dailies  
 [Dress Up Contests Theme Fix](https://raw.githubusercontent.com/marascript/userscripts/master/scripts/dressUpContests.user.js) - Adds missing dress up contest themes back  
-[Drew and Shushan Faster](https://raw.githubusercontent.com/marascript/userscripts/master/scripts/dressUpContests.user.js) - Automatically complete Drew/Shushan quests  
+[Drew and Shushan Faster](https://raw.githubusercontent.com/marascript/userscripts/master/scripts/drewShusanHelper.user.js) - Automatically complete Drew/Shushan quests  
 [Easier Pet Training Payment](https://raw.githubusercontent.com/marascript/userscripts/master/scripts/easyTrainingPayment.user.js) - Gather all items for pet training payment  
 [Feeding Quests Easier](https://raw.githubusercontent.com/marascript/userscripts/master/scripts/feedingEasier.user.js) - Hide "fed" things on quests like Aquarium  
 [Freelance Job Picker](https://raw.githubusercontent.com/marascript/userscripts/master/scripts/freelancePicker.user.js) - Pick the best Freelance Job  
