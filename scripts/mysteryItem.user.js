@@ -250,6 +250,7 @@
         "mjdyjtumkfm.gif": "Test Your Strength Potato",
         "oofjgjgjgjgjg.gif": "The Fates Scissor Book",
         "hssksksirtshs.gif": "The Lonely Spider",
+        "ghfjdksleorityp.gif": "Troll Blaster",
         "wewertrtyu.gif": "Trotters Sword",
         "jjjdjieiwowmcm.gif": "Trotters Sword",
         "zrtypumo.gif": "Trowel",
