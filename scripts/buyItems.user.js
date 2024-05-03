@@ -3,8 +3,8 @@
 // @description Buys one of each item in a shop, then goes to another.
 // @namespace   Marascripts
 // @author      marascripts
-// @version     1.1.3
-// @grant       GM.setValue
+// @version     1.2.0
+// @grant       GM_setValue
 // @grant       GM_getValue
 // @version     1.0.0
 // @match       https://www.marapets.com/shop.php*
@@ -18,15 +18,21 @@
     'use strict'
 
     const doc = document
-    const AUTO_BUY = GM_getValue("autoBuy", true)
+    const AUTO_BUY = true
     const PURCHASED_ITEMS = JSON.parse(localStorage.getItem("purchased")) || []
+    const BUY_TIMEOUT_MIN = 1000
+    const BUY_TIMEOUT_MAX = 3000
+
+    const TIMEOUT = Math.random() * (BUY_TIMEOUT_MAX - BUY_TIMEOUT_MIN) + BUY_TIMEOUT_MIN
+
+    const shopkeeper = doc.querySelector(".mainfeature_art a")
 
     /*
     ** Comment out (//) stores you don't want to visit.
     ** Function will pick randomly from the "storesToVisit" variable.
     */
     function findNewStore() {
-        const storesToVisit = [
+        const stores = [
             38, // Armour
             33, // Bakery
             27, // Balloons
@@ -86,10 +92,25 @@
             6,  // Vegetables
             7,  // Weapons
             5,  // Wigs
-        ]
+        ];
 
-        location.href = `https://www.marapets.com/shop.php?id=${storesToVisit[Math.floor(Math.random() * storesToVisit.length)]}`
+        const visited = GM_getValue("visited", [])
+        let nextStore = stores.filter((store) => !visited.includes(store))[0];
+
+        if (nextStore) {
+            visited.push(nextStore)
+            GM_setValue("visited", visited)
+        } else {
+            GM_setValue("visited", [])
+            nextStore = stores[0]
+        }
+
+        location.href = `https://www.marapets.com/shop.php?id=${nextStore}`
     }
+
+    
+    const buyPage = doc.URL.includes("?do=buy")
+    const idPage = doc.URL.includes("id=")
 
     if (doc.querySelector(".middleit.bigger .petpadding") && AUTO_BUY) {
         const allItems = Array.from(document.querySelectorAll(".itemwidth"))
@@ -98,18 +119,18 @@
         if (itemToBuy) {
             setTimeout(() => {
                 itemToBuy.querySelector(".fixborders.itempadding.middleit a").click()
-            }, Math.random() * (500 - 300) + 100)
+            }, TIMEOUT)
         }
 
         else {
             findNewStore()
         }
     }
-    else if (doc.URL.includes("id=") && !doc.URL.includes("?do=buy") && !doc.querySelector(".middleit.bigger .petpadding")) {
+    else if (idPage && !buyPage && !doc.querySelector(".middleit.bigger .petpadding")) {
         findNewStore()
     }
 
-    if (!doc.URL.includes("id=")) {
+    if (!idPage) {
         setTimeout(() => {
             // If we dont have an unsuccesful message, add item to list of purchased items
             if (!doc.querySelector(".maralayoutmiddle .middleit span.bigger")) {
@@ -125,11 +146,11 @@
             }
 
             // Return to the shop
-            doc.querySelector(".mainfeature_art a").click()
+            shopkeeper.click()
         }, Math.random() * (500 - 100) + 200)
     }
 
-    else if (doc.URL.includes("?do=buy")) {
+    else if (buyPage) {
         const captcha = doc.querySelector("input[name='code']")
         // No captcha buy the item
         if (!captcha) {
@@ -145,8 +166,7 @@
         else if (AUTO_BUY) {
             PURCHASED_ITEMS.push(doc.querySelector(".mainfeature_art2 b.bigger").innerText)
             localStorage.setItem("purchased", JSON.stringify(PURCHASED_ITEMS))
-            doc.querySelector(".mainfeature_art a").click()
-
+            shopkeeper.click()
         }
 
         // We have a captcha, focus it and submit after 6 digits
