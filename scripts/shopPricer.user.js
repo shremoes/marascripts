@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Automatically prices shop, requires the Gift Box.
 // @author      marascripts
-// @version     1.2.0
+// @version     1.2.1
 // @grant       none
 // @match       https://www.marapets.com/viewstock.php*
 // @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/shopPricer.user.js
@@ -17,7 +17,6 @@
 (() => {
   'use strict';
 
-
   /**
    * Settings
    * 
@@ -29,12 +28,11 @@
   const IGNORE_LARGE_DROPS = 0;
   const IGNORE_MEDIUM_DROPS = 0;
 
-
   function getNextStep() {
     const message = document.querySelector('.maralayoutmiddle .bigger.middleit')
-    const changed = message.innerText.includes('have');
-    const autoPriced = message.innerText.includes('has');
-    const noReprice = message.innerText.includes('not');
+    const changed = message.textContent.includes('have');
+    const autoPriced = message.textContent.includes('has');
+    const noReprice = message.textContent.includes('not');
 
     if (autoPriced) { updatePrices() }
     if (noReprice || changed) { nextPageOrRestart() }
@@ -45,7 +43,7 @@
     const pageButtons = document.querySelectorAll('.pages_all .pages_each a');
     const secondToLastPageButton = pageButtons[pageButtons.length - 2];
 
-    if (secondToLastPageButton.innerText === 'Next ›') {
+    if (secondToLastPageButton.textContent === 'Next ›') {
       secondToLastPageButton.click();
     } else {
       setTimeout(() => {
@@ -64,7 +62,7 @@
   function ignoreReprice(selector) {
     const items = document.querySelectorAll(selector);
     items.forEach((item) => {
-      const oldPrice = item.querySelector('.mp').innerText.split('MP')[0].replace(/,/g, '');
+      const oldPrice = item.querySelector('.mp').textContent.split('MP')[0].replace(/,/g, '');
       item.querySelector('input').value = oldPrice;
     });
   }
