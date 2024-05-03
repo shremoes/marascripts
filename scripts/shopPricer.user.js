@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Automatically prices shop, requires the Gift Box.
 // @author      marascripts
-// @version     1.1.1
+// @version     1.1.0
 // @grant       none
 // @match       https://www.marapets.com/viewstock.php*
 // @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/shopPricer.user.js
@@ -17,8 +17,6 @@
 (() => {
     'use strict';
   
-    // Time before pricing again in milliseconds (multiply seconds by 60,000)
-    // Default 1200000 (20 minutes)
     const TIMEOUT = 1200000;
     const IGNORE_LARGE_DROPS = 0;
     const IGNORE_MEDIUM_DROPS = 0;
@@ -53,14 +51,14 @@
   
     // Go to the next page, or alert that we are finished
     if (noReprice || changed !== -1) {
-      const secondToLastPageButton = [...document.querySelectorAll('.pages_each a')].slice(-2, -1)[0];
+      const secondToLastPageButton = [...document.querySelectorAll('.pages_all')[0].querySelectorAll('.pages_each a')].slice(-2, -1)[0];
   
       // If the second to last button says "Next >", click it otherwise notify we are finished
       if (secondToLastPageButton.innerText === 'Next ›') {
         secondToLastPageButton.click();
       } else {
         setTimeout(() => {
-          location.href = 'https://www.marapets.com/viewstock.php?page=1';
+          window.location.href = 'https://www.marapets.com/viewstock.php?page=1';
         }, TIMEOUT);
       }
     }
