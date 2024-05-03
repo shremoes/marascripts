@@ -18,8 +18,8 @@
     'use strict';
   
     const TIMEOUT = 150000;
-    const IGNORE_LARGE_DROPS = 1;
-    const IGNORE_MEDIUM_DROPS = 1;
+    const IGNORE_LARGE_DROPS = 0;
+    const IGNORE_MEDIUM_DROPS = 0;
   
     const noReprice = document.querySelector('.maralayoutmiddle .bigger.banned.middleit');
     const changed = document.querySelector('.maralayoutmiddle .bigger.middleit').innerText.search('You have changed');
