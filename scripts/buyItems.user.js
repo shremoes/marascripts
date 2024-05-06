@@ -91,7 +91,7 @@
             28, // Soft Drinks
             6,  // Vegetables
             7,  // Weapons
-            5,  // Wigs
+            58,  // Wigs
         ];
 
         const visited = GM_getValue("visited", [])
