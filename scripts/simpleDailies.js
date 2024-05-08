@@ -3,58 +3,63 @@
 // @namespace   Marascripts
 // @description Automates most dailies.
 // @author      marascripts
-// @version     1.2.4
+// @version     2.0.0
+// @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/data/mysteryItems.js
+// @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/captcha.js
 // @grant       none
+// @match       https://www.marapets.com/agency.php*
 // @match       https://www.marapets.com/ants.php
-// @match       https://www.marapets.com/vending.php
 // @match       https://www.marapets.com/archeology.php
-// @match       https://www.marapets.com/rack.php
-// @match       https://www.marapets.com/potofgold.php
-// @match       https://www.marapets.com/undyingfairy.php
-// @match       https://www.marapets.com/trash.php
-// @match       https://www.marapets.com/telescope.php
-// @match       https://www.marapets.com/sword.php
-// @match       https://www.marapets.com/magazines.php
+// @match       https://www.marapets.com/atm.php
+// @match       https://www.marapets.com/bank.php
+// @match       https://www.marapets.com/bpbank.php
+// @match       https://www.marapets.com/burst.php*
+// @match       https://www.marapets.com/cloudnine.php*
+// @match       https://www.marapets.com/darkfairy.php
+// @match       https://www.marapets.com/dash.php*
+// @match       https://www.marapets.com/deal.php*
+// @match       https://www.marapets.com/doubleornothing.php
 // @match       https://www.marapets.com/fishing.php
-// @match       https://www.marapets.com/newsagent.php
-// @match       https://www.marapets.com/gumball.php*
-// @match       https://www.marapets.com/scratchcards2.php*
-// @match       https://www.marapets.com/sevenheaven.php*
 // @match       https://www.marapets.com/giganticfairy.php
+// @match       https://www.marapets.com/giveaways.php*
+// @match       https://www.marapets.com/graverobbing.php
+// @match       https://www.marapets.com/graves.php*
+// @match       https://www.marapets.com/guesstheweight.php*
+// @match       https://www.marapets.com/gumball.php*
+// @match       https://www.marapets.com/icefairy.php
+// @match       https://www.marapets.com/jackpot.php*
+// @match       https://www.marapets.com/jobs.php
+// @match       https://www.marapets.com/magazines.php
+// @match       https://www.marapets.com/multiplier.php*
+// @match       https://www.marapets.com/newsagent.php
+// @match       https://www.marapets.com/nuttytree.php
+// @match       https://www.marapets.com/pancakes.php*
+// @match       https://www.marapets.com/pie.php*
+// @match       https://www.marapets.com/pipes.php*
+// @match       https://www.marapets.com/plushies.php
+// @match       https://www.marapets.com/plushies2.php
+// @match       https://www.marapets.com/potofgold.php
+// @match       https://www.marapets.com/racing.php*
+// @match       https://www.marapets.com/rack.php
+// @match       https://www.marapets.com/rpbank.php
+// @match       https://www.marapets.com/scratchcards.php*
+// @match       https://www.marapets.com/scratchcards2.php*
+// @match       https://www.marapets.com/scratchcards3.php*
+// @match       https://www.marapets.com/sevenheaven.php*
 // @match       https://www.marapets.com/sewage.php
+// @match       https://www.marapets.com/shares.php*
+// @match       https://www.marapets.com/spooks.php*
 // @match       https://www.marapets.com/sugarstack.php*
 // @match       https://www.marapets.com/sultan.php
-// @match       https://www.marapets.com/darkfairy.php
-// @match       https://www.marapets.com/trojan.php
-// @match       https://www.marapets.com/guesstheweight.php*
+// @match       https://www.marapets.com/sword.php
+// @match       https://www.marapets.com/telescope.php
 // @match       https://www.marapets.com/tombola*
-// @match       https://www.marapets.com/graverobbing.php
-// @match       https://www.marapets.com/cloudnine.php*
-// @match       https://www.marapets.com/doubleornothing.php
-// @match       https://www.marapets.com/pipes.php*
-// @match       https://www.marapets.com/scratchcards.php*
-// @match       https://www.marapets.com/scratchcards3.php*
-// @match       https://www.marapets.com/plushies.php*
-// @match       https://www.marapets.com/giveaways.php
-// @match       https://www.marapets.com/dash.php*
-// @match       https://www.marapets.com/burst.php*
-// @match       https://www.marapets.com/spooks.php*
-// @match       https://www.marapets.com/wormdigging.php*
-// @match       https://www.marapets.com/plushies2.php
-// @match       https://www.marapets.com/giveaways.php*
-// @match       https://www.marapets.com/burst.php*
-// @match       https://www.marapets.com/nuttytree.php
-// @match       https://www.marapets.com/jackpot.php*
-// @match       https://www.marapets.com/bingo.php*
-// @match       https://www.marapets.com/pie.php*
-// @match       https://www.marapets.com/multiplier.php*
+// @match       https://www.marapets.com/trash.php
 // @match       https://www.marapets.com/tree.php
-// @match       https://www.marapets.com/deal.php*
-// @match       https://www.marapets.com/pancakes.php*
-// @match       https://www.marapets.com/bingo.php*
-// @match       https://www.marapets.com/graves.php*
-// @match       https://www.marapets.com/racing.php*
-// @match       https://www.marapets.com/jobs.php
+// @match       https://www.marapets.com/trojan.php
+// @match       https://www.marapets.com/undyingfairy.php
+// @match       https://www.marapets.com/vending.php
+// @match       https://www.marapets.com/wormdigging.php*
 // @match       https://www.marapets.com/fruitmachine.php
 // @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/simpleDailies.user.js
 // @homepageURL https://github.com/marascript/userscripts
@@ -64,6 +69,7 @@
 
 (() => {
     "use strict"
+
     const path = location.pathname
 
     //* One click games
@@ -302,6 +308,92 @@
                 const panTwo = document.querySelector("a[href='pancakes.php?play=1&id=2']")
                 panTwo.click()
             }
+        }
+    }
+
+    //* Fill in pin at ATM
+    if (location.pathname === "/atm.php") {
+        const MY_PIN = "0000"
+        document.querySelector("form[action='https://www.marapets.com/atm.php?do=deposit'] input[name='pin']").value = MY_PIN
+        document.querySelector("form[action='https://www.marapets.com/atm.php?do=withdraw'] input[name='pin']").value = MY_PIN
+    }
+
+    // * Bank interest
+    if (location.pathname.includes("/bank.php")) {
+        const collectInterest = [...document.querySelectorAll("input")].find((e) => e.value.includes("Interest"))
+        if (collectInterest) {
+            collectInterest.click()
+        }
+
+        if (document.querySelector(".emailtop")) {
+            document.querySelector(".mainfeature_art a").click()
+        }
+    }
+
+    //* Buy cheapest stock
+    // TODO: Price on shares page doesn't always actually match price, so can be less than 100
+    if (location.pathname === "/shares.php") {
+        if (!document.querySelector('.middleit.comebackbox')) {
+            const ON_BUY_PAGE = document.URL.includes('?do=company');
+    
+            if (!ON_BUY_PAGE) {
+                let lowestPrice = 99999;
+                let buyLink = '';
+    
+                document.querySelectorAll('.fairyreward_box .itempadding span.currencytext b').forEach((company) => {
+                    const price = parseInt(company.innerText.split('MP')[0].replace(/,/g, ''));
+                    if (price < lowestPrice && price > 100) {
+                        lowestPrice = price;
+                        buyLink = company.parentElement.parentElement.parentElement.parentElement;
+                    }
+                });
+    
+                buyLink.click();
+            }
+    
+            if (ON_BUY_PAGE) {
+                document.querySelector("input[name='amount']").value = 100;
+                document.querySelector("input[name='Submit']").click();
+            }
+        }
+    }
+
+    //* Freelance Job Agency
+    // TODO: Add back captcha check
+    if (location.pathname.includes("/agency.php")) {
+        /**
+         * * Set to 1 to pick the best MP/time reatio job.
+         * * Set to 0 to just pick the highest paying job.
+         */
+        const IGNORE_RATIO = 0
+
+        const allJobs = [...document.querySelectorAll(".itemwidth.fixborders")]
+        const unqualified = [...document.querySelectorAll(".fadeit3")]
+        const availableJobs = allJobs.filter(job => !unqualified.includes(job))
+    
+        const bestJob = availableJobs.reduce((best, job) => {
+            let pay = parseInt(job.innerText.split(" ")[0].split("MP")[0])
+    
+            if (!IGNORE_RATIO) {
+                const timeNumber = parseInt(job.innerText.split(" ")[1])
+                const time = timeNumber < 5 ? timeNumber * 60 : timeNumber
+                pay = pay / time
+            }
+    
+            return pay > best.pay ? { id: job.id, pay } : best
+        }, { id: "", pay: 0 })
+    
+        if (bestJob.id) {
+            document.querySelector(`#${bestJob.id} a`).click()
+        }
+    }
+
+    //* Mystery item
+    if (document.URL.includes("/icefairy.php")) {
+        const todaysItem = document.querySelector(".middleit .marapets_border").src.split("/")[4]
+
+        if (knownItems[todaysItem]) {
+            document.querySelector("input[name='item']").value = knownItems[todaysItem]
         }
     }
 })()
