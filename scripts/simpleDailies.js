@@ -3,12 +3,13 @@
 // @namespace   Marascripts
 // @description Automates most dailies.
 // @author      marascripts
-// @version     2.0.0
+// @version     2.1.0
 // @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/data/mysteryItems.js
 // @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/captcha.js
 // @grant       none
 // @match       https://www.marapets.com/agency.php*
 // @match       https://www.marapets.com/ants.php
+// @match       https://www.marapets.com/aquarium.php*
 // @match       https://www.marapets.com/archeology.php
 // @match       https://www.marapets.com/atm.php
 // @match       https://www.marapets.com/bank.php
@@ -19,6 +20,7 @@
 // @match       https://www.marapets.com/dash.php*
 // @match       https://www.marapets.com/deal.php*
 // @match       https://www.marapets.com/doubleornothing.php
+// @match       https://www.marapets.com/elekaprison.php*
 // @match       https://www.marapets.com/fishing.php
 // @match       https://www.marapets.com/giganticfairy.php
 // @match       https://www.marapets.com/giveaways.php*
@@ -26,9 +28,11 @@
 // @match       https://www.marapets.com/graves.php*
 // @match       https://www.marapets.com/guesstheweight.php*
 // @match       https://www.marapets.com/gumball.php*
+// @match       https://www.marapets.com/humpracing.php*
 // @match       https://www.marapets.com/icefairy.php
 // @match       https://www.marapets.com/jackpot.php*
 // @match       https://www.marapets.com/jobs.php
+// @match       https://www.marapets.com/knutthouse.php*
 // @match       https://www.marapets.com/magazines.php
 // @match       https://www.marapets.com/multiplier.php*
 // @match       https://www.marapets.com/newsagent.php
@@ -41,6 +45,7 @@
 // @match       https://www.marapets.com/potofgold.php
 // @match       https://www.marapets.com/racing.php*
 // @match       https://www.marapets.com/rack.php
+// @match       https://www.marapets.com/robots.php*
 // @match       https://www.marapets.com/rpbank.php
 // @match       https://www.marapets.com/scratchcards.php*
 // @match       https://www.marapets.com/scratchcards2.php*
@@ -66,6 +71,7 @@
 // @supportURL	https://github.com/marascript/userscripts/issues
 // @license     MIT
 // ==/UserScript==
+
 
 (() => {
     "use strict"
@@ -394,6 +400,29 @@
 
         if (knownItems[todaysItem]) {
             document.querySelector("input[name='item']").value = knownItems[todaysItem]
+        }
+    }
+
+    //* Aquarium, Robot Repair, Eleke Prison
+    if (document.URL.includes("/aquarium.php") || document.URL.includes("/robots.php") || document.URL.includes("/elekaprison.php")) {
+        const allOptions = document.querySelectorAll("#eachitemdiv")
+
+        for (const option in allOptions) {
+            const currentOption = allOptions[option]
+
+            // Hide fed option
+            if (currentOption.classList.contains("fadeit2")) {
+                currentOption.remove()
+            }
+        }
+    }
+
+    //* Hump Racing and Knutt House
+    if (document.URL.includes("/humpracing.php") || document.URL.includes("/knutthouse.php")) {
+        const fedPets = document.querySelectorAll(".fadeit2")
+
+        for (const pet in fedPets) {
+            fedPets[pet].parentElement.parentElement.remove()
         }
     }
 })()
