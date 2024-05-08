@@ -1,11 +1,10 @@
 // ==UserScript==
 // @name        Avatar Solution Linker
 // @namespace   Marascripts
-// @description Adds direct links to Maraforce to missing or Slater Stalker avatars.
+// @description Adds direct links to Maraforce to missing avatar solution
 // @author      marascripts
-// @version     1.0.2
+// @version     2.0.0
 // @grant       none
-// @match       https://www.marapets.com/stalker.php*
 // @match       https://www.marapets.com/avatars.php?missing=1*
 // @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/avatarSolutionLinker.user.js
 // @homepageURL https://github.com/marascript/userscripts
@@ -38,15 +37,6 @@
 
                 missingAvatars[avatar].appendChild(link)
             }
-        }
-    }
-
-    if (document.URL.includes("/stalker.php")) {
-        const avatar = document.querySelector(".sbigger").innerText.split(" Hidden Avatar")[0]
-        if (avatar) {
-            const urlEncodedAvatar = avatar.replace(/ /g, "+")
-            const checkSolution = document.querySelector(".pricecheck").parentElement
-            checkSolution.href = `https://www.maraforce.com/avatars.php?search=${urlEncodedAvatar}`
         }
     }
 })()
