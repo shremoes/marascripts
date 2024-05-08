@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Automates most dailies.
 // @author      marascripts
-// @version     3.1.0
+// @version     3.1.1
 // @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/data/mysteryItems.js
 // @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/captcha.js
 // @grant       none
@@ -65,6 +65,7 @@
 // @match       https://www.marapets.com/sewerpipes.php
 // @match       https://www.marapets.com/shares.php*
 // @match       https://www.marapets.com/spooks.php*
+// @match       https://www.marapets.com/stalker.php*
 // @match       https://www.marapets.com/statue.php
 // @match       https://www.marapets.com/sugarstack.php*
 // @match       https://www.marapets.com/sultan.php
@@ -467,5 +468,15 @@
     
         const curePets = document.querySelector("input[value='Cure Pets']")
         curePets.click()
+    }
+
+    //* Add link to Slater Stalker
+    if (document.URL.includes("/stalker.php")) {
+        const avatar = document.querySelector(".sbigger").innerText.split(" Hidden Avatar")[0]
+        if (avatar) {
+            const urlEncodedAvatar = avatar.replace(/ /g, "+")
+            const checkSolution = document.querySelector(".pricecheck").parentElement
+            checkSolution.href = `https://www.maraforce.com/avatars.php?search=${urlEncodedAvatar}`
+        }
     }
 })()
