@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Automates most dailies.
 // @author      marascripts
-// @version     2.1.0
+// @version     3.0.0
 // @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/data/mysteryItems.js
 // @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/captcha.js
 // @grant       none
@@ -20,15 +20,19 @@
 // @match       https://www.marapets.com/dash.php*
 // @match       https://www.marapets.com/deal.php*
 // @match       https://www.marapets.com/doubleornothing.php
+// @match       https://www.marapets.com/elekafountain.php
 // @match       https://www.marapets.com/elekaprison.php*
 // @match       https://www.marapets.com/fishing.php
+// @match       https://www.marapets.com/genie.php
 // @match       https://www.marapets.com/giganticfairy.php
 // @match       https://www.marapets.com/giveaways.php*
 // @match       https://www.marapets.com/graverobbing.php
 // @match       https://www.marapets.com/graves.php*
 // @match       https://www.marapets.com/guesstheweight.php*
+// @match       https://www.marapets.com/guillotine.php
 // @match       https://www.marapets.com/gumball.php*
 // @match       https://www.marapets.com/humpracing.php*
+// @match       https://www.marapets.com/icecaves.php
 // @match       https://www.marapets.com/icefairy.php
 // @match       https://www.marapets.com/jackpot.php*
 // @match       https://www.marapets.com/jobs.php
@@ -40,20 +44,27 @@
 // @match       https://www.marapets.com/pancakes.php*
 // @match       https://www.marapets.com/pie.php*
 // @match       https://www.marapets.com/pipes.php*
+// @match       https://www.marapets.com/pixie.php
 // @match       https://www.marapets.com/plushies.php
 // @match       https://www.marapets.com/plushies2.php
+// @match       https://www.marapets.com/pond.php?i_id=*
+// @match       https://www.marapets.com/portal.php
 // @match       https://www.marapets.com/potofgold.php
 // @match       https://www.marapets.com/racing.php*
 // @match       https://www.marapets.com/rack.php
+// @match       https://www.marapets.com/reservoir.php
 // @match       https://www.marapets.com/robots.php*
+// @match       https://www.marapets.com/rollercoaster.php
 // @match       https://www.marapets.com/rpbank.php
 // @match       https://www.marapets.com/scratchcards.php*
 // @match       https://www.marapets.com/scratchcards2.php*
 // @match       https://www.marapets.com/scratchcards3.php*
 // @match       https://www.marapets.com/sevenheaven.php*
 // @match       https://www.marapets.com/sewage.php
+// @match       https://www.marapets.com/sewerpipes.php
 // @match       https://www.marapets.com/shares.php*
 // @match       https://www.marapets.com/spooks.php*
+// @match       https://www.marapets.com/statue.php
 // @match       https://www.marapets.com/sugarstack.php*
 // @match       https://www.marapets.com/sultan.php
 // @match       https://www.marapets.com/sword.php
@@ -64,6 +75,7 @@
 // @match       https://www.marapets.com/trojan.php
 // @match       https://www.marapets.com/undyingfairy.php
 // @match       https://www.marapets.com/vending.php
+// @match       https://www.marapets.com/whirlpool.php
 // @match       https://www.marapets.com/wormdigging.php*
 // @match       https://www.marapets.com/fruitmachine.php
 // @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/simpleDailies.user.js
@@ -75,6 +87,13 @@
 
 (() => {
     "use strict"
+
+    /**
+     * PRESREVE_PET - Set to 0 to do dailies which can transform your pet
+     * DEFAULT_GETS_STATS - Set to 1 to do stat dailies automatically
+     */
+    const PRESREVE_PET = 1
+    const DEFAULT_GETS_STATS = 0
 
     const path = location.pathname
 
@@ -423,6 +442,44 @@
 
         for (const pet in fedPets) {
             fedPets[pet].parentElement.parentElement.remove()
+        }
+    }
+
+    //* Dailies that can reward stats
+    if (DEFAULT_GETS_STATS) {
+        const statQuests = [
+        "/genie.php",
+        "/pixie.php",
+        "/statue.php",
+        "/elekafountain.php",
+        "/sewerpipes.php",
+        "/rollercoaster.php"
+        ]
+
+        if (statQuests.includes(path)) { clickDefaultPet() }
+    }
+
+    //* Dailies that can transform your pet
+    if (!PRESREVE_PET) {
+        const riskyQuests = [
+            "/guillotine.php",
+            "/pond.php?i_id=*",
+            "/portal.php",
+            "/icecaves.php",
+            "/reservoir.php",
+            "/whirlpool.php"
+        ]
+
+        if (riskyQuests.includes(path)) { clickDefaultPet() }
+    }
+
+    function clickDefaultPet() {
+        const defaultPetImg = document.querySelector(".defaultpet")
+
+        if (defaultPetImg) {
+            const defaultPetLink = defaultPetImg.parentElement
+            defaultPetLink.onclick = ""
+            defaultPetLink.click()
         }
     }
 })()
