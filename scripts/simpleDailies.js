@@ -3,7 +3,7 @@
 // @namespace   Marascripts
 // @description Automates most dailies.
 // @author      marascripts
-// @version     3.0.0
+// @version     3.1.0
 // @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/data/mysteryItems.js
 // @require     https://raw.githubusercontent.com/marascript/userscripts/master/scripts/utilities/captcha.js
 // @grant       none
@@ -31,6 +31,7 @@
 // @match       https://www.marapets.com/guesstheweight.php*
 // @match       https://www.marapets.com/guillotine.php
 // @match       https://www.marapets.com/gumball.php*
+// @match       https://www.marapets.com/hospital.php*
 // @match       https://www.marapets.com/humpracing.php*
 // @match       https://www.marapets.com/icecaves.php
 // @match       https://www.marapets.com/icefairy.php
@@ -89,11 +90,15 @@
     "use strict"
 
     /**
-     * PRESREVE_PET - Set to 0 to do dailies which can transform your pet
-     * DEFAULT_GETS_STATS - Set to 1 to do stat dailies automatically
+     * ? PRESREVE_PET - 1 to skip dailies which can transform your pet
+     * ? DEFAULT_GETS_STATS - 1 to do stat dailies automatically
+     * ? IGNORE_RATIO - 1 to pick best MP/Time ratio, 0 for highest paying (Freelance)
+     * ? PAY_FOR_HOSPITAL - 1 to automatically heal all pets
      */
     const PRESREVE_PET = 1
     const DEFAULT_GETS_STATS = 0
+    const IGNORE_RATIO = 0
+    const PAY_FOR_HOSPITAL = 0
 
     const path = location.pathname
 
@@ -258,20 +263,6 @@
         '/spooks.php'
     ]
 
-    if (randomImgs.includes(path)) {
-        pickRandom("#eachitemdiv a")
-    }
-
-    //* Jackpot Pyramid
-    if (path === "/jackpot.php") {
-        pickRandom(".pyramid a")
-    }
-
-    //* Worm Digging
-    if (path === "/wormdigging.php") {
-        pickRandom(".wormbox input")
-    }
-
     //* Plushie Machines, Nutty Tree
     const randomButtons = [
         "/plushies.php",
@@ -279,19 +270,13 @@
         "/nuttytree.php"
     ]
 
-    if (randomButtons.includes(path)) {
-        pickRandom("input[type='submit']")
-    }
+    if (randomImgs.includes(path)) { pickRandom("#eachitemdiv a") }
+    if (randomButtons.includes(path)) { pickRandom("input[type='submit']") }
 
-    //* Christmas Tree (Shake for avatar)
-    if (path === "/tree.php") {
-        document.querySelector("input[value='Shake Tree']").click()
-    }
-
-    //* Open Graves
-    if (path === "/graves.php") {
-        pickRandom(".flex-table .middleit a")
-    }
+    if (path === "/jackpot.php") { pickRandom(".pyramid a") }
+    if (path === "/wormdigging.php") { pickRandom(".wormbox input") }
+    if (path === "/graves.php") { pickRandom(".flex-table .middleit a") }
+    if (path === "/tree.php") { document.querySelector("input[value='Shake Tree']").click() }
 
     //* Duck or Dive
     // TODO: Pick best time to stop, maybe
@@ -306,10 +291,8 @@
         pickRandom(".middleit.flex-table #eachitemdiv a")
     }
 
-    //* Newth Racing (Hasty for avatar)
+    //* Newth Racing
     if (path === "/racing.php") {
-				// option13 for Hasty avatar
-        // option20 for Snazzy (most reward)
         const newth = document.getElementById("option20")
         if (newth) {
             newth.checked = true
@@ -386,12 +369,6 @@
     //* Freelance Job Agency
     // TODO: Add back captcha check
     if (location.pathname.includes("/agency.php")) {
-        /**
-         * * Set to 1 to pick the best MP/time reatio job.
-         * * Set to 0 to just pick the highest paying job.
-         */
-        const IGNORE_RATIO = 0
-
         const allJobs = [...document.querySelectorAll(".itemwidth.fixborders")]
         const unqualified = [...document.querySelectorAll(".fadeit3")]
         const availableJobs = allJobs.filter(job => !unqualified.includes(job))
@@ -448,12 +425,12 @@
     //* Dailies that can reward stats
     if (DEFAULT_GETS_STATS) {
         const statQuests = [
-        "/genie.php",
-        "/pixie.php",
-        "/statue.php",
-        "/elekafountain.php",
-        "/sewerpipes.php",
-        "/rollercoaster.php"
+            "/genie.php",
+            "/pixie.php",
+            "/statue.php",
+            "/elekafountain.php",
+            "/sewerpipes.php",
+            "/rollercoaster.php"
         ]
 
         if (statQuests.includes(path)) { clickDefaultPet() }
@@ -481,5 +458,14 @@
             defaultPetLink.onclick = ""
             defaultPetLink.click()
         }
+    }
+
+    // * Pay for hospital
+    if (PAY_FOR_HOSPITAL && document.URL.includes("/hospital.php")) {
+        const selectAll = document.querySelector("input[value='Select All Pets']")
+        selectAll.click()
+    
+        const curePets = document.querySelector("input[value='Cure Pets']")
+        curePets.click()
     }
 })()
