@@ -21,23 +21,18 @@
 (() => {
     'use strict'
 
-    // * USER VARIABLES *
-
     /**
-     * * Time between actions, increase for more time
-     * ? Default 100
+     * ! These may need to be adjusted depending on the opponent
+     * ? BATTLE_AGAIN_TIME - Time between actions, increase for more time (default 100)
+     * ? HEALTH_VARIANCE - Increase to heal more often (default 25)
+     * ? BATTLE_AGAIN_TIME - Maximum time before starting a new battle (default 150)
      */
-    const BATTLE_AGAIN_TIME = 100
-
-    /**
-     * * Increase to heal more often
-     * ? Default 25
-     */
+    const BATTLE_TURN_TIME = 100
     const HEALTH_VARIANCE = 25
-
-
+    const BATTLE_AGAIN_TIME = 150
 
     const doc = document
+
     if (!doc.querySelector('.middleit .more.italic') && doc.querySelector('.opponents')) {
         setTimeout(() => {
             const playerHealth = doc.querySelector('.bigger.alsotry')?.innerText.split(' ')
@@ -51,8 +46,9 @@
             }
 
             else { attack?.click() }
+
             doc.querySelector('.g-recaptcha')?.click()
-        }, BATTLE_AGAIN_TIME)
+        }, BATTLE_TURN_TIME)
     }
 
     if (!doc.URL.includes('/battle.php')) {
@@ -62,6 +58,6 @@
             const battleAction = startBattle ? startBattle : questAgain
 
             battleAction.click()
-        }, 150)
+        }, BATTLE_AGAIN_TIME)
     }
 })()
