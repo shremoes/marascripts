@@ -15,10 +15,7 @@
 (() => {
     'use strict'
 
-    // Set to 1 if you have the giftbox
-    const HAS_GIFTBOX = 0
-
-    if (document.URL.includes("/avatars.php") && HAS_GIFTBOX) {
+    if (document.URL.includes("/avatars.php")) {
         const missingAvatars = document.querySelectorAll("#eachitemdiv")
 
         for (const avatar in missingAvatars) {
