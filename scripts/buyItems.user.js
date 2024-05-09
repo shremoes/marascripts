@@ -95,7 +95,8 @@
         ];
 
         const visited = GM_getValue("visited", [])
-        let nextStore = stores.filter((store) => !visited.includes(store))[0];
+        const unvisited = stores.filter((store) => !visited.includes(store))
+        let nextStore = unvisited[Math.floor(Math.random() * unvisited.length)]
 
         if (nextStore) {
             visited.push(nextStore)
@@ -108,7 +109,7 @@
         location.href = `https://www.marapets.com/shop.php?id=${nextStore}`
     }
 
-    
+
     const buyPage = doc.URL.includes("?do=buy")
     const idPage = doc.URL.includes("id=")
 
