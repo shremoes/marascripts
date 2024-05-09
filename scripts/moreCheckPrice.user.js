@@ -34,46 +34,46 @@
 (() => {
     'use strict'
 
-    function createCheckPrice(item, itemId) {
-        const checkPrice = document.createElement("b")
-        checkPrice.innerText = "Check Price"
-        checkPrice.classList.add("pricecheck")
-
-        const link = document.createElement("a")
-        link.appendChild(checkPrice)
-        link.href = "javascript:;"
-        link.classList.add("dopricecheck")
-        link.setAttribute("data-id", itemId)
-
-        const linkContainer = document.createElement("div")
-        linkContainer.classList.add("itempadding")
-        linkContainer.style.textAlign = "center"
-        linkContainer.appendChild(link)
-
-        item.appendChild(linkContainer)
-    }
-
-    if (!document.URL.includes("missing") && !document.URL.includes("stamps")) {
-        const items = document.querySelectorAll(".itemwidth.fixborders")
+    if (!document.URL.includes('missing') && !document.URL.includes('stamps')) {
+        const items = document.querySelectorAll('.itemwidth.fixborders')
 
         for (const item in items) {
             if (items[item] instanceof Node) {
-                createCheckPrice(items[item], items[item].id.split("eachitemdiv")[1])
+                createCheckPrice(items[item], items[item].id.split('eachitemdiv')[1])
             }
         }
     }
 
-    if (document.URL.includes("stamps")) {
-        const stamps = document.querySelectorAll("#eachitemdiv.itemwidth.fixborders a")
+    if (document.URL.includes('stamps')) {
+        const stamps = document.querySelectorAll('#eachitemdiv.itemwidth.fixborders a')
 
         for (const stamp in stamps) {
             if (stamps[stamp] instanceof Node) {
                 const stampLink = stamps[stamp]
                 if (stampLink) {
-                    const stampId = stampLink.href.split("item=")[1]
+                    const stampId = stampLink.href.split('item=')[1]
                     createCheckPrice(stamps[stamp], stampId)
                 }
             }
         }
+    }
+
+    function createCheckPrice(item, itemId) {
+        const checkPrice = document.createElement('b')
+        checkPrice.innerText = 'Check Price'
+        checkPrice.classList.add('pricecheck')
+
+        const link = document.createElement('a')
+        link.appendChild(checkPrice)
+        link.href = 'javascript:;'
+        link.classList.add('dopricecheck')
+        link.setAttribute('data-id', itemId)
+
+        const linkContainer = document.createElement('div')
+        linkContainer.classList.add('itempadding')
+        linkContainer.style.textAlign = 'center'
+        linkContainer.appendChild(link)
+
+        item.appendChild(linkContainer)
     }
 })()
