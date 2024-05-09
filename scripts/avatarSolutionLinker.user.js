@@ -15,21 +15,21 @@
 (() => {
     'use strict'
 
-    if (document.URL.includes("/avatars.php")) {
-        const missingAvatars = document.querySelectorAll("#eachitemdiv")
+    if (document.URL.includes('/avatars.php')) {
+        const missingAvatars = document.querySelectorAll('#eachitemdiv')
 
         for (const avatar in missingAvatars) {
-            missingAvatars[avatar].style.paddingBottom = "15px"
+            missingAvatars[avatar].style.paddingBottom = '15px'
 
-            if (!missingAvatars[avatar].querySelector(".offline")) {
-                const name = missingAvatars[avatar].querySelector(".itempadding .bigger").innerText.replace(/ /g, "+")
-                const link = document.createElement("a")
-                const linkText = document.createTextNode("Check Solution")
+            if (!missingAvatars[avatar].querySelector('.offline')) {
+                const name = missingAvatars[avatar].querySelector('.itempadding .bigger').innerText.replace(/ /g, '+')
+                const link = document.createElement('a')
+                const linkText = document.createTextNode('Check Solution')
 
                 link.appendChild(linkText)
                 link.href = `https://www.maraforce.com/avatars.php?search=${name}`
-                link.target = "_blank"
-                link.style.color = "gray"
+                link.target = '_blank'
+                link.style.color = 'gray'
                 link.style.fontWeight = 700
 
                 missingAvatars[avatar].appendChild(link)
