@@ -165,6 +165,7 @@ const knownItems = {
     "grimpond.gif": "Osafo Backpack",
 
     "zpxocidksl.gif": "Parpy",
+    "hitmotaf.gif": "Peachie",
     "dfgdfgggh.gif": "Peanuts",
     "jjhhgghjkk.gif": "Peasant Fairy Gloves ",
     "dkfjghrutyvbxpq.gif": "Peeler",
