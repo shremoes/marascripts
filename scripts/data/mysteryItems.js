@@ -10,6 +10,7 @@ const knownItems = {
     "sjsososos.gif": "Autumn Book",
     "penjhgsy.gif": "Azul Voodoo Doll",
 
+    "zabbafat.gif": "Bacon",
     "sjdjdidosos.gif": "Ball of Bronze Yarn",
     "swinfhgyt.gif": "Ball of Gold Yarn",
     "dfhsdfhslfh.gif": "Balloon Collecting Guide",
