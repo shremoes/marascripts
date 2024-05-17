@@ -250,6 +250,8 @@ const knownItems = {
     "gjepcnusdy.gif": "White Fly Trap",
     "xcvbgfdswertpob.gif": "Winter Costume",
 
+    "lorufnnsdmd.gif": "Xor Stamp",
+    
     "asdcvbhjkiopytr.gif": "Yellow Osafo Marshmallow",
 
     "tuyiuopkhjgdfsw.gif": "Zarplet",
