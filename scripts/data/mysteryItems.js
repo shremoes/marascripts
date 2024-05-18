@@ -116,6 +116,7 @@ const knownItems = {
     "jentnerkommeroggar.png": "Heavy Concoction",
     "fuyjjjkjukkiyki.gif": "Holiday Decorating Guide",
     "cxcxcvcvbv.gif": "Homeless Fairy Wings",
+    "cftyjmkopliuhbg.gif": "Headless Wig",
     "utokglapsgehrt.gif": "Hoop Earrings",
     "tyuwqopjnnhj.gif": "Hula Doll",
 
