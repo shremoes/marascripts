@@ -12,22 +12,23 @@
 // @license     MIT
 // ==/UserScript==
 
-// TODO: Add a button instead of the shopkeeper
+// TODO: Add a toggle
+// TODO: Conflicts with questing scripts
 
 (() => {
     'use strict';
 
     /**
      * ! Requires Shop Pricer Giftbox!
-     * TIMEOUT - Set to amount of milliseconds to wait before restarting
+     * TIMEOUT - Set to amount of milliseconds to wait before restarting (20 minutes default)
      * IGNORE_LARGE_DROPS - Set to 1 to ignore large price drops (red box)
      * IGNORE_MEDIUM_DROPS - Set to 1 to ignore medium price drops (yellow box)
      */
-    const TIMEOUT = 1200000;
+    const TIMEOUT = 1200000; // Default 1200000
     const IGNORE_LARGE_DROPS = 0;
     const IGNORE_MEDIUM_DROPS = 0;
 
-    
+
     function getStatus() {
         // We use the message above the shopkeeper to determine the next step
         const message = document.querySelector('.maralayoutmiddle .bigger.middleit').textContent;
@@ -50,7 +51,7 @@
 
         // Update prices
         else {
-            document.querySelector("input[value='Auto Price']").click();      
+            document.querySelector("input[value='Auto Price']").click();
         }
     }
 
