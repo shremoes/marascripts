@@ -224,6 +224,7 @@ const knownItems = {
     "nbvbvcvbnm.gif": "Staff of Blitzen",
     "lkjlkjhghj.gif": "Starry Blueberry Pie",
     "fgjetyujdhmvj.gif": "Starry Viotto Potion",
+    "skfjjfiem.gif": "Strawberry Gumball",
     "sksoisoos.gif": "Strawberry Lolly",
     "fjfjdkdksl.gif": "Strobe Pancakes",
     "ddppddkkij.gif": "Summer Adorab",
