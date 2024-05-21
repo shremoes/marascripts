@@ -3,7 +3,7 @@
 // @description Buys one of each item in a shop, then goes to another.
 // @namespace   Marascripts
 // @author      marascripts
-// @version     1.2.0
+// @version     1.3.0
 // @grant       GM_setValue
 // @grant       GM_getValue
 // @version     1.0.0
@@ -130,6 +130,10 @@
     else if (idPage && !buyPage && !doc.querySelector(".middleit.bigger .petpadding")) {
         findNewStore()
     }
+
+    if (document.body.textContent.includes("Sorry! I just sold")) {
+        shopkeeper.click()
+    }    
 
     if (!idPage) {
         setTimeout(() => {
