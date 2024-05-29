@@ -92,7 +92,7 @@
             6,  // Vegetables
             7,  // Weapons
             58,  // Wigs
-            //76 // Mummy Dolls (BP)
+            //76, // Mummy Dolls (BP)
             //45, // Potato Chips (BP)
             //60, // Charms (RP)
             //40, // Health Tonics (BP)
