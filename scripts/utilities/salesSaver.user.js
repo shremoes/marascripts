@@ -16,10 +16,18 @@ const allSales = document.querySelectorAll("#eachitemdiv")
 let query = "INSERT INTO ShopSales (item, price, user) VALUES "
 
 for (let i = 0; i < allSales.length; i++) {
-	const mpText = allSales[i].querySelector(".mp").textContent
+	
 	const item = allSales[i].querySelector(".bigger").textContent
-	const user = allSales[i].querySelector(".alsotry").textContent
+
+	const user = allSales[i].querySelector(".alsotry")
+	const userName = user.textContent
+	const userId = user.parentElement.href.split("id=")[1]
+
+	const mpText = allSales[i].querySelector(".mp").textContent
 	const mp = parseInt(mpText.split("MP")[0].replace(/,/g, ""))
+
+	const currentDate = new Date()
+	const relativeTime = allSales[i].querySelectorAll("b")[2].textContent
 
 	query += `("${item}", ${mp}, "${user}"), `
 }
