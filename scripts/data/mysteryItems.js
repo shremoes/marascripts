@@ -194,6 +194,8 @@ const knownItems = {
     "sojuenhd.gif": "Purple Striped Worm",
     "mnbvcfghjuytred.gif": "Purple Walee Balloon",
 
+    "dvbpuych.gif": "Quality Trap",
+    
     "nkjigydrawxscfv.gif": "Radiator Cap",
     "okyhgygrdvvgbfd.gif": "Recycled Egg",
     "daocriupos.gif": "Recycling",
