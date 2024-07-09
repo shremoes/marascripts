@@ -3,7 +3,7 @@
 // @description Buys one of each item in a shop, then goes to another.
 // @namespace   Marascripts
 // @author      marascripts
-// @version     1.2.0
+// @version     1.4.0
 // @grant       GM_setValue
 // @grant       GM_getValue
 // @version     1.0.0
@@ -92,6 +92,10 @@
             6,  // Vegetables
             7,  // Weapons
             58,  // Wigs
+            //76, // Mummy Dolls (BP)
+            //45, // Potato Chips (BP)
+            //60, // Charms (RP)
+            //40, // Health Tonics (BP)
         ];
 
         const visited = GM_getValue("visited", [])
@@ -130,6 +134,10 @@
     else if (idPage && !buyPage && !doc.querySelector(".middleit.bigger .petpadding")) {
         findNewStore()
     }
+
+    if (document.body.textContent.includes("Sorry! I just sold")) {
+        shopkeeper.click()
+    }    
 
     if (!idPage) {
         setTimeout(() => {

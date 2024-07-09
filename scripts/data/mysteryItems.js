@@ -10,6 +10,8 @@ const knownItems = {
     "sjsososos.gif": "Autumn Book",
     "penjhgsy.gif": "Azul Voodoo Doll",
 
+    "zabbafat.gif": "Bacon",
+    "jpfopjtnvdslsd.gif": "Bacon",
     "sjdjdidosos.gif": "Ball of Bronze Yarn",
     "swinfhgyt.gif": "Ball of Gold Yarn",
     "dfhsdfhslfh.gif": "Balloon Collecting Guide",
@@ -115,6 +117,7 @@ const knownItems = {
     "jentnerkommeroggar.png": "Heavy Concoction",
     "fuyjjjkjukkiyki.gif": "Holiday Decorating Guide",
     "cxcxcvcvbv.gif": "Homeless Fairy Wings",
+    "cftyjmkopliuhbg.gif": "Headless Wig",
     "utokglapsgehrt.gif": "Hoop Earrings",
     "tyuwqopjnnhj.gif": "Hula Doll",
 
@@ -191,6 +194,8 @@ const knownItems = {
     "sojuenhd.gif": "Purple Striped Worm",
     "mnbvcfghjuytred.gif": "Purple Walee Balloon",
 
+    "dvbpuych.gif": "Quality Trap",
+    
     "nkjigydrawxscfv.gif": "Radiator Cap",
     "okyhgygrdvvgbfd.gif": "Recycled Egg",
     "daocriupos.gif": "Recycling",
@@ -222,6 +227,7 @@ const knownItems = {
     "nbvbvcvbnm.gif": "Staff of Blitzen",
     "lkjlkjhghj.gif": "Starry Blueberry Pie",
     "fgjetyujdhmvj.gif": "Starry Viotto Potion",
+    "skfjjfiem.gif": "Strawberry Gumball",
     "sksoisoos.gif": "Strawberry Lolly",
     "fjfjdkdksl.gif": "Strobe Pancakes",
     "ddppddkkij.gif": "Summer Adorab",
@@ -249,6 +255,8 @@ const knownItems = {
     "gjepcnusdy.gif": "White Fly Trap",
     "xcvbgfdswertpob.gif": "Winter Costume",
 
+    "lorufnnsdmd.gif": "Xor Stamp",
+    
     "asdcvbhjkiopytr.gif": "Yellow Osafo Marshmallow",
 
     "tuyiuopkhjgdfsw.gif": "Zarplet",
