@@ -12,6 +12,7 @@
 // @match       https://www.marapets.com/elitegym.php*
 // @match       https://www.marapets.com/shops.php*
 // @match       https://www.marapets.com/shop.php*
+// @match       https://www.marapets.com/viewstock.php
 // @downloadURL https://raw.githubusercontent.com/marascript/userscripts/master/scripts/easyTrainingPayment.user.js
 // @homepageURL https://github.com/marascript/userscripts
 // @supportURL	https://github.com/marascript/userscripts/issues
@@ -131,7 +132,7 @@
             }
         }
 
-        if (document.URL.includes('/shops.php')) {
+        if (document.URL.includes('/shops.php') || document.URL.includes('/viewstock.php')) {
             GM_setValue('bought', 1)
             window.location.href = TRAINING_URL
         }
