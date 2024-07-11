@@ -80,6 +80,7 @@ const knownItems = {
     "swsedrfvbgyhjkl.gif": "Eye Egg",
 
     "sosofefivm.gif": "Falling Petals",
+    "ylvisgamlefantaruerkrogh.png": "Fasoro Ears",
     "ddaonncbrz.gif": "Feta",
     "didjwawa.gif": "Figure Skating",
     "pklzdfhgj.gif": "Filter",
