@@ -1,0 +1,1 @@
+BOMB_SYMBOL = 0
