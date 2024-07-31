@@ -239,6 +239,7 @@ const knownItems = {
     "mjdyjtumkfm.gif": "Test Your Strength Potato",
     "oofjgjgjgjgjg.gif": "The Fates Scissor Book",
     "hssksksirtshs.gif": "The Lonely Spider",
+    "ytdukdukgggggggg.gif": "Toothbrush",
     "ghfjdksleorityp.gif": "Troll Blaster",
     "wewertrtyu.gif": "Trotters Sword",
     "jjjdjieiwowmcm.gif": "Trotters Sword",
